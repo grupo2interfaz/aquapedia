@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explorar – AquaPedia</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">AquaPedia</a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+          <li><a href="explorar.html" class="nav-explorar active">&#128269; Explorar</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="explorar-hero" aria-label="Explorar categorías">
+      <div class="container">
+        <h1 class="section-title">Explorá todas las categorías</h1>
+        <p class="section-sub">Elegí un grupo de animales acuáticos y comenzá tu exploración</p>
+      </div>
+    </section>
+
+    <section class="categories-section" aria-label="Categorías disponibles">
+      <div class="container">
+        <div class="categories-grid">
+
+          <article class="cat-card">
+            <a href="mamiferos.html" class="cat-link" aria-label="Ver Mamíferos Marinos">
+              <img src="img/mamiferos.jpg" alt="Ballena azul nadando" class="cat-img" />
+              <div class="cat-info">
+                <h2>Mamíferos Marinos</h2>
+                <p>Los gobernantes de sangre caliente de las profundidades</p>
+                <span class="ver-mas">Ver más ›</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="cat-card">
+            <a href="#" class="cat-link" aria-label="Ver Peces">
+              <img src="img/peces.jpg" alt="Cardumen de peces en el océano" class="cat-img" />
+              <div class="cat-info">
+                <h2>Peces</h2>
+                <p>Los vertebrados más diversos del océano</p>
+                <span class="ver-mas">Ver más ›</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="cat-card">
+            <a href="#" class="cat-link" aria-label="Ver Moluscos">
+              <img src="img/moluscos.jpg" alt="Pulpo en el fondo marino" class="cat-img" />
+              <div class="cat-info">
+                <h2>Moluscos</h2>
+                <p>Maestros del camuflaje y la adaptación</p>
+                <span class="ver-mas">Ver más ›</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="cat-card">
+            <a href="#" class="cat-link" aria-label="Ver Crustáceos">
+              <img src="img/crustaceos.jpg" alt="Cangrejo en el fondo marino" class="cat-img" />
+              <div class="cat-info">
+                <h2>Crustáceos</h2>
+                <p>Arquitectos acorazados del fondo marino</p>
+                <span class="ver-mas">Ver más ›</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="cat-card">
+            <a href="#" class="cat-link" aria-label="Ver Cnidarios">
+              <img src="img/cnidarios.jpg" alt="Medusas flotando en el océano" class="cat-img" />
+              <div class="cat-info">
+                <h2>Cnidarios</h2>
+                <p>Etéreos viajeros y constructores de arrecifes</p>
+                <span class="ver-mas">Ver más ›</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="cat-card">
+            <a href="#" class="cat-link" aria-label="Ver Equinodermos">
+              <img src="img/equinodermos.jpg" alt="Estrella de mar en el fondo marino" class="cat-img" />
+              <div class="cat-info">
+                <h2>Equinodermos</h2>
+                <p>Maravillas espinosas del fondo oceánico</p>
+                <span class="ver-mas">Ver más ›</span>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">AquaPedia</p>
+        <p>Una enciclopedia digital dedicada a explorar y preservar la magnífica biodiversidad de nuestros océanos y cursos de agua.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Explorar categorías">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="mamiferos.html">Mamíferos Marinos</a></li>
+          <li><a href="explorar.html">Peces</a></li>
+          <li><a href="explorar.html">Moluscos</a></li>
+          <li><a href="explorar.html">Crustáceos</a></li>
+          <li><a href="explorar.html">Cnidarios</a></li>
+          <li><a href="explorar.html">Equinodermos</a></li>
+        </ul>
+      </nav>
+      <aside class="footer-about">
+        <h4>Acerca de</h4>
+        <p>AquaPedia es un proyecto educativo diseñado para inspirar curiosidad y conciencia sobre la vida acuática y la importancia de la conservación de los océanos.</p>
+      </aside>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AquaPedia. Todos los derechos reservados. Protegiendo nuestros océanos, una especie a la vez.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
