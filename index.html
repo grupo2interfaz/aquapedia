@@ -1,241 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AquaPedia – Enciclopedia de vida acuática</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Google Fonts: Playfair Display (display) + DM Sans (body) -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaPedia</title>
 </head>
 <body>
 
-  <!-- ========== HEADER / NAV ========== -->
-  <header class="site-header">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">AquaPedia</a>
-      <nav class="main-nav" aria-label="Navegación principal">
-        <ul>
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
-          <li><a href="explorar.html" class="nav-explorar">&#128269; Explorar</a></li>
-        </ul>
-      </nav>
-      <!-- Menú hamburguesa (mobile) -->
-      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <header>
+    <p>AquaPedia</p>
+    <p>Buscar</p>
+    <p>CCC</p>
   </header>
 
   <main>
+    <section>
+      <h1>AquaPedia</h1>
+      <p>
+        Sumergite en la enciclopedia digital más completa del mundo sobre la
+        vida acuática. Descubrí, aprendé y protegé la increíble biodiversidad
+        de nuestros océanos.
+      </p>
 
-    <!-- ========== HERO ========== -->
-    <section class="hero" aria-label="Portada">
-      <div class="hero-overlay"></div>
-      <div class="hero-content container">
-        <h1 class="hero-title">AquaPedia</h1>
-        <p class="hero-subtitle">
-          Sumergite en la enciclopedia digital más completa del mundo sobre
-          la vida acuática. Descubrí, aprendé y protegé la increíble
-          biodiversidad de nuestros océanos.
-        </p>
-        <!-- Barra de búsqueda -->
-        <div class="search-bar" role="search">
-          <label for="hero-search" class="sr-only">Buscar especie, hábitat o categoría</label>
-          <span class="search-icon" aria-hidden="true">&#128269;</span>
-          <input
-            id="hero-search"
-            type="search"
-            placeholder="Buscá una especie, hábitat o categoría..."
-          />
-        </div>
-        <a href="explorar.html" class="btn-primary">Empezá a explorar ›</a>
-      </div>
+      <form>
+        <label for="busqueda">Buscar</label>
+        <input type="search" id="busqueda" name="busqueda" placeholder="Buscar">
+      </form>
     </section>
 
-    <!-- ========== STATS ========== -->
-    <section class="stats-bar" aria-label="Estadísticas del sitio">
-      <div class="container stats-grid">
-        <article class="stat-card">
-          <span class="stat-icon" aria-hidden="true">〰</span>
-          <strong class="stat-number">6</strong>
-          <span class="stat-label">Categorías</span>
-          <span class="stat-sub">Grupos de animales explorados</span>
-        </article>
-        <article class="stat-card">
-          <span class="stat-icon" aria-hidden="true">🐠</span>
-          <strong class="stat-number">+24</strong>
-          <span class="stat-label">Especies</span>
-          <span class="stat-sub">Especies destacadas</span>
-        </article>
-        <article class="stat-card">
-          <span class="stat-icon" aria-hidden="true">🛡</span>
-          <strong class="stat-number">18</strong>
-          <span class="stat-label">Conservación</span>
-          <span class="stat-sub">Amenazas documentadas</span>
-        </article>
-      </div>
+    <section>
+      <article>
+        <h2>6 Categorías</h2>
+        <p>Grupos de animales explorados</p>
+      </article>
+
+      <article>
+        <h2>+24 Especies</h2>
+        <p>Especies destacadas</p>
+      </article>
+
+      <article>
+        <h2>18 Conservación</h2>
+        <p>Amenazas documentadas</p>
+      </article>
     </section>
 
-    <!-- ========== CATEGORÍAS ========== -->
-    <section class="categories-section" aria-labelledby="cats-title">
-      <div class="container">
-        <h2 id="cats-title" class="section-title">Explorá la vida acuática</h2>
-        <p class="section-sub">
-          Navegá por seis grandes categorías de animales acuáticos, cada una
-          revelando un rincón único de la biodiversidad submarina.
-        </p>
+    <section>
+      <h2>Explorá la vida acuática</h2>
+      <p>
+        Navegá por seis grandes categorías de animales acuáticos, cada una
+        revelando un rincón único de la biodiversidad submarina.
+      </p>
 
-        <div class="categories-grid">
+      <article>
+        <a href="mamiferos.html">
+          <img src="imagenes/mamiferos-marinos.jpg" alt="Mamíferos marinos">
+          <h3>Mamíferos marinos</h3>
+          <p>Los gobernantes de sangre caliente de las profundidades</p>
+        </a>
+      </article>
 
-          <!-- Mamíferos Marinos -->
-          <article class="cat-card">
-            <a href="mamiferos.html" class="cat-link" aria-label="Ver Mamíferos Marinos">
-              <img
-                src="img/mamiferos.jpg"
-                alt="Ballena azul nadando en el océano profundo"
-                class="cat-img"
-              />
-              <div class="cat-info">
-                <h3>Mamíferos Marinos</h3>
-                <p>Los gobernantes de sangre caliente de las profundidades</p>
-                <span class="ver-mas">Ver más ›</span>
-              </div>
-            </a>
-          </article>
+      <article>
+        <img src="imagenes/peces.jpg" alt="Peces">
+        <h3>Peces</h3>
+        <p>Los vertebrados más diversos del océano</p>
+      </article>
 
-          <!-- Peces -->
-          <article class="cat-card">
-            <a href="explorar.html" class="cat-link" aria-label="Ver Peces">
-              <img
-                src="img/peces.jpg"
-                alt="Cardumen de peces nadando en el océano"
-                class="cat-img"
-              />
-              <div class="cat-info">
-                <h3>Peces</h3>
-                <p>Los vertebrados más diversos del océano</p>
-                <span class="ver-mas">Ver más ›</span>
-              </div>
-            </a>
-          </article>
+      <article>
+        <img src="imagenes/moluscos.jpg" alt="Moluscos">
+        <h3>Moluscos</h3>
+        <p>Maestros del camuflaje y la adaptación</p>
+      </article>
 
-          <!-- Moluscos -->
-          <article class="cat-card">
-            <a href="explorar.html" class="cat-link" aria-label="Ver Moluscos">
-              <img
-                src="img/moluscos.jpg"
-                alt="Pulpo en el fondo marino"
-                class="cat-img"
-              />
-              <div class="cat-info">
-                <h3>Moluscos</h3>
-                <p>Maestros del camuflaje y la adaptación</p>
-                <span class="ver-mas">Ver más ›</span>
-              </div>
-            </a>
-          </article>
+      <article>
+        <img src="imagenes/crustaceos.jpg" alt="Crustáceos">
+        <h3>Crustáceos</h3>
+        <p>Arquitectos acorazados del fondo marino</p>
+      </article>
 
-          <!-- Crustáceos -->
-          <article class="cat-card">
-            <a href="explorar.html" class="cat-link" aria-label="Ver Crustáceos">
-              <img
-                src="img/crustaceos.jpg"
-                alt="Cangrejo colorido en el fondo marino"
-                class="cat-img"
-              />
-              <div class="cat-info">
-                <h3>Crustáceos</h3>
-                <p>Arquitectos acorazados del fondo marino</p>
-                <span class="ver-mas">Ver más ›</span>
-              </div>
-            </a>
-          </article>
+      <article>
+        <img src="imagenes/cnidarios.jpg" alt="Cnidarios">
+        <h3>Cnidarios</h3>
+        <p>Etéreos viajeros y constructores de arrecifes</p>
+      </article>
 
-          <!-- Cnidarios -->
-          <article class="cat-card">
-            <a href="explorar.html" class="cat-link" aria-label="Ver Cnidarios">
-              <img
-                src="img/cnidarios.jpg"
-                alt="Medusas flotando en el océano"
-                class="cat-img"
-              />
-              <div class="cat-info">
-                <h3>Cnidarios</h3>
-                <p>Etéreos viajeros y constructores de arrecifes</p>
-                <span class="ver-mas">Ver más ›</span>
-              </div>
-            </a>
-          </article>
-
-          <!-- Equinodermos -->
-          <article class="cat-card">
-            <a href="explorar.html" class="cat-link" aria-label="Ver Equinodermos">
-              <img
-                src="img/equinodermos.jpg"
-                alt="Estrella de mar naranja en el fondo marino"
-                class="cat-img"
-              />
-              <div class="cat-info">
-                <h3>Equinodermos</h3>
-                <p>Maravillas espinosas del fondo oceánico</p>
-                <span class="ver-mas">Ver más ›</span>
-              </div>
-            </a>
-          </article>
-
-        </div><!-- /categories-grid -->
-      </div>
+      <article>
+        <img src="imagenes/equinodermos.jpg" alt="Equinodermos">
+        <h3>Equinodermos</h3>
+        <p>Maravillas espinosas del fondo oceánico</p>
+      </article>
     </section>
 
-    <!-- ========== CTA CONSERVACIÓN ========== -->
-    <section class="conservation-cta" aria-labelledby="cta-title">
-      <div class="container cta-inner">
-        <h2 id="cta-title" class="cta-title">Protejamos nuestros océanos</h2>
-        <p class="cta-sub">
-          Cada especie desempeña un rol vital en el equilibrio de los ecosistemas
-          marinos. Conocé las amenazas que enfrentan y cómo podemos ayudar a
-          preservar la biodiversidad acuática para las futuras generaciones.
-        </p>
-        <a href="sobre-nosotros.html" class="btn-outline">Descubrí todas las amenazas</a>
-      </div>
+    <section>
+      <h2>Protejamos nuestros océanos</h2>
+      <p>
+        Cada especie desempeña un rol vital en el equilibrio de los ecosistemas
+        marinos. Conocé las amenazas que enfrentan y cómo podemos ayudar a
+        preservar la biodiversidad acuática para las futuras generaciones.
+      </p>
+      <a href="amenazas.html">Descubrí todas las amenazas</a>
     </section>
-
   </main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
+  <footer>
+    <section>
+      <h2>AquaPedia</h2>
+      <p>
+        Una enciclopedia digital dedicada a explorar y preservar la magnífica
+        diversidad de nuestros océanos y cursos de agua.
+      </p>
+    </section>
 
-      <div class="footer-brand">
-        <p class="footer-logo">AquaPedia</p>
-        <p>Una enciclopedia digital dedicada a explorar y preservar la magnífica biodiversidad de nuestros océanos y cursos de agua.</p>
-      </div>
+    <section>
+      <h3>Explorar</h3>
+      <p>Mamíferos Marinos</p>
+      <p>Peces</p>
+      <p>Moluscos</p>
+      <p>Crustáceos</p>
+      <p>Cnidarios</p>
+      <p>Equinodermos</p>
+    </section>
 
-      <nav class="footer-nav" aria-label="Explorar categorías">
-        <h4>Explorar</h4>
-        <ul>
-          <li><a href="mamiferos.html">Mamíferos Marinos</a></li>
-          <li><a href="explorar.html">Peces</a></li>
-          <li><a href="explorar.html">Moluscos</a></li>
-          <li><a href="explorar.html">Crustáceos</a></li>
-          <li><a href="explorar.html">Cnidarios</a></li>
-          <li><a href="explorar.html">Equinodermos</a></li>
-        </ul>
-      </nav>
+    <section>
+      <h3>Acerca de</h3>
+      <p>
+        AquaPedia es un proyecto educativo diseñado para inspirar curiosidad y
+        conciencia sobre la vida acuática y la importancia de su conservación
+        en los océanos.
+      </p>
+    </section>
 
-      <aside class="footer-about">
-        <h4>Acerca de</h4>
-        <p>AquaPedia es un proyecto educativo diseñado para inspirar curiosidad y conciencia sobre la vida acuática y la importancia de la conservación de los océanos.</p>
-      </aside>
-
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 AquaPedia. Todos los derechos reservados. Protegiendo nuestros océanos, una especie a la vez.</p>
-    </div>
+    <p>© 2026 AquaPedia. Todos los derechos reservados.</p>
+    <p>Hecho con amor por quienes aman la vida bajo el agua.</p>
   </footer>
 
-  <script src="main.js"></script>
 </body>
 </html>
