@@ -1,0 +1,19 @@
+/* 1. Sacar puntitos del nav */
+ul {
+  list-style: none;
+}
+
+/* 2. Redondear todas las imágenes */
+img {
+  border-radius: 10px;
+}
+
+/* 3. Mismo fondo a 3 secciones */
+section {
+  background-color: #e0f7fa;
+}
+
+/* 4. Borde al div del logo */
+#logo {
+  border: 2px solid black;
+}
