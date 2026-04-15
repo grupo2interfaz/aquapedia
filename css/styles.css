@@ -10,10 +10,10 @@ img {
 
 /* 3. Mismo fondo a 3 secciones */
 section {
-  background-color: #e0f7fa;
+  background-color: #001994;
 }
 
 /* 4. Borde al div del logo */
 #logo {
-  border: 2px solid black;
+  border: 2px solid rgb(64, 255, 0);
 }
