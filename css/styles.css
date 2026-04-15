@@ -1,13 +1,22 @@
 /* -------------------- */
-/* GENERAL */
+/* TIPOGRAFÍAS */
 /* -------------------- */
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Fustat', sans-serif;
   background-color: #f5fbfd;
   color: #0f2a33;
 }
+
+h1, h2, h3 {
+  font-family: 'Gloock', serif;
+  margin-top: 0;
+}
+
+/* -------------------- */
+/* GENERAL */
+/* -------------------- */
 
 img {
   max-width: 100%;
@@ -25,7 +34,6 @@ footer section,
 footer nav {
   padding: 24px;
 }
-
 
 /* -------------------- */
 /* HEADER */
@@ -47,20 +55,18 @@ header p {
   font-size: 14px;
 }
 
-
 /* -------------------- */
-/* PRIMERA SECCIÓN */
 /* HERO */
 /* -------------------- */
 
 main section:first-of-type {
   background-color: #eaf8fc;
   text-align: center;
+  padding: 40px 24px;
 }
 
 main section:first-of-type h1 {
-  margin-top: 0;
-  font-size: 42px;
+  font-size: 44px;
 }
 
 main section:first-of-type p {
@@ -76,7 +82,7 @@ form {
 label {
   display: block;
   margin-bottom: 8px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 input[type="search"] {
@@ -85,12 +91,10 @@ input[type="search"] {
   padding: 12px;
   border: 1px solid #b9dbe6;
   border-radius: 10px;
-  font-size: 14px;
+  font-family: 'Fustat', sans-serif;
 }
 
-
 /* -------------------- */
-/* SEGUNDA SECCIÓN */
 /* DATOS RÁPIDOS */
 /* -------------------- */
 
@@ -117,18 +121,16 @@ main section:nth-of-type(2) article img {
 }
 
 main section:nth-of-type(2) h2 {
-  margin: 12px 0 8px 0;
   font-size: 24px;
+  margin: 12px 0 8px 0;
 }
 
 main section:nth-of-type(2) p {
-  margin: 0;
   font-size: 14px;
+  margin: 0;
 }
 
-
 /* -------------------- */
-/* TERCERA SECCIÓN */
 /* CATEGORÍAS */
 /* -------------------- */
 
@@ -138,7 +140,6 @@ main section:nth-of-type(3) {
 }
 
 main section:nth-of-type(3) > h2 {
-  margin-top: 0;
   font-size: 32px;
 }
 
@@ -165,8 +166,8 @@ main section:nth-of-type(3) article img {
 }
 
 main section:nth-of-type(3) article h3 {
-  margin: 14px 0 8px 0;
   font-size: 22px;
+  margin: 14px 0 8px 0;
 }
 
 main section:nth-of-type(3) article p {
@@ -174,10 +175,8 @@ main section:nth-of-type(3) article p {
   line-height: 1.5;
 }
 
-
 /* -------------------- */
-/* CUARTA SECCIÓN */
-/* CTA AMENAZAS */
+/* CTA FINAL */
 /* -------------------- */
 
 main section:nth-of-type(4) {
@@ -186,7 +185,6 @@ main section:nth-of-type(4) {
 }
 
 main section:nth-of-type(4) h2 {
-  margin-top: 0;
   font-size: 30px;
 }
 
@@ -202,8 +200,8 @@ main section:nth-of-type(4) a {
   color: white;
   padding: 12px 20px;
   border-radius: 10px;
+  font-family: 'Fustat', sans-serif;
 }
-
 
 /* -------------------- */
 /* FOOTER */
@@ -213,11 +211,6 @@ footer {
   background-color: #0f2a33;
   color: white;
   padding: 30px 24px;
-}
-
-footer h2,
-footer h3 {
-  margin-top: 0;
 }
 
 footer p {
@@ -236,15 +229,5 @@ footer nav li {
 
 footer nav a {
   color: white;
-}
-
-
-/* -------------------- */
-/* MISMO FONDO A 3 SECCIONES */
-/* -------------------- */
-
-main section:first-of-type,
-main section:nth-of-type(3),
-main section:nth-of-type(4) {
-  background-color: #eaf8fc;
+  font-family: 'Fustat', sans-serif;
 }
