@@ -1,0 +1,324 @@
+/* -------------------- */
+/* TIPOGRAFÍAS Y BASE */
+/* -------------------- */
+
+body {
+  margin: 0;
+  font-family: 'Fustat', sans-serif;
+  background-color: #f5fbfd;
+  color: #0f2a33;
+}
+
+h1, h2, h3 {
+  font-family: 'Gloock', serif;
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main section,
+footer section,
+footer nav {
+  padding: 24px;
+}
+
+/* -------------------- */
+/* HEADER */
+/* -------------------- */
+
+header {
+  background-color: #d9f3fb;
+  padding: 20px 24px;
+  border-bottom: 1px solid #b9dbe6;
+}
+
+header a img {
+  width: 120px;
+  border-radius: 0;
+}
+
+/* -------------------- */
+/* HERO */
+/* -------------------- */
+
+main section:first-of-type {
+  background-color: #eaf8fc;
+  text-align: center;
+  padding: 40px 24px;
+}
+
+main section:first-of-type img {
+  width: 180px;
+  border-radius: 0;
+  margin-bottom: 16px;
+}
+
+main section:first-of-type h1 {
+  margin: 0 0 10px 0;
+  font-size: 44px;
+}
+
+main section:first-of-type p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* -------------------- */
+/* INTRODUCCIÓN */
+/* -------------------- */
+
+main section:nth-of-type(2) {
+  background-color: #ffffff;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+main section:nth-of-type(2) h2 {
+  font-size: 32px;
+}
+
+main section:nth-of-type(2) p {
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* -------------------- */
+/* CLASIFICACIÓN */
+/* -------------------- */
+
+main section:nth-of-type(3) {
+  background-color: #eaf8fc;
+  padding: 32px 24px;
+}
+
+main section:nth-of-type(3) h2 {
+  text-align: center;
+  font-size: 32px;
+}
+
+main section:nth-of-type(3) > p {
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  line-height: 1.7;
+}
+
+main section:nth-of-type(3) ul {
+  max-width: 650px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+main section:nth-of-type(3) li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* -------------------- */
+/* HÁBITOS ALIMENTICIOS */
+/* -------------------- */
+
+main section:nth-of-type(4) {
+  background-color: #ffffff;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+main section:nth-of-type(4) h3 {
+  font-size: 30px;
+}
+
+main section:nth-of-type(4) p {
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* -------------------- */
+/* COMPORTAMIENTOS */
+/* -------------------- */
+
+main section:nth-of-type(5) {
+  background-color: #eaf8fc;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+main section:nth-of-type(5) h3 {
+  font-size: 30px;
+}
+
+main section:nth-of-type(5) p {
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* -------------------- */
+/* ESPECIES DESTACADAS */
+/* -------------------- */
+
+main section:nth-of-type(6) {
+  background-color: #ffffff;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+main section:nth-of-type(6) h2 {
+  font-size: 34px;
+  margin-bottom: 24px;
+}
+
+main section:nth-of-type(6) article {
+  display: inline-block;
+  width: 230px;
+  margin: 12px;
+  padding: 16px;
+  vertical-align: top;
+  background-color: #eaf8fc;
+  border-radius: 16px;
+}
+
+main section:nth-of-type(6) article img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+main section:nth-of-type(6) article h3 {
+  margin: 14px 0 0 0;
+  font-size: 20px;
+}
+
+/* -------------------- */
+/* HÁBITATS Y DISTRIBUCIÓN */
+/* -------------------- */
+
+main section:nth-of-type(7) {
+  background-color: #eaf8fc;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+main section:nth-of-type(7) h2 {
+  font-size: 34px;
+}
+
+main section:nth-of-type(7) > p {
+  max-width: 850px;
+  margin: 0 auto 24px auto;
+  line-height: 1.7;
+}
+
+main section:nth-of-type(7) article {
+  display: inline-block;
+  width: 250px;
+  margin: 12px;
+  padding: 18px;
+  vertical-align: top;
+  background-color: white;
+  border-radius: 16px;
+}
+
+main section:nth-of-type(7) article h3 {
+  font-size: 21px;
+}
+
+main section:nth-of-type(7) article p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* -------------------- */
+/* CONSERVACIÓN Y AMENAZAS */
+/* -------------------- */
+
+main section:nth-of-type(8) {
+  background-color: #ffffff;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+main section:nth-of-type(8) h2 {
+  font-size: 34px;
+  margin-bottom: 24px;
+}
+
+main section:nth-of-type(8) article {
+  display: inline-block;
+  width: 250px;
+  margin: 12px;
+  padding: 18px;
+  vertical-align: top;
+  background-color: #eaf8fc;
+  border-radius: 16px;
+}
+
+main section:nth-of-type(8) article h3 {
+  font-size: 21px;
+}
+
+main section:nth-of-type(8) article p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* -------------------- */
+/* NAVEGACIÓN FINAL */
+/* -------------------- */
+
+main section:nth-of-type(9) {
+  background-color: #d9f3fb;
+  padding: 30px 24px;
+  text-align: center;
+}
+
+main section:nth-of-type(9) a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 18px;
+  background-color: #0f2a33;
+  color: white;
+  border-radius: 10px;
+  font-family: 'Fustat', sans-serif;
+}
+
+/* -------------------- */
+/* FOOTER */
+/* -------------------- */
+
+footer {
+  background-color: #0f2a33;
+  color: white;
+  padding: 30px 24px;
+}
+
+footer p {
+  line-height: 1.5;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer nav li {
+  margin-bottom: 8px;
+}
+
+footer nav a {
+  color: white;
+  font-family: 'Fustat', sans-serif;
+}
