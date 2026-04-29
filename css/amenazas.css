@@ -1,0 +1,238 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TIPOGRAFÍAS */
+body {
+  font-family: 'Fustat', sans-serif;
+  background-color: #f4f4f4;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: 'Gloock', serif;
+}
+
+/* CONTENEDOR GENERAL */
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.hero h1 {
+  color: #c26a2e;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #666;
+  font-size: 14px;
+  max-width: 320px;
+  margin: auto;
+}
+
+/* BLOQUES DE AMENAZAS */
+.wave-section {
+  padding: 60px 20px;
+  border-radius: 50px 50px 0 0;
+  color: white;
+}
+
+.wave-light {
+  background: #6faec4;
+}
+
+.wave-medium {
+  background: #2f8fa3;
+}
+
+.wave-dark {
+  background: #0f2b3a;
+}
+
+.wave-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.wave-section p {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* OCEANOS EN CRISIS */
+.crisis {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.crisis-card {
+  background: url('../imagenes/coral.jpg') center/cover;
+  border-radius: 20px;
+  padding: 60px 20px;
+  color: white;
+  position: relative;
+}
+
+.crisis-card h2 {
+  font-size: 26px;
+}
+
+.crisis-card p {
+  font-size: 14px;
+}
+
+/* BOTÓN DESPLEGABLE */
+.toggle {
+  margin-top: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* LISTA OCULTA */
+.crisis-list {
+  display: none;
+  margin-top: 20px;
+}
+
+.crisis-list.active {
+  display: block;
+}
+
+.crisis-item {
+  background: #eaeaea;
+  padding: 12px;
+  border-radius: 20px;
+  margin: 10px 0;
+  font-size: 13px;
+  color: #1a1a1a;
+}
+
+/* DATOS */
+.datos {
+  padding: 40px 20px;
+  text-align: center;
+  background: #0f2b3a;
+  color: white;
+}
+
+.datos h2 {
+  margin-bottom: 10px;
+}
+
+.datos p {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.dato-card {
+  background: #eaeaea;
+  color: black;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 300px;
+  font-size: 13px;
+}
+
+/* VIDA EN RIESGO */
+.riesgo {
+  padding: 40px 20px;
+  background: #ffffff;
+}
+
+.riesgo h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.animales {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.animal {
+  text-align: center;
+}
+
+.animal img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.animal h3 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.animal p {
+  font-size: 11px;
+  color: #666;
+}
+
+/* FORMULARIO */
+.form-section {
+  padding: 50px 20px;
+  background: linear-gradient(#0f2b3a, #1f4c63);
+  color: white;
+  text-align: center;
+}
+
+.form-section h2 {
+  margin-bottom: 10px;
+}
+
+.form-section p {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  font-size: 13px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  background: #3bb3c7;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
