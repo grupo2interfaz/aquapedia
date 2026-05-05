@@ -1,1291 +1,293 @@
-/* =============================================
-   AQUAPEDIA — styles.css
-   Fuentes: Gloock (títulos), Fustat (texto)
-   Responsive: mobile-first → desktop
-   ============================================= */
-
-/* ---------- RESET & BASE ---------- */
-*, *::before, *::after {
-  box-sizing: border-box;
+/* =========================
+RESET
+========================= */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
-:root {
-  --azul-oscuro:  #0d1f2d;
-  --azul-medio:   #1a3a4a;
-  --azul-claro:   #2a6475;
-  --acento:       #4db8c8;
-  --naranja:      #e87c3e;
-  --blanco:       #ffffff;
-  --gris-claro:   #f0f4f6;
-  --gris-medio:   #e2eaee;
-  --gris-texto:   #6b7c8a;
-  --texto-oscuro: #1a2b35;
-  --font-titulo:  'Gloock', serif;
-  --font-texto:   'Fustat', sans-serif;
-  --radio:        16px;
-  --radio-lg:     20px;
-  --sombra:       0 4px 24px rgba(0,0,0,0.08);
-  --max-w:        1200px;
-}
-
-html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--font-texto);
-  font-size: 15px;
-  color: var(--texto-oscuro);
-  background: var(--blanco);
-  line-height: 1.65;
+  font-family: "Fustat", sans-serif;
+  background: #eaf7fb;
+  color: #08263d;
 }
 
-img { display: block; max-width: 100%; }
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
-
-/* =============================================
-   HEADER
-   ============================================= */
-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 24px;
-  background: rgba(13,31,45,0.88);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-header a img {
-  height: 26px;
-  width: auto;
-}
-
-/* Mobile: solo logo + "Buscar" */
-header p {
-  color: var(--blanco);
-  font-size: 14px;
-  cursor: pointer;
-  opacity: 0.85;
-}
-
-/* Desktop nav (oculto en mobile) */
-header nav {
-  display: none;
-}
-
-/* =============================================
-   HERO / INDEX
-   ============================================= */
-.index {
-  position: relative;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 110px 24px 80px;
-  overflow: hidden;
-  background: var(--azul-oscuro);
-}
-
-.index > img {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: 0.55;
-}
-
-.index::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(13,31,45,0.3) 0%, rgba(13,31,45,0.6) 100%);
-}
-
-.index > * { position: relative; z-index: 1; }
-
-.index h1 {
-  font-family: var(--font-titulo);
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
-  color: var(--blanco);
-  margin-bottom: 20px;
-  line-height: 1.1;
-  max-width: 700px;
-}
-
-.index > p {
-  color: rgba(255,255,255,0.88);
-  font-size: clamp(14px, 1.5vw, 17px);
-  max-width: 560px;
-  margin-bottom: 40px;
-  font-weight: 300;
-  line-height: 1.7;
-}
-
-.index form {
-  width: 100%;
-  max-width: 480px;
-  margin-bottom: 28px;
-}
-
-.index form label { display: none; }
-
-.index form input[type="search"] {
-  width: 100%;
-  padding: 14px 22px 14px 44px;
-  border-radius: 50px;
-  border: none;
-  background: rgba(255,255,255,0.95);
-  color: var(--texto-oscuro);
-  font-family: var(--font-texto);
-  font-size: 14px;
-  outline: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236b7c8a' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.242 1.656a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 16px center;
-}
-
-.index form input[type="search"]::placeholder {
-  color: var(--gris-texto);
-}
-
-.index .cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 32px;
-  border-radius: 50px;
-  background: var(--acento);
-  color: var(--blanco);
-  font-size: 15px;
-  font-weight: 600;
-  transition: background 0.2s, transform 0.15s;
-}
-
-.index .cta:hover {
-  background: #3aa8b8;
-  transform: translateY(-1px);
-}
-
-/* =============================================
-   STATS
-   ============================================= */
-.stats {
-  background: var(--blanco);
-  padding: 32px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.stats article {
-  background: var(--gris-claro);
-  border-radius: var(--radio-lg);
-  padding: 20px 24px;
-  box-shadow: var(--sombra);
-  text-align: center;
-}
-
-.stats article a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: var(--texto-oscuro);
-}
-
-.stats article img {
-  width: 38px; height: 38px;
-  object-fit: contain;
-  margin: 0 auto 4px;
-}
-
-.stats article h2 {
-  font-family: var(--font-titulo);
-  font-size: 2rem;
-  color: var(--azul-oscuro);
-  line-height: 1;
-}
-
-.stats article h3 {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--texto-oscuro);
-}
-
-.stats article p {
-  font-size: 12px;
-  color: var(--gris-texto);
-  font-weight: 300;
-}
-
-/* =============================================
-   CATEGORÍAS
-   ============================================= */
-#categorias {
-  padding: 64px 24px 48px;
-  background: var(--blanco);
-}
-
-#categorias > h2 {
-  font-family: var(--font-titulo);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  color: var(--texto-oscuro);
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-#categorias > p {
-  font-size: 15px;
-  color: var(--gris-texto);
-  text-align: center;
-  max-width: 480px;
-  margin: 0 auto 40px;
-  font-weight: 300;
-  line-height: 1.7;
-}
-
-/* Mobile: columna única */
-.categorias-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.categorias-grid article {
-  position: relative;
-  border-radius: var(--radio-lg);
-  overflow: hidden;
-  min-height: 170px;
-  cursor: pointer;
-}
-
-.categorias-grid article img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.categorias-grid article:hover img {
-  transform: scale(1.04);
-}
-
-.categorias-grid article::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.62) 40%, rgba(0,0,0,0.18));
-  pointer-events: none;
-}
-
-.categorias-grid article a {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-}
-
-.cat-info {
-  position: absolute;
-  bottom: 16px;
-  left: 18px;
-  z-index: 2;
-}
-
-.cat-info h3 {
-  font-family: var(--font-titulo);
-  font-size: 1.2rem;
-  color: var(--blanco);
-  margin-bottom: 4px;
-}
-
-.cat-info p {
-  font-size: 12px;
-  color: rgba(255,255,255,0.8);
-  font-weight: 300;
-  max-width: 65%;
-}
-
-.cat-arrow {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  z-index: 2;
-  font-size: 13px;
-  color: var(--blanco);
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  opacity: 0.9;
-}
-
-/* =============================================
-   CONSERVACIÓN (index)
-   ============================================= */
-#conservacion {
-  background: linear-gradient(180deg, #0d2535 0%, #1a4a5a 60%, #2a7a8a 100%);
-  padding: 80px 24px;
-  text-align: center;
-}
-
-#conservacion h2 {
-  font-family: var(--font-titulo);
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  color: var(--blanco);
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-#conservacion p {
-  font-size: 15px;
-  color: rgba(255,255,255,0.78);
-  max-width: 520px;
-  margin: 0 auto 36px;
-  font-weight: 300;
-  line-height: 1.7;
-}
-
-#conservacion a {
-  display: inline-block;
-  padding: 13px 28px;
-  border-radius: 50px;
-  border: 1.5px solid rgba(255,255,255,0.4);
-  color: var(--blanco);
-  font-size: 14px;
-  font-weight: 500;
-  transition: background 0.2s;
-}
-
-#conservacion a:hover {
-  background: rgba(255,255,255,0.12);
-}
-
-/* =============================================
-   FOOTER
-   ============================================= */
-footer {
-  background: var(--azul-oscuro);
-  border-top: 1px solid rgba(255,255,255,0.07);
-  padding: 48px 24px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-
-footer .footer-brand h2 {
-  font-family: var(--font-titulo);
-  font-size: 1.3rem;
-  color: var(--blanco);
-  margin-bottom: 10px;
-}
-
-footer .footer-brand p {
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.55);
-  max-width: 240px;
-}
-
-footer nav h3,
-footer .footer-about h3 {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--blanco);
-  margin-bottom: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-footer nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-footer nav ul li a {
-  font-size: 13px;
-  color: rgba(255,255,255,0.55);
-  transition: color 0.2s;
-}
-
-footer nav ul li a:hover { color: var(--acento); }
-
-footer .footer-about p {
-  font-size: 13px;
-  color: rgba(255,255,255,0.55);
-  font-weight: 300;
-  line-height: 1.7;
-}
-
-footer .footer-copy {
-  border-top: 1px solid rgba(255,255,255,0.07);
-  padding-top: 20px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.3);
-  text-align: center;
-}
-
-/* Aplico clases al HTML existente de footer */
-footer > section:first-child { /* brand */ }
-footer > section:last-child  { /* about */ }
-
-/* =============================================
-   MAMIFEROS.HTML — Hero
-   ============================================= */
-.mamiferos-hero {
-  position: relative;
-  min-height: 420px;
-  background: var(--azul-oscuro);
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  padding-top: 60px;
-}
-
-.mamiferos-hero img {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: 0.6;
-}
-
-.mamiferos-hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(13,31,45,0.15) 20%, rgba(13,31,45,0.88) 100%);
-}
-
-.hero-texto {
-  position: relative;
-  z-index: 2;
-  padding: 0 24px 48px;
-}
-
-.hero-texto .back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 16px;
-  transition: opacity 0.2s;
-}
-
-.hero-texto .back-link:hover { opacity: 0.6; }
-
-.hero-texto h1 {
-  font-family: var(--font-titulo);
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  color: var(--blanco);
-  margin-bottom: 10px;
-  line-height: 1.1;
-}
-
-.hero-texto > p {
-  font-size: 15px;
-  color: rgba(255,255,255,0.75);
-  font-weight: 300;
-}
-
-/* =============================================
-   MAMIFEROS — Contenido interno
-   ============================================= */
-main > section {
-  padding: 40px 24px;
-}
-
-/* Encabezados con icono/acento */
-main > section > h2 {
-  font-family: var(--font-titulo);
-  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-  color: var(--texto-oscuro);
-  margin-bottom: 14px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-main > section > h2 .icon {
-  font-size: 1.3rem;
-}
-
-main > section > p {
-  font-size: 14px;
-  color: #3d5060;
-  line-height: 1.75;
-  font-weight: 300;
-  max-width: 680px;
-}
-
-/* Lista de características (pills) */
-.caracteristicas-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.caracteristicas-grid li {
-  background: var(--gris-claro);
-  border-radius: 50px;
-  padding: 13px 20px;
-  font-size: 13px;
-  color: var(--texto-oscuro);
+h1, h2, h3 {
+  font-family: "Gloock", serif;
   font-weight: 400;
 }
 
-/* Secciones oscuras (hábitos / comportamientos) */
-.seccion-dark {
-  background: var(--azul-medio) !important;
-  border-radius: var(--radio-lg);
-  margin: 0 0 16px;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.seccion-dark h3 {
-  font-family: var(--font-titulo);
-  font-size: 1.2rem;
-  color: var(--blanco);
-  margin-bottom: 10px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.seccion-dark p {
-  font-size: 14px;
-  color: rgba(255,255,255,0.75);
-  line-height: 1.7;
-  font-weight: 300;
-}
-
-/* =============================================
-   ESPECIES DESTACADAS — Cards con imagen
-   ============================================= */
-.especies-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 16px;
-}
-
-.especie-card {
-  border-radius: var(--radio-lg);
-  overflow: hidden;
-  background: var(--gris-claro);
-  position: relative;
-}
-
-.especie-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.especie-card .especie-info {
-  padding: 16px 18px;
-}
-
-.especie-card h3 {
-  font-family: var(--font-titulo);
-  font-size: 1.2rem;
-  color: var(--texto-oscuro);
-  margin-bottom: 4px;
-}
-
-/* =============================================
-   HÁBITATS — Cards blancas
-   ============================================= */
-.habitats-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.habitat-card {
-  background: var(--blanco);
-  border-radius: var(--radio-lg);
-  padding: 20px 22px;
-  box-shadow: var(--sombra);
-}
-
-.habitat-card h3 {
-  font-family: var(--font-titulo);
-  font-size: 1rem;
-  color: var(--texto-oscuro);
-  margin-bottom: 6px;
-}
-
-.habitat-card p {
-  font-size: 13px;
-  color: var(--gris-texto);
-  font-weight: 300;
-}
-
-/* =============================================
-   CONSERVACIÓN / AMENAZAS — Pills naranja
-   ============================================= */
-.amenazas-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.amenaza-card {
-  border: 2px solid var(--naranja);
-  border-radius: 50px;
-  padding: 16px 22px;
-  transition: background 0.2s;
-}
-
-.amenaza-card:hover {
-  background: rgba(232,124,62,0.06);
-}
-
-.amenaza-card h3 {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--naranja);
-  margin-bottom: 4px;
-}
-
-.amenaza-card p {
-  font-size: 13px;
-  color: var(--texto-oscuro);
-  font-weight: 300;
-}
-
-/* =============================================
-   NAVEGACIÓN ANTERIOR / SIGUIENTE
-   ============================================= */
-.nav-paginacion {
+/* =========================
+HEADER
+========================= */
+header {
+  background: #08263d;
+  color: white;
+  padding: 16px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
-  border-top: 1px solid var(--gris-medio);
-  background: var(--blanco);
 }
 
-.nav-paginacion a {
-  font-size: 14px;
-  color: var(--acento);
-  font-weight: 500;
+header img {
+  width: 100px;
+}
+
+/* =========================
+HERO HOME
+========================= */
+.home-hero {
+  background:
+    linear-gradient(rgba(8,38,61,0.5), rgba(8,38,61,0.8)),
+    url("../imagenes/fondomar.jpg") center / cover no-repeat;
+
+  height: 650px;
+
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 4px;
-  transition: opacity 0.2s;
-}
 
-.nav-paginacion a:hover { opacity: 0.7; }
-
-/* =============================================
-   AMENAZAS.HTML
-   ============================================= */
-
-/* Hero amenazas */
-.hero {
-  padding: 100px 24px 48px;
-  background: var(--blanco);
-  max-width: var(--max-w);
-  margin: 0 auto;
-}
-
-.hero .hero-icon {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  color: var(--naranja);
-}
-
-.hero h1 {
-  font-family: var(--font-titulo);
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  color: var(--naranja);
-  margin-bottom: 16px;
-  line-height: 1.15;
-}
-
-.hero p {
-  font-size: 15px;
-  color: var(--gris-texto);
-  font-weight: 300;
-  line-height: 1.7;
-  max-width: 560px;
-}
-
-/* Wave sections */
-.wave-section {
-  padding: 52px 24px;
-}
-
-.wave-light  { background: var(--blanco); }
-.wave-medium { background: var(--gris-claro); }
-.wave-dark   { background: var(--blanco); }
-
-.wave-section h2 {
-  font-family: var(--font-titulo);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  color: var(--texto-oscuro);
-  margin-bottom: 14px;
-}
-
-.wave-section p {
-  font-size: 14px;
-  color: var(--gris-texto);
-  font-weight: 300;
-  line-height: 1.75;
-  max-width: 600px;
-}
-
-/* Alineaciones alternadas desktop */
-.wave-medium { text-align: right; }
-.wave-medium p { margin-left: auto; }
-
-/* Crisis card */
-.crisis {
-  padding: 40px 20px;
-  background: var(--azul-oscuro);
-}
-
-.crisis-card {
-  border-radius: var(--radio-lg);
-  padding: 48px 32px;
   text-align: center;
-  background-color: var(--azul-medio);
-  background-image: url('../imagenes/fondomar.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-  max-width: 860px;
-  margin: 0 auto;
+  color: white;
+  padding: 0 20px;
 }
 
-.crisis-card::before {
-  content: '';
+.home-hero h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.home-hero p {
+  max-width: 700px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.home-hero input {
+  width: 600px;
+  max-width: 90%;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: none;
+}
+
+.cta {
+  margin-top: 20px;
+  background: #2e96ad;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 25px;
+  display: inline-block;
+}
+
+/* =========================
+PASTILLAS
+========================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+
+  margin: -60px auto 60px;
+  padding: 0 40px;
+
+  position: relative;
+  z-index: 10;
+}
+
+.stats article {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+.stats img {
+  width: 35px;
+  margin: 0 auto 10px;
+}
+
+.stats h2 {
+  font-size: 28px;
+}
+
+.stats h3 {
+  font-family: "Fustat";
+  font-weight: 600;
+}
+
+.stats p {
+  font-size: 13px;
+  color: #777;
+}
+
+/* =========================
+CATEGORÍAS
+========================= */
+#categorias {
+  background: white;
+  padding: 80px 60px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+#categorias > h2,
+#categorias > p {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+#categorias article {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+#categorias img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+#categorias article::after {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(13,31,45,0.78);
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
 }
 
-.crisis-card > * { position: relative; z-index: 1; }
-
-.crisis-card h2 {
-  font-family: var(--font-titulo);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  color: var(--blanco);
-  margin-bottom: 8px;
+#categorias h3,
+#categorias p {
+  position: absolute;
+  left: 20px;
+  color: white;
+  z-index: 2;
 }
 
-.crisis-card > p {
-  font-size: 15px;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 24px;
+#categorias h3 {
+  bottom: 50px;
 }
 
-.toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255,255,255,0.35);
-  color: var(--blanco);
-  font-size: 1.3rem;
-  cursor: pointer;
-  margin-bottom: 24px;
-  transition: background 0.2s;
-  user-select: none;
-}
-
-.toggle:hover { background: rgba(255,255,255,0.1); }
-
-.crisis-list {
-  display: none;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.crisis-list.active { display: flex; }
-
-.crisis-item {
-  background: rgba(255,255,255,0.10);
-  border-radius: 50px;
-  padding: 16px 24px;
+#categorias p {
+  bottom: 25px;
   font-size: 14px;
-  color: rgba(255,255,255,0.88);
-  text-align: left;
 }
 
-/* Datos */
-.datos {
-  padding: 64px 24px;
-  background: var(--blanco);
-}
-
-.datos h2 {
-  font-family: var(--font-titulo);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  color: var(--texto-oscuro);
-  margin-bottom: 8px;
+/* =========================
+CONSERVACIÓN
+========================= */
+#conservacion {
+  background: linear-gradient(#08263d, #2e96ad);
+  color: white;
   text-align: center;
+  padding: 100px 20px;
 }
 
-.datos > p {
-  font-size: 14px;
-  color: var(--gris-texto);
-  text-align: center;
-  margin-bottom: 36px;
-  font-weight: 300;
+#conservacion h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
-.datos-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+#conservacion p {
+  max-width: 600px;
+  margin: auto;
 }
 
-.dato-card {
-  background: var(--gris-claro);
-  border-radius: var(--radio-lg);
-  padding: 24px 22px;
-  font-size: 15px;
-  color: var(--texto-oscuro);
-  font-weight: 500;
-  text-align: center;
-  line-height: 1.5;
-}
-
-/* Vida en riesgo */
-.riesgo {
-  padding: 64px 24px;
-  background: var(--blanco);
-}
-
-.riesgo h2 {
-  font-family: var(--font-titulo);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  color: var(--texto-oscuro);
-  margin-bottom: 6px;
-}
-
-.riesgo > p {
-  font-size: 14px;
-  color: var(--gris-texto);
-  margin-bottom: 32px;
-  font-weight: 300;
-}
-
-.animales {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.animal {
-  border-radius: var(--radio-lg);
-  overflow: hidden;
-  background: var(--azul-oscuro);
+/* =========================
+MAMÍFEROS HERO
+========================= */
+.mamiferos-hero {
   position: relative;
-  min-height: 160px;
 }
 
-.animal img {
+.mamiferos-hero img {
   width: 100%;
-  height: 160px;
+  height: 500px;
   object-fit: cover;
-  opacity: 0.7;
 }
 
-.animal-info {
+.hero-texto {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 12px 14px;
-  background: linear-gradient(to top, rgba(13,31,45,0.9) 60%, transparent);
+  bottom: 40px;
+  left: 40px;
+  color: white;
 }
 
-.animal h3 {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--blanco);
-  margin-bottom: 4px;
+.hero-texto h1 {
+  font-size: 50px;
 }
 
-.animal ul {
-  padding-left: 0;
+/* =========================
+AMENAZAS
+========================= */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.animal ul li {
-  font-size: 11px;
-  color: rgba(255,255,255,0.75);
-  font-weight: 300;
-  list-style: disc;
-  list-style-position: inside;
+.wave-section {
+  padding: 80px;
 }
 
-/* Formulario */
-.form-section {
-  padding: 64px 24px;
-  background: var(--blanco);
-  position: relative;
-  overflow: hidden;
+.wave-light { background: #8ccde0; }
+.wave-medium { background: #2e96ad; color: white; }
+.wave-dark { background: #08263d; color: white; }
+
+/* =========================
+FOOTER
+========================= */
+footer {
+  background: #08263d;
+  color: white;
+  padding: 80px 100px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.form-section::before {
-  content: '';
-  position: absolute;
-  top: -60px; right: -60px;
-  width: 200px; height: 200px;
-  background: rgba(77,184,200,0.08);
-  border-radius: 50%;
-  pointer-events: none;
+footer ul {
+  list-style: none;
 }
 
-.form-section h2 {
-  font-family: var(--font-titulo);
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-  color: var(--texto-oscuro);
-  margin-bottom: 8px;
-}
+/* =========================
+RESPONSIVE
+========================= */
+@media (max-width: 768px) {
 
-.form-section > p {
-  font-size: 15px;
-  color: var(--naranja);
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
-.form-section > p + p {
-  font-size: 14px;
-  color: var(--gris-texto);
-  margin-bottom: 32px;
-  font-weight: 300;
-}
-
-.form-section form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 640px;
-}
-
-.form-section input,
-.form-section textarea {
-  width: 100%;
-  padding: 14px 20px;
-  border-radius: 50px;
-  border: 1.5px solid #d0dce5;
-  background: var(--blanco);
-  font-family: var(--font-texto);
-  font-size: 14px;
-  color: var(--texto-oscuro);
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.form-section textarea {
-  border-radius: var(--radio-lg);
-  resize: vertical;
-  min-height: 110px;
-}
-
-.form-section input:focus,
-.form-section textarea:focus {
-  border-color: var(--acento);
-  box-shadow: 0 0 0 3px rgba(77,184,200,0.12);
-}
-
-.form-section input::placeholder,
-.form-section textarea::placeholder { color: #a8bcc8; }
-
-.form-section button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 36px;
-  border-radius: 50px;
-  border: none;
-  background: var(--acento);
-  color: var(--blanco);
-  font-family: var(--font-texto);
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
-  align-self: flex-start;
-}
-
-.form-section button:hover {
-  background: #3aa8b8;
-  transform: translateY(-1px);
-}
-
-/* =============================================
-   RESPONSIVE — TABLET  (≥ 640px)
-   ============================================= */
-@media (min-width: 640px) {
+  .home-hero h1 {
+    font-size: 40px;
+  }
 
   .stats {
-    flex-direction: row;
-    gap: 16px;
-    padding: 32px 32px;
+    grid-template-columns: 1fr;
+    margin-top: -40px;
   }
 
-  .stats article { flex: 1; }
-
-  .caracteristicas-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .habitats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .datos-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .animales {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .form-section form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .form-section textarea,
-  .form-section button { grid-column: 1 / -1; }
-}
-
-/* =============================================
-   RESPONSIVE — DESKTOP  (≥ 960px)
-   ============================================= */
-@media (min-width: 960px) {
-
-  /* Header desktop */
-  header {
-    padding: 16px 48px;
-  }
-
-  header p { display: none; } /* ocultar "Buscar" texto */
-
-  header nav {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-
-  header nav a {
-    color: rgba(255,255,255,0.85);
-    font-size: 14px;
-    font-weight: 400;
-    transition: color 0.2s;
-  }
-
-  header nav a:hover { color: var(--blanco); }
-
-  header nav .nav-explorar {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: rgba(255,255,255,0.85);
-    font-size: 14px;
-    cursor: pointer;
-  }
-
-  /* Hero */
-  .index {
-    min-height: 100vh;
-    padding: 140px 48px 100px;
-  }
-
-  /* Stats centradas con max-width */
-  .stats {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: 40px 48px;
-  }
-
-  /* Stats: icono arriba, números grandes, texto centrado */
-  .stats article a {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Categorías: grid 3 columnas */
   #categorias {
-    padding: 80px 48px 64px;
-    max-width: calc(var(--max-w) + 96px);
-    margin: 0 auto;
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
   }
 
-  .categorias-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-
-  .categorias-grid article img {
-    height: 220px;
-  }
-
-  .categorias-grid article {
-    min-height: 220px;
-  }
-
-  /* Categoría grande (primera) */
-  .categorias-grid article:first-child {
-    grid-column: 1 / 2;
-  }
-
-  /* Conservación */
-  #conservacion {
-    padding: 100px 48px;
-  }
-
-  /* Footer 3 columnas */
   footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 56px 80px 32px;
-    max-width: 100%;
+    display: block;
+    padding: 40px 20px;
   }
 
-  footer > section,
-  footer > nav {
-    flex: 1;
-  }
-
-  footer > section:first-child {
-    flex: 1.4;
-  }
-
-  /* Mamíferos hero más alto */
-  .mamiferos-hero {
-    min-height: 520px;
-  }
-
-  .hero-texto {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 48px 64px;
-  }
-
-  /* Contenido interno mamiferos con max-width */
-  main > section {
-    max-width: var(--max-w);
-    margin-left: auto;
-    margin-right: auto;
-    padding: 48px 48px;
-  }
-
-  /* Características 2 col desktop */
-  .caracteristicas-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Secciones hábitos / comportamientos lado a lado */
-  .secciones-dark-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
-  /* Especies: grid 2 columnas */
-  .especies-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Hábitats: 3 columnas */
-  .habitats-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Amenazas hero */
-  .hero {
-    padding: 120px 80px 60px;
-    max-width: var(--max-w);
-  }
-
-  /* Wave sections más anchas */
-  .wave-section {
-    padding: 72px 80px;
-    max-width: var(--max-w);
-    margin: 0 auto;
-  }
-
-  /* Datos: 3 columnas */
-  .datos-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .datos {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: 80px 48px;
-  }
-
-  /* Animales: 4 columnas (2x2 → 4 en fila si hay espacio) */
-  .animales {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .riesgo {
-    max-width: var(--max-w);
-    margin: 0 auto;
-  }
-
-  /* Form section */
-  .form-section {
-    padding: 80px 80px;
-    max-width: var(--max-w);
-    margin: 0 auto;
-  }
-
-  /* Crisis card más ancha */
-  .crisis-card {
-    padding: 64px 80px;
-  }
-
-  .crisis-list {
-    max-width: 560px;
-    margin: 0 auto;
-  }
-}
-
-/* =============================================
-   WIDE DESKTOP  (≥ 1280px)
-   ============================================= */
-@media (min-width: 1280px) {
-
-  .categorias-grid article img {
-    height: 260px;
-  }
-
-  .categorias-grid article {
-    min-height: 260px;
-  }
-
-  .especies-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .especie-card img {
-    height: 220px;
-  }
 }
