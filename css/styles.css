@@ -1,34 +1,26 @@
 /* =========================
-   RESET
+RESET
 ========================= */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Fustat", sans-serif;
-  background-color: #eaf7fb;
+  background: #eaf7fb;
   color: #08263d;
-  line-height: 1.4;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: "Gloock", serif;
   font-weight: 400;
 }
 
 img {
-  display: block;
   max-width: 100%;
+  display: block;
 }
 
 a {
@@ -37,13 +29,12 @@ a {
 }
 
 /* =========================
-   HEADER
+HEADER
 ========================= */
-
 header {
-  background-color: #08263d;
+  background: #08263d;
   color: white;
-  padding: 16px 28px;
+  padding: 16px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,108 +44,107 @@ header img {
   width: 100px;
 }
 
-header p {
-  color: white;
-  font-size: 14px;
-}
-
 /* =========================
-   HOME HERO
+HERO HOME
 ========================= */
-
 .home-hero {
   background:
-    linear-gradient(rgba(8, 38, 61, 0.35), rgba(8, 38, 61, 0.6)),
-    url("../imagenes/fondosmar.jpg") center / cover no-repeat;
-  min-height: 620px;
-  color: white;
-  text-align: center;
-  padding: 150px 24px 120px;
+    linear-gradient(rgba(8,38,61,0.5), rgba(8,38,61,0.8)),
+    url("../imagenes/fondomar.jpg") center / cover no-repeat;
+
+  height: 650px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
 
 .home-hero h1 {
   font-size: 70px;
-  line-height: 1;
   margin-bottom: 20px;
 }
 
 .home-hero p {
-  max-width: 760px;
-  font-size: 22px;
-  margin-bottom: 34px;
-}
-
-.home-hero form {
-  width: 100%;
-  max-width: 640px;
-}
-
-.home-hero label {
-  display: none;
+  max-width: 700px;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 .home-hero input {
-  width: 100%;
-  border: none;
+  width: 600px;
+  max-width: 90%;
+  padding: 14px 20px;
   border-radius: 30px;
-  padding: 16px 24px;
-  font-family: "Fustat", sans-serif;
+  border: none;
+}
+
+.cta {
+  margin-top: 20px;
+  background: #2e96ad;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 25px;
+  display: inline-block;
 }
 
 /* =========================
-   PASTILLAS HOME
+PASTILLAS
 ========================= */
-
 .stats {
-  background-color: #eaf7fb;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  max-width: 1150px;
-  margin: -55px auto 0;
-  padding: 0 28px 80px;
+  gap: 40px;
+  max-width: 1100px;
+
+  margin: -60px auto 60px;
+  padding: 0 40px;
+
   position: relative;
-  z-index: 4;
+  z-index: 10;
 }
 
 .stats article {
-  background-color: white;
+  background: white;
   border-radius: 18px;
-  padding: 26px 20px;
+  padding: 25px;
   text-align: center;
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.15);
 }
 
 .stats img {
-  width: 38px;
-  margin: 0 auto 8px;
+  width: 35px;
+  margin: 0 auto 10px;
 }
 
 .stats h2 {
   font-size: 28px;
-  line-height: 1;
+}
+
+.stats h3 {
+  font-family: "Fustat";
+  font-weight: 600;
 }
 
 .stats p {
+  font-size: 13px;
   color: #777;
-  font-size: 14px;
 }
 
 /* =========================
-   CATEGORÍAS HOME
+CATEGORÍAS
 ========================= */
-
 #categorias {
-  background-color: white;
-  padding: 90px 70px 110px;
+  background: white;
+  padding: 80px 60px;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 45px;
+  gap: 40px;
 }
 
 #categorias > h2,
@@ -163,691 +153,141 @@ header p {
   text-align: center;
 }
 
-#categorias > h2 {
-  font-size: 56px;
-  line-height: 1.1;
-  margin-bottom: 10px;
-}
-
-#categorias > p {
-  max-width: 780px;
-  margin: 0 auto 40px;
-  font-size: 20px;
-  color: #555;
-}
-
 #categorias article {
   position: relative;
+  border-radius: 25px;
   overflow: hidden;
-  border-radius: 28px;
-  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
 
-#categorias article a {
-  display: block;
-  position: relative;
-  height: 100%;
-}
-
-#categorias article img {
+#categorias img {
   width: 100%;
-  height: 270px;
+  height: 260px;
   object-fit: cover;
-  filter: brightness(0.78);
 }
 
-#categorias article a::after {
+#categorias article::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(transparent 35%, rgba(0, 0, 0, 0.72));
-  z-index: 1;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
 }
 
-#categorias article h3,
-#categorias article p {
+#categorias h3,
+#categorias p {
   position: absolute;
-  left: 32px;
-  right: 32px;
+  left: 20px;
   color: white;
   z-index: 2;
-  text-align: left;
-  margin: 0;
 }
 
-#categorias article h3 {
-  bottom: 60px;
-  font-size: 30px;
-  line-height: 1;
+#categorias h3 {
+  bottom: 50px;
 }
 
-#categorias article p {
-  bottom: 30px;
-  font-size: 16px;
-  line-height: 1.2;
-  max-width: 85%;
+#categorias p {
+  bottom: 25px;
+  font-size: 14px;
 }
 
 /* =========================
-   CONSERVACIÓN HOME
+CONSERVACIÓN
 ========================= */
-
 #conservacion {
-  background: linear-gradient(#08263d, #2b98b2);
+  background: linear-gradient(#08263d, #2e96ad);
   color: white;
   text-align: center;
-  padding: 120px 28px;
+  padding: 100px 20px;
 }
 
 #conservacion h2 {
-  font-size: 56px;
-  line-height: 1.05;
-  margin-bottom: 24px;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
 #conservacion p {
-  max-width: 760px;
-  margin: 0 auto 32px;
-  font-size: 20px;
-}
-
-#conservacion a {
-  display: inline-block;
-  padding: 14px 40px;
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  background-color: rgba(255, 255, 255, 0.12);
+  max-width: 600px;
+  margin: auto;
 }
 
 /* =========================
-   MAMÍFEROS HERO
+MAMÍFEROS HERO
 ========================= */
-
 .mamiferos-hero {
   position: relative;
-  padding: 0;
-  overflow: hidden;
 }
 
 .mamiferos-hero img {
   width: 100%;
-  height: 72vh;
-  min-height: 520px;
+  height: 500px;
   object-fit: cover;
-}
-
-.mamiferos-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(transparent 35%, rgba(0, 0, 0, 0.7));
-  z-index: 1;
 }
 
 .hero-texto {
   position: absolute;
-  left: 70px;
-  bottom: 70px;
-  z-index: 2;
+  bottom: 40px;
+  left: 40px;
   color: white;
-  max-width: 700px;
 }
 
 .hero-texto h1 {
-  font-size: 64px;
-  line-height: 1;
-}
-
-.hero-texto p {
-  font-size: 22px;
+  font-size: 50px;
 }
 
 /* =========================
-   MAMÍFEROS CONTENIDO
+AMENAZAS
 ========================= */
-
-.mamiferos-hero ~ section {
-  padding: 75px 70px;
-}
-
-.mamiferos-hero ~ section h2 {
-  font-size: 48px;
-  margin-bottom: 18px;
-}
-
-.mamiferos-hero ~ section h3 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.mamiferos-hero ~ section p {
-  color: #233d4a;
-}
-
-.mamiferos-hero ~ section ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-  margin-top: 25px;
-}
-
-.mamiferos-hero ~ section ul li {
-  background-color: white;
-  padding: 18px 22px;
-  border-radius: 28px;
-  text-align: center;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
-}
-
-.mamiferos-hero ~ section article {
-  margin-bottom: 24px;
-}
-
-.mamiferos-hero ~ section article img {
-  width: 100%;
-  height: 270px;
-  object-fit: cover;
-  border-radius: 24px;
-}
-
-/* =========================
-   AMENAZAS
-========================= */
-
 .hero {
-  background-color: white;
-  color: #c96822;
   text-align: center;
-  padding: 80px 28px 60px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  line-height: 1.1;
-  margin-bottom: 16px;
-}
-
-.hero p {
-  max-width: 640px;
-  margin: auto;
-  font-size: 18px;
+  padding: 80px 20px;
 }
 
 .wave-section {
-  padding: 110px 140px;
+  padding: 80px;
 }
 
-.wave-section h2 {
-  font-size: 46px;
-  margin-bottom: 18px;
-}
-
-.wave-light {
-  background-color: #8ccde0;
-}
-
-.wave-medium {
-  background-color: #2e96ad;
-  color: white;
-}
-
-.wave-dark {
-  background-color: #08263d;
-  color: white;
-}
-
-.crisis {
-  background-color: #08263d;
-  color: white;
-  padding: 80px 70px;
-}
-
-.crisis-card {
-  background:
-    linear-gradient(rgba(8, 38, 61, 0.35), rgba(8, 38, 61, 0.55)),
-    url("../imagenes/coral.jpg") center / cover no-repeat;
-  max-width: 1100px;
-  margin: 0 auto;
-  border-radius: 34px;
-  padding: 95px 60px;
-  text-align: center;
-}
-
-.crisis-card h2 {
-  font-size: 64px;
-  line-height: 1;
-}
-
-.crisis-card p {
-  font-size: 24px;
-}
-
-.toggle {
-  font-size: 42px;
-  cursor: pointer;
-  margin-top: 12px;
-}
-
-.crisis-list {
-  display: none;
-  margin-top: 30px;
-}
-
-.crisis-list.active {
-  display: block;
-}
-
-.crisis-item {
-  background-color: rgba(255, 255, 255, 0.72);
-  color: #08263d;
-  padding: 16px 22px;
-  border-radius: 26px;
-  margin-bottom: 14px;
-}
-
-.datos {
-  background-color: #020609;
-  color: white;
-  text-align: center;
-  padding: 80px 70px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.datos h2,
-.datos > p {
-  grid-column: 1 / -1;
-}
-
-.datos h2 {
-  color: #9eddeb;
-  font-size: 38px;
-}
-
-.dato-card {
-  background-color: #eeeeee;
-  color: #111;
-  padding: 24px;
-  border-radius: 18px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-  font-weight: 600;
-}
-
-.riesgo {
-  background-color: white;
-  padding: 80px 70px;
-}
-
-.riesgo h2 {
-  font-size: 46px;
-}
-
-.animales {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 1050px;
-  margin: 30px auto 0;
-}
-
-.animal img {
-  height: 260px;
-  object-fit: cover;
-  border-radius: 22px;
-  filter: brightness(0.75);
-}
-
-.animal h3 {
-  font-size: 22px;
-  margin-top: 10px;
-}
-
-.animal p {
-  font-size: 14px;
-}
-
-.form-section {
-  background: linear-gradient(#ffffff, #08263d);
-  text-align: center;
-  padding: 90px 70px;
-}
-
-.form-section h2 {
-  font-size: 46px;
-}
-
-.form-section form {
-  max-width: 900px;
-  margin: 35px auto 0;
-}
-
-.form-section input,
-.form-section textarea {
-  width: 100%;
-  border: none;
-  border-radius: 24px;
-  padding: 14px 20px;
-  margin-bottom: 12px;
-  font-family: "Fustat", sans-serif;
-  background-color: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-}
-
-.form-section textarea {
-  height: 130px;
-  resize: none;
-}
-
-button {
-  border: none;
-  background-color: #2e96ad;
-  color: white;
-  padding: 12px 36px;
-  border-radius: 25px;
-  font-family: "Fustat", sans-serif;
-  cursor: pointer;
-}
+.wave-light { background: #8ccde0; }
+.wave-medium { background: #2e96ad; color: white; }
+.wave-dark { background: #08263d; color: white; }
 
 /* =========================
-   FOOTER
+FOOTER
 ========================= */
-
 footer {
-  background-color: #08263d;
+  background: #08263d;
   color: white;
-  padding: 85px 100px 45px;
+  padding: 80px 100px;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 90px;
-}
-
-footer section,
-footer nav {
-  padding: 0;
-  margin: 0;
-}
-
-footer h2,
-footer h3 {
-  font-size: 24px;
-  margin-bottom: 14px;
-}
-
-footer p,
-footer li,
-footer a {
-  color: white;
-  font-size: 14px;
 }
 
 footer ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer li {
-  background: none;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-  margin-bottom: 10px;
 }
 
 /* =========================
-   MOBILE
+RESPONSIVE
 ========================= */
-
-@media (max-width: 767px) {
-  header {
-    padding: 14px 20px;
-  }
-
-  header img {
-    width: 90px;
-  }
-
-  .home-hero {
-    min-height: 520px;
-    padding: 90px 24px 110px;
-  }
+@media (max-width: 768px) {
 
   .home-hero h1 {
-    font-size: 46px;
-  }
-
-  .home-hero p {
-    font-size: 15px;
+    font-size: 40px;
   }
 
   .stats {
     grid-template-columns: 1fr;
-    gap: 14px;
-    margin-top: -70px;
-    padding: 0 24px 55px;
+    margin-top: -40px;
   }
 
   #categorias {
-    display: block;
-    padding: 55px 24px;
-  }
-
-  #categorias > h2 {
-    font-size: 36px;
-  }
-
-  #categorias > p {
-    font-size: 15px;
-  }
-
-  #categorias article {
-    margin-bottom: 28px;
-  }
-
-  #categorias article img {
-    height: 230px;
-  }
-
-  #categorias article h3 {
-    font-size: 25px;
-    bottom: 52px;
-    left: 24px;
-  }
-
-  #categorias article p {
-    font-size: 14px;
-    bottom: 24px;
-    left: 24px;
-  }
-
-  #conservacion {
-    padding: 80px 28px;
-  }
-
-  #conservacion h2 {
-    font-size: 38px;
-  }
-
-  #conservacion p {
-    font-size: 15px;
-  }
-
-  .mamiferos-hero img {
-    height: 60vh;
-    min-height: 430px;
-  }
-
-  .hero-texto {
-    left: 28px;
-    bottom: 38px;
-  }
-
-  .hero-texto h1 {
-    font-size: 42px;
-  }
-
-  .hero-texto p {
-    font-size: 17px;
-  }
-
-  .mamiferos-hero ~ section {
-    padding: 46px 28px;
-  }
-
-  .mamiferos-hero ~ section h2 {
-    font-size: 34px;
-  }
-
-  .mamiferos-hero ~ section ul {
     grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding: 70px 28px 50px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .wave-section {
-    padding: 70px 28px;
-  }
-
-  .wave-section h2 {
-    font-size: 32px;
-  }
-
-  .crisis {
-    padding: 50px 28px;
-  }
-
-  .crisis-card {
-    padding: 50px 24px;
-  }
-
-  .crisis-card h2 {
-    font-size: 42px;
-  }
-
-  .datos {
-    display: block;
-    padding: 60px 28px;
-  }
-
-  .dato-card {
-    margin-top: 18px;
-  }
-
-  .riesgo {
-    padding: 55px 28px;
-  }
-
-  .riesgo h2 {
-    font-size: 36px;
-  }
-
-  .animales {
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-  }
-
-  .animal img {
-    height: 125px;
-  }
-
-  .animal h3 {
-    font-size: 16px;
-  }
-
-  .animal p {
-    font-size: 12px;
-  }
-
-  .form-section {
-    padding: 70px 28px;
-  }
-
-  .form-section h2 {
-    font-size: 34px;
+    padding: 40px 20px;
   }
 
   footer {
     display: block;
-    padding: 55px 28px 28px;
+    padding: 40px 20px;
   }
 
-  footer section,
-  footer nav {
-    margin-bottom: 30px;
-  }
-
-  footer ul {
-    columns: 2;
-  }
-}.home-hero {
-  background:
-    linear-gradient(rgba(8, 38, 61, 0.4), rgba(8, 38, 61, 0.7)),
-    url("../imagenes/fondomar.jpg") center / cover no-repeat;
-}
-/* PASTILLAS HOME COMO MOCKUP */
-.stats {
-  background: white;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 45px;
-  max-width: 1180px;
-  margin: -60px auto 0;
-  padding: 0 60px 80px;
-  position: relative;
-  z-index: 5;
-}
-
-.stats article {
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 18px;
-  padding: 26px 20px 24px;
-  text-align: center;
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
-}
-
-.stats article a {
-  display: block;
-}
-
-.stats img {
-  width: 38px;
-  height: auto;
-  margin: 0 auto 8px;
-}
-
-.stats h2 {
-  font-size: 32px;
-  line-height: 0.9;
-  margin: 0;
-}
-
-.stats h3 {
-  font-family: "Fustat", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  margin: 2px 0 4px;
-}
-
-.stats p {
-  font-size: 13px;
-  color: #8b8b8b;
-  margin: 0;
-}
-
-/* MOBILE */
-@media (max-width: 767px) {
-  .stats {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    margin-top: -55px;
-    padding: 0 24px 55px;
-  }
 }
