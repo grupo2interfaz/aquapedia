@@ -91,7 +91,34 @@ article {
 article img {
   border-radius: 20px;
 }
+/* HERO MAMÍFEROS (imagen + texto encima) */
+.mamiferos-hero {
+  position: relative;
+}
 
+.mamiferos-hero img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+/* TEXTO ENCIMA */
+.hero-texto {
+  position: absolute;
+  bottom: 40px;
+  left: 25px;
+  color: white;
+  max-width: 80%;
+}
+
+.hero-texto h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero-texto p {
+  font-size: 16px;
+}
 /* =========================
    SECCIÓN CATEGORÍAS
 ========================= */
