@@ -787,4 +787,67 @@ footer li {
   footer ul {
     columns: 2;
   }
+}.home-hero {
+  background:
+    linear-gradient(rgba(8, 38, 61, 0.4), rgba(8, 38, 61, 0.7)),
+    url("../imagenes/fondomar.jpg") center / cover no-repeat;
+}
+/* PASTILLAS HOME COMO MOCKUP */
+.stats {
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  max-width: 1180px;
+  margin: -60px auto 0;
+  padding: 0 60px 80px;
+  position: relative;
+  z-index: 5;
+}
+
+.stats article {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  padding: 26px 20px 24px;
+  text-align: center;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+}
+
+.stats article a {
+  display: block;
+}
+
+.stats img {
+  width: 38px;
+  height: auto;
+  margin: 0 auto 8px;
+}
+
+.stats h2 {
+  font-size: 32px;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.stats h3 {
+  font-family: "Fustat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 2px 0 4px;
+}
+
+.stats p {
+  font-size: 13px;
+  color: #8b8b8b;
+  margin: 0;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: -55px;
+    padding: 0 24px 55px;
+  }
 }
