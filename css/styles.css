@@ -749,3 +749,48 @@ footer li {
   height: 100%;
   object-fit: cover;
 }
+/* ARREGLO HOME HERO */
+.home-hero {
+  background: linear-gradient(rgba(8, 38, 61, 0.35), rgba(8, 38, 61, 0.65)),
+    url("../imagenes/fondo.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 24px;
+}
+
+.home-hero h1 {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.home-hero p {
+  max-width: 520px;
+  margin: 16px auto 22px;
+}
+
+.home-hero form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* IMAGEN DEBAJO DEL HERO */
+.imagen-divisor {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.imagen-divisor img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* PASTILLAS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px 24px 50px;
+  margin-top: 0;
+}
