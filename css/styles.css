@@ -749,3 +749,14 @@ footer li {
   height: 100%;
   object-fit: cover;
 }
+/* IMAGEN DEBAJO DEL HERO */
+.imagen-divisor {
+  width: 100%;
+  overflow: hidden;
+}
+
+.imagen-divisor img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
