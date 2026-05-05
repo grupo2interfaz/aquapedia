@@ -731,4 +731,9 @@ footer li {
   footer ul {
     columns: 1;
   }
+}/* FORZAR PASTILLAS EN FILA */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
