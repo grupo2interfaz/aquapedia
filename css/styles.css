@@ -273,35 +273,90 @@ button {
   cursor: pointer;
 }
 
-/* =========================
-   MAMÍFEROS
-========================= */
-ul {
-  list-style: none;
+/* HERO MAMIFEROS */
+.mamiferos-hero {
+  position: relative;
 }
 
-ul li {
+.mamiferos-hero img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+/* TEXTO ARRIBA DE LA IMAGEN */
+.hero-texto {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  color: white;
+}
+
+.hero-texto h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero-texto p {
+  font-size: 16px;
+}
+}
+
+/* ARREGLO FOOTER */
+main ul li {
   background-color: white;
   padding: 12px;
   border-radius: 20px;
   margin-bottom: 10px;
-}
-
-/* =========================
-   FOOTER
-========================= */
 footer {
   background-color: #08263d;
   color: white;
-  padding: 40px 25px;
+  padding: 70px 8%;
+}
+
+footer section,
+footer nav {
+  padding: 0;
+  margin-bottom: 30px;
 }
 
 footer ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 footer li {
-  margin-bottom: 8px;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer p,
+footer li,
+footer a {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    align-items: start;
+  }
+
+  footer section,
+  footer nav {
+    margin-bottom: 0;
+  }
 }
 
 /* =========================
