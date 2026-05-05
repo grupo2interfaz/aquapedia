@@ -737,3 +737,15 @@ footer li {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
+.mamiferos-hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.mamiferos-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
