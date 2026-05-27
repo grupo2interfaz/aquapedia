@@ -10,7 +10,7 @@
 
 <body>
 
-  <header>
+  <header class="site-header">
   <a href="index.html">
     <img src="imagenes/logo.png" alt="AquaPedia">
   </a>
@@ -20,9 +20,9 @@
 <section class="home-hero">
   <img src="imagenes/fondomar.jpg" alt="Fondo marino">
 
-  <h1>AquaPedia</h1>
+  <h1 class="section-title">AquaPedia</h1>
 
-  <p>
+  <p class="section-sub">
     Sumergite en la enciclopedia digital más completa del mundo sobre la
     vida acuática. Descubrí, aprendé y protegé la increíble biodiversidad
     de nuestros océanos.
@@ -38,7 +38,7 @@
 
 <section class="stats">
 
-  <article>
+  <article class="stat-card">
     <a href="#categorias">
       <img src="imagenes/olas.png" alt="olas">
       <h2>6</h2>
@@ -47,7 +47,7 @@
     </a>
   </article>
 
-  <article>
+  <article class="stat-card">
     <a href="#categorias">
       <img src="imagenes/pez.png" alt="pez">
       <h2>+24</h2>
@@ -56,7 +56,7 @@
     </a>
   </article>
 
-  <article>
+  <article class="stat-card">
     <a href="amenazas.html">
       <img src="imagenes/seguridad.png" alt="seguridad">
       <h2>18</h2>
@@ -67,16 +67,14 @@
 
 </section>
 
-</section>
-
     <section id="categorias">
-  <h2>Explorá la vida acuática</h2>
-      <p>
+  <h2 class="section-title">Explorá la vida acuática</h2>
+      <p class="section-sub">
         Navegá por seis grandes categorías de animales acuáticos, cada una
         revelando un rincón único de la biodiversidad submarina.
       </p>
 
-      <article>
+      <article class="cat-card">
         <a href="mamiferos.html">
           <img src="imagenes/ballena.png" alt="Mamíferos marinos">
           <h3>Mamíferos marinos</h3>
@@ -84,58 +82,58 @@
         </a>
       </article>
 
-      <article>
+      <article class="cat-card">
         <img src="imagenes/peces.png" alt="Peces">
         <h3>Peces</h3>
         <p>Los vertebrados más diversos del océano</p>
       </article>
 
-      <article>
+      <article class="cat-card">
         <img src="imagenes/moluscos.png" alt="Moluscos">
         <h3>Moluscos</h3>
         <p>Maestros del camuflaje y la adaptación</p>
       </article>
 
-      <article>
+      <article class="cat-card">
         <img src="imagenes/crustaseos.png" alt="Crustáceos">
         <h3>Crustáceos</h3>
         <p>Arquitectos acorazados del fondo marino</p>
       </article>
 
-      <article>
+      <article class="cat-card">
         <img src="imagenes/cnidarios.png" alt="Cnidarios">
         <h3>Cnidarios</h3>
         <p>Etéreos viajeros y constructores de arrecifes</p>
       </article>
 
-      <article>
+      <article class="cat-card">
         <img src="imagenes/equinodermos.png" alt="Equinodermos">
         <h3>Equinodermos</h3>
         <p>Maravillas espinosas del fondo oceánico</p>
       </article>
     </section>
 
-   <section id="conservacion">
-  <h2>Protejamos nuestros océanos</h2>
-      <p>
+   <section id="conservacion" class="conservation-cta">
+  <h2 class="cta-title">Protejamos nuestros océanos</h2>
+      <p class="cta-sub">
         Cada especie desempeña un rol vital en el equilibrio de los ecosistemas
         marinos. Conocé las amenazas que enfrentan y cómo podemos ayudar a
         preservar la biodiversidad acuática para las futuras generaciones.
       </p>
-      <a href="amenazas.html">Descubrí todas las amenazas</a>
+      <a href="amenazas.html" class="btn-outline">Descubrí todas las amenazas</a>
     </section>
   </main>
 
   <footer>
 
-  <section>
+  <section class="footer-brand">
     <h2>AquaPedia</h2>
     <p>
       Una enciclopedia digital dedicada a explorar y preservar la biodiversidad de nuestros océanos.
     </p>
   </section>
 
-  <nav>
+  <nav class="footer-nav">
     <h3>Explorar</h3>
 
     <ul>
@@ -149,7 +147,7 @@
 
   </nav>
 
-  <section>
+  <section class="footer-about">
     <h3>Acerca de</h3>
     <p>
       AquaPedia es un proyecto educativo para generar conciencia sobre la vida acuática.
