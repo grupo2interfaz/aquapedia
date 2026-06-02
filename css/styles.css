@@ -531,43 +531,45 @@ header nav {
   border-radius: 24px;
   padding: 36px 12px;
   text-align: center;
-  color: var(--blanco);
+  color: white;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
-.crisis-card h2 {
-  font-size: 33px;
-  line-height: 1;
-}
-
-.crisis-card p {
-  font-size: 20px;
-}
-
-.toggle {
-  font-size: 30px;
-  cursor: pointer;
-}
-
 .crisis-list {
-  display: none;
-  margin-top: 20px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+  transition: max-height 0.7s ease, opacity 0.5s ease, margin-top 0.5s ease;
 }
 
 .crisis-list.active {
-  display: block;
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 28px;
 }
 
 .crisis-item {
   background: rgba(255, 255, 255, 0.62);
   border-radius: 35px;
-  padding: 11px 18px;
-  margin: 10px 0;
-  color: var(--blanco);
-  font-size: 11px;
+  padding: 14px 22px;
+  margin: 10px auto;
+  max-width: 520px;
+  color: white;
+  font-size: 13px;
+  line-height: 1.1;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.crisis-list.active .crisis-item {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .datos {
