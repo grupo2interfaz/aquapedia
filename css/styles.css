@@ -1271,4 +1271,19 @@ footer ul {
 
 .crisis-list.active {
   display: block;
+}/* VIDA EN RIESGO — SOLO DESKTOP EN 2 COLUMNAS */
+
+@media (min-width: 768px) {
+  .riesgo .animales {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 28px !important;
+    width: 100% !important;
+  }
+
+  .riesgo .animal {
+    width: 100% !important;
+    height: 300px !important;
+    min-height: 300px !important;
+  }
 }
