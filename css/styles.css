@@ -1187,3 +1187,82 @@ footer ul {
     font-size: 11px !important;
   }
 }
+/* FIX FINAL VIDA EN RIESGO DESKTOP */
+
+@media (min-width: 768px) {
+  .riesgo {
+    background: white !important;
+    padding: 70px 6% !important;
+  }
+
+  .riesgo h2 {
+    font-size: 48px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .riesgo > p {
+    font-size: 18px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .riesgo .animales {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 28px !important;
+  }
+
+  .riesgo .animal {
+    position: relative !important;
+    height: 300px !important;
+    min-height: 300px !important;
+    border-radius: 34px !important;
+    overflow: hidden !important;
+    background: var(--azul) !important;
+  }
+
+  .riesgo .animal img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: brightness(0.55) !important;
+    transform: none !important;
+  }
+
+  .riesgo .animal .info {
+    position: absolute !important;
+    z-index: 3 !important;
+    left: 38px !important;
+    top: 70px !important;
+    right: 36px !important;
+    color: white !important;
+  }
+
+  .riesgo .animal h3 {
+    position: static !important;
+    color: white !important;
+    font-size: 30px !important;
+    line-height: 1 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .riesgo .animal ul {
+    list-style: disc !important;
+    padding-left: 18px !important;
+  }
+
+  .riesgo .animal li {
+    color: white !important;
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+  }
+
+  .riesgo .animal .nota {
+    display: block !important;
+    color: var(--naranja) !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+    margin-top: 85px !important;
+  }
+}
