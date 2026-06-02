@@ -1404,3 +1404,78 @@ footer ul {
     }
 
 }
+
+/* ==========================
+   FIX FINAL - OCÉANOS EN CRISIS
+========================== */
+
+.crisis-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 32px auto 0 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important;
+
+  max-width: 900px !important;
+}
+
+.crisis-list li {
+  background: #d8dbe0 !important;
+  color: #000000 !important;
+
+  text-align: center !important;
+  font-size: 1rem !important;
+  line-height: 1.35 !important;
+
+  padding: 20px 28px !important;
+  border-radius: 999px !important;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.14) !important;
+  list-style: none !important;
+}
+
+/* si tu JS usa active */
+.crisis-list.active {
+  display: flex !important;
+  opacity: 1 !important;
+  max-height: 900px !important;
+}
+
+
+/* ==========================
+   FIX FINAL - VIDA EN RIESGO GRID
+========================== */
+
+.animales-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 24px !important;
+  margin-top: 24px !important;
+}
+
+@media (min-width: 768px) {
+
+  .crisis-list {
+    gap: 32px !important;
+    margin-top: 38px !important;
+  }
+
+  .crisis-list li {
+    font-size: 1.25rem !important;
+    padding: 24px 42px !important;
+  }
+
+  .animales-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px !important;
+  }
+
+  .animales-grid .animal {
+    width: 100% !important;
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+
+}
