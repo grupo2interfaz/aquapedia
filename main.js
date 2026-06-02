@@ -103,3 +103,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(createBubble, 1200);
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const textNodes = [];
+
+  function getTextNodes(element) {
+    for (const node of element.childNodes) {
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+        textNodes.push(node);
+      } else if (
+        node.nodeType === Node.ELEMENT_NODE &&
+        !["SCRIPT", "STYLE", "NOSCRIPT"].includes(node.tagName)
+      ) {
+        getTextNodes(node);
+      }
+    }
+  }
+
+  getTextNodes(document.body);
+
+  textNodes.forEach((node) => {
+    const words = node.textContent.split(/(\s+)/);
+    const fragment = document.createDocumentFragment();
+
+    words.forEach((part) => {
+      if (part.trim() === "") {
+        fragment.appendChild(document.createTextNode(part));
+      } else {
+        const span = document.createElement("span");
+        span.textContent = part;
+        span.addEventListener("mouseenter", () => {
+          span.style.color = "#1a6eff";
+          span.style.transition = "color 0.2s ease";
+        });
+        span.addEventListener("mouseleave", () => {
+          span.style.color = "";
+        });
+        fragment.appendChild(span);
+      }
+    });
+
+    node.parentNode.replaceChild(fragment, node);
+  });
+});
