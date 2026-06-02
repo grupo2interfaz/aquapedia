@@ -1265,4 +1265,10 @@ footer ul {
     line-height: 1.2 !important;
     margin-top: 85px !important;
   }
+}.crisis-list {
+  display: none;
+}
+
+.crisis-list.active {
+  display: block;
 }
