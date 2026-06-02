@@ -1631,7 +1631,17 @@ footer ul {
 /* ==========================
    ESPECIES DESTACADAS
 ========================== */
+especie-info h3 {
+    font-size: 18px; /* antes 20px */
+    margin-bottom: 6px;
+    color: #0c2340;
+}
 
+.especie-info p em {
+    font-size: 12px; /* para el nombre científico */
+    display: block;
+    margin-bottom: 6px;
+}
 .especies-grid {
     display: grid;
     grid-template-columns: 1fr;
