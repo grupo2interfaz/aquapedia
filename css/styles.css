@@ -1328,4 +1328,20 @@ footer ul {
   to {
     transform: translateY(-120vh);
   }
+}.btn-outline {
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(217,110,43,.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 12px rgba(217,110,43,0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(217,110,43,0);
+  }
 }
