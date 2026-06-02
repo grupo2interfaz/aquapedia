@@ -1418,4 +1418,28 @@ footer ul {
     padding: 20px 70px;
     margin-bottom: 16px;
   }
+}/* Íconos de títulos - Mobile first */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .section-title {
+    gap: 10px;
+  }
+
+  .section-title img {
+    width: 26px;
+    height: 26px;
+  }
 }
