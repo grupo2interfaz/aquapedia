@@ -103,4 +103,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(createBubble, 1200);
 });
-
