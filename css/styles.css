@@ -1287,3 +1287,19 @@ footer ul {
     min-height: 300px !important;
   }
 }
+#boton-crisis {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+#lista-crisis {
+  display: none;
+  margin-top: 24px;
+}
+
+#lista-crisis.abierto {
+  display: block;
+}
