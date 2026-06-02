@@ -1346,100 +1346,61 @@ footer ul {
   }
 }
 
-/* FIX DESPLEGABLE OCÉANOS EN CRISIS */
+//* ==========================
+   OCÉANOS EN CRISIS
+   LISTA DESPLEGABLE
+========================== */
 
-.crisis {
-  background: #02070a;
-  padding: 35px 38px;
-  color: white;
-  text-align: center;
+.crisis-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
 }
 
-.crisis-card {
-  max-width: 520px;
-  margin: 0 auto;
-  border-radius: 24px;
-  padding: 55px 16px;
-  text-align: center;
+.crisis-content.active {
+    max-height: 1000px;
 }
 
-#boton-crisis {
-  display: block;
-  margin: 12px auto 0;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 34px;
-  line-height: 1;
-  cursor: pointer;
+.crisis-list {
+    list-style: none;
+    padding: 20px 0 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
-#lista-crisis {
-  display: none;
-  max-width: 520px;
-  margin: 28px auto 0;
-}
+.crisis-list li {
+    background: rgba(220, 225, 230, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
-#lista-crisis.abierto {
-  display: block;
-}
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.2;
 
-#lista-crisis .crisis-item {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.58);
-  color: white;
-  border-radius: 999px;
-  padding: 14px 28px;
-  margin-bottom: 10px;
-  font-size: 13px;
-  line-height: 1.15;
-  text-align: left;
-}
+    padding: 18px 24px;
+    border-radius: 999px;
 
-/* DESKTOP */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 
-@media (min-width: 768px) {
-  .crisis {
-    padding: 80px 7% 65px;
-  }
-
-  .crisis-card {
-    max-width: 1080px;
-    min-height: 300px;
-    padding: 110px 30px;
-  }
-
-  #lista-crisis {
-    max-width: 1080px;
-  }
-
-  #lista-crisis .crisis-item {
-    font-size: 21px;
-    padding: 20px 70px;
-    margin-bottom: 16px;
-  }
-}/* Íconos de títulos - Mobile first */
-.section-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.section-title img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-  flex-shrink: 0;
+    list-style: none;
+    margin: 0;
 }
 
 /* Desktop */
 @media (min-width: 768px) {
-  .section-title {
-    gap: 10px;
-  }
 
-  .section-title img {
-    width: 26px;
-    height: 26px;
-  }
+    .crisis-list {
+        max-width: 900px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    .crisis-list li {
+        font-size: 1.1rem;
+        line-height: 1.3;
+        padding: 22px 36px;
+    }
+
 }
