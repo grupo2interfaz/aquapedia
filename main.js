@@ -65,3 +65,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const container = document.querySelector(".bubbles");
+
+  if (!container) return;
+
+  function createBubble() {
+
+    const bubble = document.createElement("div");
+
+    bubble.classList.add("bubble");
+
+    const size = Math.random() * 80 + 20;
+
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+
+    bubble.style.left = `${Math.random() * 100}%`;
+
+    bubble.style.background =
+      Math.random() > 0.5
+        ? "rgba(191,231,240,.35)"
+        : "rgba(46,150,173,.25)";
+
+    const duration = Math.random() * 8 + 8;
+
+    bubble.style.animationDuration = `${duration}s`;
+
+    container.appendChild(bubble);
+
+    setTimeout(() => {
+      bubble.remove();
+    }, duration * 1000);
+  }
+
+  setInterval(createBubble, 1200);
+});
