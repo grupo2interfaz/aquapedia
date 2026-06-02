@@ -538,7 +538,7 @@ header nav {
   overflow: hidden;
 }
 
-..crisis-list {
+.crisis-list {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -1117,8 +1117,7 @@ footer ul {
   footer li {
     font-size: 13px;
   }
-}
-@media (min-width: 768px) {
+@media (min-width: 768px) 
   .especies-destacadas {
     background: var(--aqua-claro);
     padding: 70px 6%;
@@ -1129,44 +1128,49 @@ footer ul {
     margin-bottom: 32px;
   }
 
-  .especies-grid {
+  .especies-destacadas .especies-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 
-  .especie-card {
+  .especies-destacadas .especie-card {
     display: flex;
+    min-height: 210px;
     background: #bfe7f0;
     border-radius: 28px;
     overflow: hidden;
-    min-height: 210px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.14);
   }
 
-  .especie-card img {
+  .especies-destacadas .especie-card img {
     width: 170px;
     height: auto;
     object-fit: cover;
+    filter: none;
   }
 
-  .especie-info {
+  .especies-destacadas .especie-info {
     flex: 1;
     padding: 34px 28px;
     position: relative;
   }
 
-  .especie-info h3 {
+  .especies-destacadas .especie-info h3 {
+    position: static;
+    transform: none;
+    color: var(--azul);
     font-size: 28px;
     margin-bottom: 4px;
   }
 
-  .especie-info p {
+  .especies-destacadas .especie-info p {
+    color: var(--azul);
     font-size: 14px;
     margin-bottom: 8px;
   }
 
-  .estado {
+  .especies-destacadas .estado {
     position: absolute;
     top: 22px;
     right: 22px;
@@ -1175,13 +1179,12 @@ footer ul {
     font-size: 11px;
   }
 
-  .peligro {
+  .especies-destacadas .peligro {
     background: #f5b8c6;
     color: #9b1b38;
   }
 
-  .menor {
+  .especies-destacadas .menor {
     background: #b7ead0;
     color: #24724c;
   }
-}
