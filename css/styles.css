@@ -1117,79 +1117,73 @@ footer ul {
   footer li {
     font-size: 13px;
   }
+
+  /* FIX FINAL ESPECIES DESTACADAS */
+
 @media (min-width: 768px) {
-  .especies-destacadas {
-    background: var(--aqua-claro);
-    padding: 70px 6%;
-    width: 100%;
+  .mamiferos-hero ~ .especies-destacadas {
+    display: block !important;
+    width: 100% !important;
+    padding: 70px 6% !important;
+    background: var(--aqua-claro) !important;
   }
 
-  .especies-destacadas h2 {
-    font-size: 48px;
-    margin-bottom: 32px;
+  .mamiferos-hero ~ .especies-destacadas .especies-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px !important;
+    width: 100% !important;
   }
 
-  .especies-destacadas .especies-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+  .mamiferos-hero ~ .especies-destacadas .especie-card {
+    display: flex !important;
+    width: 100% !important;
+    height: 260px !important;
+    min-height: 260px !important;
+    background: #bfe7f0 !important;
+    border-radius: 28px !important;
+    overflow: hidden !important;
+    position: relative !important;
   }
 
-  .especies-destacadas .especie-card {
-    width: 100%;
-    display: flex;
-    min-height: 260px;
-    background: #bfe7f0;
-    border-radius: 28px;
-    overflow: hidden;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.14);
+  .mamiferos-hero ~ .especies-destacadas .especie-card img {
+    position: static !important;
+    width: 220px !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: none !important;
+    transform: none !important;
   }
 
-  .especies-destacadas .especie-card img {
-    width: 220px;
-    height: auto;
-    object-fit: cover;
-    filter: none;
+  .mamiferos-hero ~ .especies-destacadas .especie-info {
+    flex: 1 !important;
+    padding: 36px !important;
+    position: relative !important;
   }
 
-  .especies-destacadas .especie-info {
-    flex: 1;
-    padding: 36px;
-    position: relative;
+  .mamiferos-hero ~ .especies-destacadas .especie-info h3 {
+    position: static !important;
+    transform: none !important;
+    color: var(--azul) !important;
+    font-size: 34px !important;
+    line-height: 1 !important;
+    margin-bottom: 8px !important;
   }
 
-  .especies-destacadas .especie-info h3 {
-    position: static;
-    transform: none;
-    color: var(--azul);
-    font-size: 34px;
-    line-height: 1;
-    margin-bottom: 8px;
+  .mamiferos-hero ~ .especies-destacadas .especie-info p {
+    position: static !important;
+    color: var(--azul) !important;
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 8px !important;
   }
 
-  .especies-destacadas .especie-info p {
-    color: var(--azul);
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-
-  .especies-destacadas .estado {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-size: 11px;
-  }
-
-  .especies-destacadas .peligro {
-    background: #f5b8c6;
-    color: #9b1b38;
-  }
-
-  .especies-destacadas .menor {
-    background: #b7ead0;
-    color: #24724c;
+  .mamiferos-hero ~ .especies-destacadas .estado {
+    position: absolute !important;
+    top: 22px !important;
+    right: 22px !important;
+    padding: 6px 12px !important;
+    border-radius: 999px !important;
+    font-size: 11px !important;
   }
 }
