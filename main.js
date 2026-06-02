@@ -1,161 +1,126 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AquaPedia</title>
-<link href="https://fonts.googleapis.com/css2?family=Fustat:wght@300;400;600&family=Gloock&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
+document.addEventListener("DOMContentLoaded", () => {
 
-<body>
+  /* =========================
+     SCROLL ANIMATIONS
+  ========================= */
 
-  <header class="site-header">
-  <a href="index.html">
-    <img src="imagenes/logo.png" alt="AquaPedia">
-  </a>
-  <p>Buscar</p>
-</header>
-  
-<section class="home-hero">
-  <img src="imagenes/fondomar.jpg" alt="Fondo marino">
+  const animatedElements = document.querySelectorAll(
+    ".stat-card, .cat-card, .wave-section, .dato-card, .animal, .crisis-card"
+  );
 
-  <h1 class="section-title">AquaPedia</h1>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.15
+    }
+  );
 
-  <p class="section-sub">
-    Sumergite en la enciclopedia digital más completa del mundo sobre la
-    vida acuática. Descubrí, aprendé y protegé la increíble biodiversidad
-    de nuestros océanos.
-  </p>
+  animatedElements.forEach((element) => {
+    element.classList.add("hidden-animation");
+    observer.observe(element);
+  });
 
-  <form>
-    <label for="busqueda">Buscar</label>
-    <input type="search" id="busqueda" name="busqueda" placeholder="Buscar">
-  </form>
+  /* =========================
+     OCEANOS EN CRISIS
+  ========================= */
 
-  <a href="#categorias" class="cta">Empezá a explorar →</a>
-</section>
+  const toggle = document.querySelector(".toggle");
+  const crisisList = document.querySelector(".crisis-list");
+  const crisisItems = document.querySelectorAll(".crisis-item");
 
-<section class="stats">
+  if (toggle && crisisList) {
 
-  <article class="stat-card">
-    <a href="#categorias">
-      <img src="imagenes/olas.png" alt="olas">
-      <h2>6</h2>
-      <h3>Categorías</h3>
-      <p>Grupos de animales explorados</p>
-    </a>
-  </article>
+    toggle.addEventListener("click", () => {
 
-  <article class="stat-card">
-    <a href="#categorias">
-      <img src="imagenes/pez.png" alt="pez">
-      <h2>+24</h2>
-      <h3>Especies</h3>
-      <p>Especies destacadas</p>
-    </a>
-  </article>
+      crisisList.classList.toggle("active");
 
-  <article class="stat-card">
-    <a href="amenazas.html">
-      <img src="imagenes/seguridad.png" alt="seguridad">
-      <h2>18</h2>
-      <h3>Conservación</h3>
-      <p>Amenazas documentadas</p>
-    </a>
-  </article>
+      if (crisisList.classList.contains("active")) {
 
-</section>
+        toggle.textContent = "↑";
 
-    <section id="categorias">
-  <h2 class="section-title">Explorá la vida acuática</h2>
-      <p class="section-sub">
-        Navegá por seis grandes categorías de animales acuáticos, cada una
-        revelando un rincón único de la biodiversidad submarina.
-      </p>
+        crisisItems.forEach((item, index) => {
 
-      <article class="cat-card">
-        <a href="mamiferos.html">
-          <img src="imagenes/ballena.png" alt="Mamíferos marinos">
-          <h3>Mamíferos marinos</h3>
-          <p>Los gobernantes de sangre caliente de las profundidades</p>
-        </a>
-      </article>
+          item.style.transitionDelay = `${index * 150}ms`;
 
-      <article class="cat-card">
-        <img src="imagenes/peces.png" alt="Peces">
-        <h3>Peces</h3>
-        <p>Los vertebrados más diversos del océano</p>
-      </article>
+          setTimeout(() => {
+            item.classList.add("show");
+          }, index * 150);
 
-      <article class="cat-card">
-        <img src="imagenes/moluscos.png" alt="Moluscos">
-        <h3>Moluscos</h3>
-        <p>Maestros del camuflaje y la adaptación</p>
-      </article>
+        });
 
-      <article class="cat-card">
-        <img src="imagenes/crustaseos.png" alt="Crustáceos">
-        <h3>Crustáceos</h3>
-        <p>Arquitectos acorazados del fondo marino</p>
-      </article>
+      } else {
 
-      <article class="cat-card">
-        <img src="imagenes/cnidarios.png" alt="Cnidarios">
-        <h3>Cnidarios</h3>
-        <p>Etéreos viajeros y constructores de arrecifes</p>
-      </article>
+        toggle.textContent = "↓";
 
-      <article class="cat-card">
-        <img src="imagenes/equinodermos.png" alt="Equinodermos">
-        <h3>Equinodermos</h3>
-        <p>Maravillas espinosas del fondo oceánico</p>
-      </article>
-    </section>
+        crisisItems.forEach((item) => {
+          item.classList.remove("show");
+        });
 
-   <section id="conservacion" class="conservation-cta">
-  <h2 class="cta-title">Protejamos nuestros océanos</h2>
-      <p class="cta-sub">
-        Cada especie desempeña un rol vital en el equilibrio de los ecosistemas
-        marinos. Conocé las amenazas que enfrentan y cómo podemos ayudar a
-        preservar la biodiversidad acuática para las futuras generaciones.
-      </p>
-      <a href="amenazas.html" class="btn-outline">Descubrí todas las amenazas</a>
-    </section>
-  </main>
+      }
 
-  <footer>
+    });
 
-  <section class="footer-brand">
-    <h2>AquaPedia</h2>
-    <p>
-      Una enciclopedia digital dedicada a explorar y preservar la biodiversidad de nuestros océanos.
-    </p>
-  </section>
+  }
 
-  <nav class="footer-nav">
-    <h3>Explorar</h3>
+  /* =========================
+     OLAS AMENAZAS
+  ========================= */
 
-    <ul>
-      <li><a href="mamiferos.html">Mamíferos marinos</a></li>
-      <li><a href="peces.html">Peces</a></li>
-      <li><a href="moluscos.html">Moluscos</a></li>
-      <li><a href="crustaceos.html">Crustáceos</a></li>
-      <li><a href="cnidarios.html">Cnidarios</a></li>
-      <li><a href="equinodermos.html">Equinodermos</a></li>
-    </ul>
+  const waves = document.querySelectorAll(".wave-section");
 
-  </nav>
+  const waveObserver = new IntersectionObserver(
+    (entries) => {
 
-  <section class="footer-about">
-    <h3>Acerca de</h3>
-    <p>
-      AquaPedia es un proyecto educativo para generar conciencia sobre la vida acuática.
-    </p>
-  </section>
+      entries.forEach((entry) => {
 
-</footer>
+        if (entry.isIntersecting) {
 
-  <script src="main.js"></script>
-</body>
-</html>
+          entry.target.classList.add("wave-visible");
+
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.25
+    }
+  );
+
+  waves.forEach((wave) => {
+    waveObserver.observe(wave);
+  });
+
+  /* =========================
+     SCROLL SUAVE
+  ========================= */
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+
+    anchor.addEventListener("click", function (e) {
+
+      const target = document.querySelector(
+        this.getAttribute("href")
+      );
+
+      if (target) {
+
+        e.preventDefault();
+
+        target.scrollIntoView({
+          behavior: "smooth"
+        });
+
+      }
+
+    });
+
+  });
+
+});
