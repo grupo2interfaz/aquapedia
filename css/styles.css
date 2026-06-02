@@ -1674,7 +1674,7 @@ especie-info h3 {
 }
 
 .especie-info {
-    padding: 20px 24px;
+    padding: 15px 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1682,7 +1682,7 @@ especie-info h3 {
 
 .especie-info h3 {
     margin: 0 0 6px 0;
-    font-size: 20px;
+    font-size: 15px;
     color: #0c2340;
 }
 
