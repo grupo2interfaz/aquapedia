@@ -1628,3 +1628,161 @@ footer ul {
     .habitats-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
     .amenazas-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
 }
+/* ==========================
+   ESPECIES DESTACADAS
+========================== */
+
+.especies-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 16px;
+}
+
+.especie-card {
+    display: flex;
+    flex-direction: row;
+    background: #d6f1fb;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.especie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.especie-card img {
+    width: 180px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.especie-info {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.especie-info h3 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    color: #0c2340;
+}
+
+.especie-info p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #0c2340;
+}
+
+.estado {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.estado.peligro { background: #ffbaba; color: #a70000; }
+.estado.menor { background: #c8f0d4; color: #155724; }
+
+.dato {
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-top: 6px;
+    background: #b0b9bf;
+    color: #fff;
+}
+
+/* MEDIA QUERIES DESKTOP */
+@media (min-width: 768px) {
+    .especies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .especies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}/* ==========================
+   HÁBITATS Y DISTRIBUCIÓN
+========================== */
+.habitats {
+    background-color: #d6f1fb;
+    padding: 40px 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.habitats .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.habitats .section-title img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.habitats-intro {
+    font-size: 16px;
+    color: #0c2340;
+    margin-bottom: 32px;
+    max-width: 800px;
+}
+
+.habitats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.habitat-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habitat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.habitat-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #0c2340;
+}
+
+.habitat-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #0c2340;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    .habitats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+}
