@@ -38,12 +38,12 @@ list-style: none;
 /* =========================
 VARIABLES
 ========================= */
-{
---azul: #08263d;
---celeste: #2e96ad;
---aqua: #bfe7f0;
---naranja: #d96e2b;
---gris: #f2f2f2;
+:root {
+  --azul: #08263d;
+  --celeste: #2e96ad;
+  --aqua: #bfe7f0;
+  --naranja: #d96e2b;
+  --gris: #f2f2f2;
 }
 
 /* =========================
@@ -118,9 +118,9 @@ rgba(8,38,61,.78)
 z-index: 1;
 }
 
-.home-hero > *(img) {
-position: relative;
-z-index: 2;
+.home-hero > *:not(img) {
+  position: relative;
+  z-index: 2;
 }
 
 .home-hero h1 {
@@ -204,39 +204,19 @@ margin-top: 6px;
 CRISIS (ejemplo limpio)
 ========================= */
 .crisis-card {
-max-width: 1080px;
-margin: 0 auto 35px;
-padding: 95px 30px;
-border-radius: 30px;
-text-align: center;
-
-background:
-linear-gradient(rgba(8,38,61,.35), rgba(8,38,61,.55)),
-url('../imagenes/fondomar.jpg') center/cover;
-}
+  max-width: 1080px;
+  margin: 0 auto 35px;
+  padding: 80px 40px;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  position: relative;
-  border-radius: 30px;
-  padding: 80px 40px;
-  color: white;
-  text-align: center;
-  overflow: hidden;
 }
-
-.crisis-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,0.3),
-    rgba(0,0,0,0.7)
-  );
-  border-radius: 30px;
-}
-
-.crisis-card * {
-  position: relative;
-  z-index: 2;
+.alerta {
+  width: 80px;
+  margin: 0 auto 20px;
 }
