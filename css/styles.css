@@ -1,5 +1,5 @@
-/* AQUAPEDIA RESPONSIVE — un solo CSS */
-{
+
+*{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -79,6 +79,7 @@ header nav a {
 font-size: 13px;
 color: rgba(255,255,255,.8);
 }
+
 
 /* =========================
 HOME HERO
