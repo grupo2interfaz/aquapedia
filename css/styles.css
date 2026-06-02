@@ -1478,4 +1478,153 @@ footer ul {
     min-height: 300px !important;
   }
 
+}/* ==========================
+   MAMÍFEROS MARINOS - SECCIONES
+========================== */
+
+/* Títulos con icono */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.section-title img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* Clasificación / tarjetas info */
+.crisis-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 900px;
+    margin: 0 auto 36px auto;
+    padding: 0;
+}
+
+.crisis-list li {
+    background: #d8dbe0;
+    color: #000;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 20px 28px;
+    border-radius: 999px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+/* Info cards hábitos y comportamientos */
+.info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 950px;
+    margin: 0 auto 36px auto;
+}
+
+.info-cards .card {
+    background: #0c2340;
+    color: #fff;
+    padding: 28px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+/* Especies destacadas grid */
+.especies-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 950px;
+    margin: 0 auto 40px auto;
+}
+
+.especie-card {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #dcf5fb;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.especie-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.especie-info {
+    padding: 20px;
+}
+
+.especie-info h3 {
+    margin: 12px 0 6px 0;
+    font-size: 20px;
+}
+
+.especie-info p {
+    margin: 4px 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.estado {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.estado.peligro { background: #ffbaba; color: #a70000; }
+.estado.menor { background: #d0f0c0; color: #155724; }
+
+/* Hábitats y distribución */
+.habitats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 950px;
+    margin: 0 auto 36px auto;
+}
+
+.habitat-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Conservación y amenazas */
+.amenazas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 950px;
+    margin: 0 auto 36px auto;
+}
+
+.amenaza-card {
+    background: #dcf5fb;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* MEDIA QUERIES DESKTOP */
+@media (min-width: 768px) {
+    .crisis-list { flex-direction: row; flex-wrap: wrap; gap: 32px; }
+    .info-cards { flex-direction: row; gap: 32px; }
+    .especies-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .habitats-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .amenazas-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
 }
