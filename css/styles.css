@@ -1117,10 +1117,11 @@ footer ul {
   footer li {
     font-size: 13px;
   }
-@media (min-width: 768px) 
+@media (min-width: 768px) {
   .especies-destacadas {
     background: var(--aqua-claro);
     padding: 70px 6%;
+    width: 100%;
   }
 
   .especies-destacadas h2 {
@@ -1129,14 +1130,16 @@ footer ul {
   }
 
   .especies-destacadas .especies-grid {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 32px;
   }
 
   .especies-destacadas .especie-card {
+    width: 100%;
     display: flex;
-    min-height: 210px;
+    min-height: 260px;
     background: #bfe7f0;
     border-radius: 28px;
     overflow: hidden;
@@ -1144,7 +1147,7 @@ footer ul {
   }
 
   .especies-destacadas .especie-card img {
-    width: 170px;
+    width: 220px;
     height: auto;
     object-fit: cover;
     filter: none;
@@ -1152,7 +1155,7 @@ footer ul {
 
   .especies-destacadas .especie-info {
     flex: 1;
-    padding: 34px 28px;
+    padding: 36px;
     position: relative;
   }
 
@@ -1160,13 +1163,14 @@ footer ul {
     position: static;
     transform: none;
     color: var(--azul);
-    font-size: 28px;
-    margin-bottom: 4px;
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 8px;
   }
 
   .especies-destacadas .especie-info p {
     color: var(--azul);
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 8px;
   }
 
@@ -1188,3 +1192,4 @@ footer ul {
     background: #b7ead0;
     color: #24724c;
   }
+}
