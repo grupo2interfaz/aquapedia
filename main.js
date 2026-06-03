@@ -1,74 +1,81 @@
-window.document.addEventListener("DOMContentLoaded", () => {
+(function() {
+  var doc = window.document;
 
-  // ── CONTADOR ANIMADO (stats) ──
-  const counters = window.document.querySelectorAll(".stats h2");
+  doc.addEventListener("DOMContentLoaded", function() {
 
-  const animateCounter = (counter) => {
-    const finalText = counter.textContent.trim();
-    const finalNumber = parseInt(finalText.replace(/\D/g, ""));
-    if (isNaN(finalNumber)) return;
+    // ── CONTADOR ANIMADO (stats) ──
+    var counters = doc.querySelectorAll(".stats h2");
 
-    let current = 0;
-    const hasPlus = finalText.includes("+");
+    function animateCounter(counter) {
+      var finalText = counter.textContent.trim();
+      var finalNumber = parseInt(finalText.replace(/\D/g, ""));
+      if (isNaN(finalNumber)) return;
 
-    const interval = setInterval(() => {
-      current++;
-      counter.textContent = hasPlus ? `+${current}` : current;
-      if (current >= finalNumber) {
-        clearInterval(interval);
-        counter.textContent = finalText;
-      }
-    }, 50);
-  };
+      var current = 0;
+      var hasPlus = finalText.includes("+");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
-        entry.target.classList.add("counted");
-        animateCounter(entry.target);
-      }
-    });
-  }, { threshold: 0.6 });
-
-  counters.forEach((counter) => observer.observe(counter));
-
-
-  // ── OCÉANOS EN CRISIS (desplegable) ──
-  const boton = window.document.getElementById("boton-crisis");
-  const lista = window.document.getElementById("lista-crisis");
-
-  if (boton && lista) {
-    boton.addEventListener("click", () => {
-      lista.classList.toggle("abierto");
-      boton.textContent = lista.classList.contains("abierto") ? "↑" : "↓";
-    });
-  }
-
-
-  // ── BURBUJAS ──
-  const container = window.document.querySelector(".bubbles");
-
-  if (container) {
-    function createBubble() {
-      const bubble = window.document.createElement("div");
-      bubble.classList.add("bubble");
-
-      const size = Math.random() * 80 + 20;
-      bubble.style.width = `${size}px`;
-      bubble.style.height = `${size}px`;
-      bubble.style.left = `${Math.random() * 100}%`;
-      bubble.style.background = Math.random() > 0.5
-        ? "rgba(191,231,240,.35)"
-        : "rgba(46,150,173,.25)";
-
-      const duration = Math.random() * 8 + 8;
-      bubble.style.animationDuration = `${duration}s`;
-
-      container.appendChild(bubble);
-      setTimeout(() => bubble.remove(), duration * 1000);
+      var interval = setInterval(function() {
+        current++;
+        counter.textContent = hasPlus ? "+" + current : current;
+        if (current >= finalNumber) {
+          clearInterval(interval);
+          counter.textContent = finalText;
+        }
+      }, 50);
     }
 
-    setInterval(createBubble, 1200);
-  }
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
+          entry.target.classList.add("counted");
+          animateCounter(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
 
-});
+    counters.forEach(function(counter) {
+      observer.observe(counter);
+    });
+
+
+    // ── OCÉANOS EN CRISIS (desplegable) ──
+    var boton = doc.getElementById("boton-crisis");
+    var lista = doc.getElementById("lista-crisis");
+
+    if (boton && lista) {
+      boton.addEventListener("click", function() {
+        lista.classList.toggle("abierto");
+        boton.textContent = lista.classList.contains("abierto") ? "↑" : "↓";
+      });
+    }
+
+
+    // ── BURBUJAS ──
+    var container = doc.querySelector(".bubbles");
+
+    if (container) {
+      function createBubble() {
+        var bubble = doc.createElement("div");
+        bubble.classList.add("bubble");
+
+        var size = Math.random() * 80 + 20;
+        bubble.style.width = size + "px";
+        bubble.style.height = size + "px";
+        bubble.style.left = (Math.random() * 100) + "%";
+        bubble.style.background = Math.random() > 0.5
+          ? "rgba(191,231,240,.35)"
+          : "rgba(46,150,173,.25)";
+
+        var duration = Math.random() * 8 + 8;
+        bubble.style.animationDuration = duration + "s";
+
+        container.appendChild(bubble);
+        setTimeout(function() { bubble.remove(); }, duration * 1000);
+      }
+
+      setInterval(createBubble, 1200);
+    }
+
+  });
+
+})();
