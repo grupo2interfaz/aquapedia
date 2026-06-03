@@ -1796,3 +1796,23 @@ especie-info h3 {
         gap: 32px;
     }
 }
+/* FORZAR TAMAÑO CORRECTO EN ESPECIES */
+
+.especie-card h3 {
+    font-size: 1.1rem !important;
+    line-height: 1.2 !important;
+    margin: 0 0 5px 0 !important;
+}
+
+.especie-card em {
+    font-size: 0.9rem !important;
+}
+
+.especie-card p {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+}
+
+.especie-card .estado {
+    font-size: 0.8rem !important;
+}
