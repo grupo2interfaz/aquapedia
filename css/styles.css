@@ -15,9 +15,7 @@
   --negro: #02070a;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: "Fustat", sans-serif;
@@ -26,30 +24,15 @@ body {
   line-height: 1.45;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: "Gloock", serif;
   font-weight: 400;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-main {
-  overflow: hidden;
-}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+main { overflow: hidden; }
 
 /* ========================
    HEADER
@@ -64,25 +47,12 @@ header {
   padding: 0 18px;
   position: relative;
   z-index: 50;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.22);
 }
-
-header img {
-  width: 78px;
-}
-
-header p {
-  font-size: 0;
-}
-
-header p::before {
-  content: "⌕";
-  font-size: 20px;
-}
-
-header nav {
-  display: none;
-}
+header img { width: 78px; }
+header p { font-size: 0; }
+header p::before { content: "⌕"; font-size: 20px; }
+header nav { display: none; }
 
 /* ========================
    HOME HERO
@@ -100,7 +70,6 @@ header nav {
   padding: 70px 28px;
   overflow: hidden;
 }
-
 .home-hero > img {
   position: absolute;
   inset: 0;
@@ -110,42 +79,18 @@ header nav {
   opacity: 0.62;
   z-index: 0;
 }
-
 .home-hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(8, 38, 61, 0.18), rgba(8, 38, 61, 0.78));
+  background: linear-gradient(rgba(8,38,61,0.18), rgba(8,38,61,0.78));
   z-index: 1;
 }
-
-.home-hero > *:not(img) {
-  position: relative;
-  z-index: 2;
-}
-
-.home-hero h1 {
-  font-size: 38px;
-  line-height: 1;
-  margin-bottom: 10px;
-}
-
-.home-hero p {
-  max-width: 300px;
-  font-size: 11px;
-  line-height: 1.45;
-  margin-bottom: 14px;
-}
-
-.home-hero form {
-  width: 100%;
-  max-width: 220px;
-}
-
-.home-hero label {
-  display: none;
-}
-
+.home-hero > *:not(img) { position: relative; z-index: 2; }
+.home-hero h1 { font-size: 38px; line-height: 1; margin-bottom: 10px; }
+.home-hero p { max-width: 300px; font-size: 11px; line-height: 1.45; margin-bottom: 14px; }
+.home-hero form { width: 100%; max-width: 220px; }
+.home-hero label { display: none; }
 .home-hero input {
   width: 100%;
   border: 0;
@@ -155,10 +100,7 @@ header nav {
   font-family: "Fustat", sans-serif;
   font-size: 11px;
 }
-
-.cta {
-  display: none;
-}
+.cta { display: none; }
 
 /* ========================
    STATS
@@ -172,35 +114,17 @@ header nav {
   position: relative;
   z-index: 10;
 }
-
 .stats article {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255,255,255,0.95);
   border-radius: 14px;
   text-align: center;
   padding: 10px 10px 13px;
-  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 18px 32px rgba(0,0,0,0.18);
 }
-
-.stats img {
-  width: 28px;
-  margin: 0 auto 3px;
-}
-
-.stats h2 {
-  font-size: 22px;
-  line-height: 1;
-}
-
-.stats h3 {
-  font-family: "Fustat", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.stats p {
-  font-size: 9px;
-  color: #8f8f8f;
-}
+.stats img { width: 28px; margin: 0 auto 3px; }
+.stats h2 { font-size: 22px; line-height: 1; }
+.stats h3 { font-family: "Fustat", sans-serif; font-size: 12px; font-weight: 600; }
+.stats p { font-size: 9px; color: #8f8f8f; }
 
 /* ========================
    HOME CATEGORIAS
@@ -209,50 +133,24 @@ header nav {
   background: var(--blanco);
   padding: 34px 46px 44px;
 }
-
-#categorias > h2 {
-  font-size: 25px;
-  line-height: 1.05;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-#categorias > p {
-  max-width: 320px;
-  margin: 0 auto 28px;
-  font-size: 11px;
-  color: #666666;
-  text-align: center;
-}
-
+#categorias > h2 { font-size: 25px; line-height: 1.05; text-align: center; margin-bottom: 10px; }
+#categorias > p { max-width: 320px; margin: 0 auto 28px; font-size: 11px; color: #666; text-align: center; }
 #categorias article {
   position: relative;
   height: 183px;
   margin-bottom: 24px;
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 17px 28px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 17px 28px rgba(0,0,0,0.2);
 }
-
-#categorias article a {
-  display: block;
-  height: 100%;
-}
-
-#categorias img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.72);
-}
-
+#categorias article a { display: block; height: 100%; }
+#categorias img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.72); }
 #categorias article::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(transparent 25%, rgba(0, 0, 0, 0.72));
+  background: linear-gradient(transparent 25%, rgba(0,0,0,0.72));
 }
-
 #categorias h3,
 #categorias article p {
   position: absolute;
@@ -261,20 +159,8 @@ header nav {
   color: var(--blanco);
   z-index: 2;
 }
-
-#categorias h3 {
-  bottom: 52px;
-  font-size: 19px;
-  line-height: 1;
-}
-
-#categorias article p {
-  bottom: 28px;
-  max-width: 75%;
-  font-size: 11px;
-  line-height: 1.25;
-}
-
+#categorias h3 { bottom: 52px; font-size: 19px; line-height: 1; }
+#categorias article p { bottom: 28px; max-width: 75%; font-size: 11px; line-height: 1.25; }
 #categorias article::before {
   content: "❯";
   position: absolute;
@@ -294,29 +180,53 @@ header nav {
   text-align: center;
   padding: 55px 30px;
 }
+#conservacion h2 { font-size: 31px; line-height: 1.05; margin-bottom: 20px; }
+#conservacion p { max-width: 320px; margin: 0 auto 24px; font-size: 13px; }
 
-#conservacion h2 {
-  font-size: 31px;
-  line-height: 1.05;
-  margin-bottom: 20px;
-}
-
-#conservacion p {
-  max-width: 320px;
-  margin: 0 auto 24px;
-  font-size: 13px;
-}
-
-/* estilos base del botón conservacion → ver .btn-amenazas más abajo */
 #conservacion a,
 .btn-amenazas {
   display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.1);
   border-radius: 28px;
   padding: 8px 22px;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255,255,255,0.85);
+}
+
+/* ========================
+   BTN AMENAZAS hover
+======================== */
+.btn-amenazas {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-amenazas:hover {
+  background: var(--naranja);
+  border-color: var(--naranja);
+  color: var(--blanco);
+  animation: pulse-naranja 1.2s ease infinite;
+}
+.btn-amenazas::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+  transform: skewX(-20deg);
+}
+.btn-amenazas:hover::before {
+  animation: destello 0.55s ease forwards;
+}
+@keyframes destello {
+  0%   { left: -75%; }
+  100% { left: 125%; }
+}
+@keyframes pulse-naranja {
+  0%   { box-shadow: 0 0 14px rgba(217,110,43,0.6), 0 0 28px rgba(217,110,43,0.3); }
+  50%  { box-shadow: 0 0 24px rgba(217,110,43,0.9), 0 0 48px rgba(217,110,43,0.5); }
+  100% { box-shadow: 0 0 14px rgba(217,110,43,0.6), 0 0 28px rgba(217,110,43,0.3); }
 }
 
 /* ========================
@@ -328,79 +238,34 @@ header nav {
   overflow: hidden;
   color: var(--blanco);
 }
-
-.mamiferos-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+.mamiferos-hero img { width: 100%; height: 100%; object-fit: cover; }
 .mamiferos-hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(transparent 25%, rgba(0, 0, 0, 0.62));
+  background: linear-gradient(transparent 25%, rgba(0,0,0,0.62));
 }
+.hero-texto { position: absolute; left: 20px; bottom: 25px; z-index: 2; }
+.hero-texto h1 { font-size: 29px; line-height: 1; }
+.hero-texto p { font-size: 11px; }
 
-.hero-texto {
-  position: absolute;
-  left: 20px;
-  bottom: 25px;
-  z-index: 2;
-}
-
-.hero-texto h1 {
-  font-size: 29px;
-  line-height: 1;
-}
-
-.hero-texto p {
-  font-size: 11px;
-}
-
-.mamiferos-hero ~ section {
-  background: var(--aqua-claro);
-  padding: 25px 28px;
-}
-
-.mamiferos-hero ~ section h2 {
-  font-size: 25px;
-  line-height: 1.1;
-  margin-bottom: 14px;
-}
-
-.mamiferos-hero ~ section h3 {
-  font-size: 18px;
-  line-height: 1.1;
-}
-
-.mamiferos-hero ~ section p {
-  font-size: 11px;
-  color: #243f4c;
-}
-
-.mamiferos-hero ~ section ul {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 18px;
-}
-
+.mamiferos-hero ~ section { background: var(--aqua-claro); padding: 25px 28px; }
+.mamiferos-hero ~ section h2 { font-size: 25px; line-height: 1.1; margin-bottom: 14px; }
+.mamiferos-hero ~ section h3 { font-size: 18px; line-height: 1.1; }
+.mamiferos-hero ~ section p { font-size: 11px; color: #243f4c; }
+.mamiferos-hero ~ section ul { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 18px; }
 .mamiferos-hero ~ section li {
   background: #eefbff;
   border-radius: 20px;
   text-align: center;
   padding: 12px;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
   color: #78909b;
   font-size: 10px;
 }
 
-/* Hábitos / comportamientos */
 .mamiferos-hero ~ section:nth-of-type(4),
-.mamiferos-hero ~ section:nth-of-type(5) {
-  padding: 12px 36px;
-}
+.mamiferos-hero ~ section:nth-of-type(5) { padding: 12px 36px; }
 
 .mamiferos-hero ~ section:nth-of-type(4) h3,
 .mamiferos-hero ~ section:nth-of-type(5) h3 {
@@ -410,7 +275,6 @@ header nav {
   padding: 24px 20px 8px;
   text-align: center;
 }
-
 .mamiferos-hero ~ section:nth-of-type(4) p,
 .mamiferos-hero ~ section:nth-of-type(5) p {
   background: var(--azul);
@@ -418,59 +282,6 @@ header nav {
   border-radius: 0 0 20px 20px;
   padding: 0 22px 24px;
   text-align: center;
-}
-
-/* Especies destacadas — layout móvil */
-.mamiferos-hero ~ section:nth-of-type(6) {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.mamiferos-hero ~ section:nth-of-type(6) h2 {
-  padding: 0 28px;
-}
-
-.mamiferos-hero ~ section:nth-of-type(6) article {
-  position: relative;
-  height: 95px;
-  overflow: hidden;
-}
-
-.mamiferos-hero ~ section:nth-of-type(6) img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.72);
-}
-
-.mamiferos-hero ~ section:nth-of-type(6) h3 {
-  position: absolute;
-  left: 55px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--blanco);
-  font-size: 24px;
-}
-
-/* Hábitat */
-.mamiferos-hero ~ section:nth-of-type(7) article {
-  background: #eefbff;
-  border-radius: 26px;
-  padding: 24px 18px;
-  margin: 18px 30px;
-  text-align: center;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
-}
-
-/* Amenazas mamíferos */
-.mamiferos-hero ~ section:nth-of-type(8) article {
-  background: var(--blanco);
-  border: 1.5px solid var(--naranja);
-  border-radius: 25px;
-  padding: 12px 16px;
-  margin-bottom: 14px;
-  text-align: center;
-  color: var(--naranja);
 }
 
 .mamiferos-hero ~ section:nth-of-type(9) {
@@ -481,7 +292,7 @@ header nav {
 }
 
 /* ========================
-   AMENAZAS — HERO
+   AMENAZAS HERO
 ======================== */
 .hero {
   background: var(--blanco);
@@ -489,23 +300,9 @@ header nav {
   color: var(--naranja);
   padding: 32px 26px 30px;
 }
-
-.alerta {
-  width: 42px;
-  margin: 0 auto 10px;
-}
-
-.hero h1 {
-  font-size: 21px;
-  line-height: 1.1;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  max-width: 320px;
-  margin: 0 auto;
-  font-size: 12px;
-}
+.alerta { width: 42px; margin: 0 auto 10px; }
+.hero h1 { font-size: 21px; line-height: 1.1; margin-bottom: 10px; }
+.hero p { max-width: 320px; margin: 0 auto; font-size: 12px; }
 
 /* ========================
    WAVE SECTIONS
@@ -515,1484 +312,28 @@ header nav {
   padding: 40px 28px 80px;
   margin-bottom: -2px;
 }
-
 .wave-section::after {
   content: "";
   position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 50px;
+  bottom: -1px; left: 0;
+  width: 100%; height: 50px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-
-.wave-light {
-  background: var(--aqua);
-}
-
+.wave-light { background: var(--aqua); }
 .wave-light::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 70' preserveAspectRatio='none'%3E%3Cpath d='M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z' fill='%232e96ad'/%3E%3C/svg%3E");
 }
-
-.wave-medium {
-  background: var(--celeste);
-  color: var(--blanco);
-  text-align: center;
-}
-
+.wave-medium { background: var(--celeste); color: var(--blanco); text-align: center; }
 .wave-medium::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 70' preserveAspectRatio='none'%3E%3Cpath d='M0,20 C480,70 960,0 1440,45 L1440,70 L0,70 Z' fill='%2308263d'/%3E%3C/svg%3E");
 }
-
-.wave-dark {
-  background: var(--azul);
-  color: var(--blanco);
-}
-
-.wave-section h2 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.wave-section p {
-  font-size: 12px;
-}
+.wave-dark { background: var(--azul); color: var(--blanco); }
+.wave-section h2 { font-size: 22px; margin-bottom: 12px; }
+.wave-section p { font-size: 12px; }
 
 /* ========================
-   CRISIS
-======================== */
-.crisis {
-  background: var(--negro);
-  padding: 35px 38px;
-  color: var(--blanco);
-}
-
-.crisis-card {
-  min-height: 150px;
-  border-radius: 24px;
-  padding: 36px 20px;
-  text-align: center;
-  color: white;
-  background: var(--azul);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.crisis-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-
-.crisis-content.active {
-  max-height: 1000px;
-}
-
-#boton-crisis {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 32px;
-  cursor: pointer;
-}
-
-/* Lista de crisis */
-.crisis-list {
-  list-style: none;
-  padding: 0;
-  margin: 32px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  max-width: 900px;
-}
-
-.crisis-list li {
-  background: #d8dbe0;
-  color: #000000;
-  text-align: center;
-  font-size: 1rem;
-  line-height: 1.35;
-  padding: 20px 28px;
-  border-radius: 999px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.14);
-  list-style: none;
-}
-
-/* Lista crisis (JS toggle con #lista-crisis) */
-#lista-crisis {
-  display: none;
-  list-style: none;
-  padding: 0;
-  margin: 28px auto 0;
-  max-width: 520px;
-  flex-direction: column;
-  gap: 14px;
-}
-
-#lista-crisis.abierto {
-  display: flex;
-}
-
-#lista-crisis .crisis-item {
-  background: rgba(210, 215, 220, 0.82);
-  color: #1a1a1a;
-  border-radius: 999px;
-  padding: 16px 28px;
-  font-size: 14px;
-  line-height: 1.35;
-  text-align: center;
-  list-style: none;
-}
-
-/* ========================
-   DATOS
-======================== */
-.datos {
-  background: var(--negro);
-  color: var(--blanco);
-  text-align: center;
-  padding: 40px 46px;
-}
-
-.datos h2 {
-  color: #8fd3e2;
-  font-size: 22px;
-}
-
-.datos > p {
-  font-size: 11px;
-  margin-bottom: 18px;
-}
-
-.dato-card {
-  background: var(--blanco);
-  color: #111111;
-  border-radius: 12px;
-  padding: 20px 14px;
-  margin: 12px 0;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
-  font-weight: 700;
-}
-
-/* ========================
-   VIDA EN RIESGO
-======================== */
-.riesgo {
-  background: white;
-  padding: 40px 39px;
-}
-
-.riesgo h2 {
-  font-size: 34px;
-  line-height: 1;
-}
-
-.riesgo > p {
-  font-size: 12px;
-  margin-bottom: 22px;
-}
-
-.animales,
-.animales-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  margin-top: 24px;
-}
-
-.animal {
-  position: relative;
-  min-height: 125px;
-  border-radius: 22px;
-  overflow: hidden;
-  color: white;
-  background: var(--azul);
-}
-
-.animal img {
-  width: 100%;
-  height: 100%;
-  min-height: 125px;
-  object-fit: cover;
-  filter: brightness(0.55);
-}
-
-.animal::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(8, 38, 61, 0.25);
-}
-
-.animal-texto {
-  position: absolute;
-  left: 16px;
-  top: 26px;
-  right: 14px;
-  z-index: 2;
-}
-
-.animal h3 {
-  position: static;
-  font-size: 15px;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-
-.animal ul {
-  list-style: disc;
-  padding-left: 14px;
-}
-
-.animal li {
-  font-size: 9px;
-  line-height: 1.25;
-}
-
-.nota-vaquita {
-  color: var(--naranja);
-  font-size: 8px;
-  line-height: 1.1;
-  margin-top: 26px;
-}
-
-/* ========================
-   FORM SECTION
-======================== */
-.form-section {
-  background: linear-gradient(var(--blanco), var(--azul));
-  text-align: center;
-  padding: 50px 38px;
-}
-
-.form-section h2 {
-  font-size: 27px;
-}
-
-.form-section > p {
-  color: var(--celeste);
-  font-size: 13px;
-  margin-bottom: 24px;
-}
-
-.form-section form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.form-section input,
-.form-section textarea {
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 22px;
-  background: rgba(180, 222, 234, 0.68);
-  padding: 9px 15px;
-  font-family: "Fustat", sans-serif;
-  font-size: 11px;
-}
-
-.form-section input:nth-child(1),
-.form-section input:nth-child(4),
-.form-section input:nth-child(5),
-.form-section textarea {
-  grid-column: 1 / -1;
-}
-
-.form-section textarea {
-  height: 98px;
-  resize: none;
-}
-
-.form-section button {
-  grid-column: 2;
-  justify-self: end;
-  background: var(--celeste);
-  color: var(--blanco);
-  border: 0;
-  border-radius: 24px;
-  padding: 8px 24px;
-  font-size: 11px;
-}
-
-/* ========================
-   FOOTER
-======================== */
-footer {
-  background: var(--azul);
-  color: var(--blanco);
-  padding: 48px 38px 28px;
-}
-
-footer section,
-footer nav {
-  margin-bottom: 26px;
-}
-
-footer h2,
-footer h3 {
-  font-size: 17px;
-  margin-bottom: 12px;
-}
-
-footer p,
-footer a,
-footer li {
-  font-size: 10px;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.72);
-}
-
-footer ul {
-  columns: 2;
-}
-
-/* ========================
-   BUBBLES
-======================== */
-.bubbles {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.bubble {
-  position: absolute;
-  bottom: -50px;
-  border-radius: 50%;
-  animation: floatUp linear forwards;
-}
-
-@keyframes floatUp {
-  from { transform: translateY(0); opacity: 0.5; }
-  to   { transform: translateY(-120vh); opacity: 0; }
-}
-
-@keyframes pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(217, 110, 43, 0.4); }
-  70%  { box-shadow: 0 0 0 12px rgba(217, 110, 43, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(217, 110, 43, 0); }
-}
-
-/* ========================
-   MAMÍFEROS — SECCIÓN TITLES
-======================== */
-.section-title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 28px;
-  margin-bottom: 24px;
-}
-
-.section-title img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-}
-
-/* ========================
-   INFO CARDS (hábitos)
-======================== */
-.info-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  max-width: 950px;
-  margin: 0 auto 36px;
-}
-
-.info-cards .card {
-  background: #0c2340;
-  color: #fff;
-  padding: 28px;
-  border-radius: 18px;
-  text-align: center;
-}
-
-/* ========================
-   ESPECIES DESTACADAS
-======================== */
-.especies-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  max-width: 1200px;
-  margin: 0 auto 40px;
-  padding: 0 16px;
-}
-
-.especie-card {
-  display: flex;
-  flex-direction: column;
-  background: #d6f1fb;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.09);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.especie-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.13);
-}
-
-.especie-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.especie-info {
-  padding: 14px 16px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.especie-info h3 {
-  margin: 0 0 4px;
-  font-size: 1rem;
-  line-height: 1.15;
-  color: #0c2340;
-}
-
-.especie-info p {
-  margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.4;
-  color: #0c2340;
-}
-
-.especie-info p em {
-  font-size: 0.78rem;
-  display: block;
-  margin-bottom: 2px;
-  font-style: italic;
-}
-
-.estado {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.estado.peligro { background: #ffbaba; color: #a70000; }
-.estado.menor   { background: #c8f0d4; color: #155724; }
-
-.dato {
-  display: inline-block;
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 12px;
-  margin-top: 6px;
-  background: #b0b9bf;
-  color: #fff;
-}
-
-/* ========================
-   HÁBITATS
-======================== */
-.habitats {
-  background-color: #d6f1fb;
-  padding: 40px 16px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.habitats-intro {
-  font-size: 16px;
-  color: #0c2340;
-  margin-bottom: 32px;
-  max-width: 800px;
-}
-
-.habitats-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  max-width: 950px;
-  margin: 0 auto 36px;
-}
-
-.habitat-card {
-  background: #fff;
-  padding: 24px;
-  border-radius: 24px;
-  text-align: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.habitat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-}
-
-.habitat-card h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
-  color: #0c2340;
-}
-
-.habitat-card p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #0c2340;
-}
-
-/* ========================
-   AMENAZAS GRID
-======================== */
-.amenazas-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  max-width: 950px;
-  margin: 0 auto 36px;
-}
-
-.amenaza-card {
-  background: #dcf5fb;
-  padding: 20px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* ========================
-   DESKTOP — min-width: 768px
-======================== */
-@media (min-width: 768px) {
-
-  /* Header */
-  header {
-    height: 56px;
-    padding: 0 7%;
-  }
-  header img { width: 110px; }
-  header p { font-size: 14px; }
-  header p::before { content: ""; font-size: 0; }
-  header nav { display: flex; gap: 34px; align-items: center; }
-  header nav a { color: rgba(255, 255, 255, 0.85); font-size: 14px; }
-
-  /* Home hero */
-  .home-hero { height: 680px; padding: 80px 24px 120px; }
-  .home-hero h1 { font-size: 92px; margin-bottom: 24px; }
-  .home-hero p { max-width: 760px; font-size: 21px; margin-bottom: 28px; }
-  .home-hero form { max-width: 640px; }
-  .home-hero input { border-radius: 10px; padding: 15px 24px; font-size: 15px; }
-  .cta {
-    display: inline-block;
-    margin-top: 28px;
-    background: var(--celeste);
-    color: var(--blanco);
-    padding: 14px 30px;
-    border-radius: 10px;
-    font-weight: 600;
-  }
-
-  /* Stats */
-  .stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
-    max-width: 1180px;
-    margin: -58px auto 72px;
-    padding: 0 60px;
-  }
-  .stats article { padding: 25px 20px 28px; }
-  .stats img { width: 38px; }
-  .stats h2 { font-size: 31px; }
-  .stats h3 { font-size: 18px; }
-  .stats p { font-size: 12px; }
-
-  /* Categorías */
-  #categorias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
-    padding: 70px 6% 90px;
-  }
-  #categorias > h2,
-  #categorias > p { grid-column: 1 / -1; }
-  #categorias > h2 { font-size: 58px; }
-  #categorias > p { max-width: 780px; font-size: 20px; }
-  #categorias article { height: 270px; margin-bottom: 0; border-radius: 26px; }
-  #categorias h3 { left: 34px; bottom: 66px; font-size: 30px; }
-  #categorias article p { left: 34px; bottom: 34px; font-size: 15px; }
-
-  /* Conservación */
-  #conservacion { padding: 115px 24px; }
-  #conservacion h2 { font-size: 56px; }
-  #conservacion p { max-width: 760px; font-size: 20px; }
-
-  /* Mamíferos hero */
-  .mamiferos-hero { height: 520px; }
-  .hero-texto { left: 9%; bottom: 72px; }
-  .hero-texto h1 { font-size: 62px; }
-  .hero-texto p { font-size: 22px; }
-
-  /* Mamíferos secciones */
-  .mamiferos-hero ~ section { padding: 55px 8%; }
-  .mamiferos-hero ~ section h2 { font-size: 48px; }
-  .mamiferos-hero ~ section p { font-size: 16px; }
-  .mamiferos-hero ~ section ul { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .mamiferos-hero ~ section:nth-of-type(4),
-  .mamiferos-hero ~ section:nth-of-type(5) {
-    display: inline-block;
-    width: calc(50% - 4px);
-    vertical-align: top;
-    padding: 30px 3%;
-  }
-
-  /* Especies destacadas (nth selector legacy) */
-  .mamiferos-hero ~ section:nth-of-type(6) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding-left: 8%;
-    padding-right: 8%;
-  }
-  .mamiferos-hero ~ section:nth-of-type(6) h2 { grid-column: 1 / -1; padding: 0; }
-  .mamiferos-hero ~ section:nth-of-type(6) article { height: 220px; border-radius: 20px; }
-  .mamiferos-hero ~ section:nth-of-type(6) h3 { font-size: 30px; }
-
-  /* Especies destacadas (clase .especies-destacadas) */
-  .mamiferos-hero ~ .especies-destacadas {
-    display: block;
-    width: 100%;
-    padding: 70px 6%;
-    background: var(--aqua-claro);
-  }
-  .mamiferos-hero ~ .especies-destacadas .especies-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    width: 100%;
-  }
-  .mamiferos-hero ~ .especies-destacadas .especie-card {
-    display: flex;
-    width: 100%;
-    height: 260px;
-    min-height: 260px;
-    background: #bfe7f0;
-    border-radius: 28px;
-    overflow: hidden;
-    position: relative;
-  }
-  .mamiferos-hero ~ .especies-destacadas .especie-card img {
-    position: static;
-    width: 220px;
-    height: 100%;
-    object-fit: cover;
-    filter: none;
-    transform: none;
-  }
-  .mamiferos-hero ~ .especies-destacadas .especie-info {
-    flex: 1;
-    padding: 36px;
-    position: relative;
-  }
-  .mamiferos-hero ~ .especies-destacadas .especie-info h3 {
-    position: static;
-    transform: none;
-    color: var(--azul);
-    font-size: 34px;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .mamiferos-hero ~ .especies-destacadas .especie-info p {
-    position: static;
-    color: var(--azul);
-    font-size: 16px;
-    line-height: 1.35;
-    margin-bottom: 8px;
-  }
-  .mamiferos-hero ~ .especies-destacadas .estado {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-size: 11px;
-  }
-
-  /* Amenazas hero */
-  .hero { padding: 80px 24px 55px; }
-  .alerta { width: 70px; }
-  .hero h1 { font-size: 46px; }
-  .hero p { font-size: 18px; max-width: 650px; }
-
-  /* Wave */
-  .wave-section { padding: 90px 12% 120px; }
-  .wave-section::after { height: 90px; }
-  .wave-section h2 { font-size: 44px; }
-  .wave-section p { max-width: 660px; font-size: 17px; }
-
-  /* Crisis */
-  .crisis { padding: 80px 7% 55px; }
-  .crisis-card {
-    max-width: 1080px;
-    margin: 0 auto 35px;
-    padding: 70px 40px;
-    border-radius: 30px;
-    min-height: 280px;
-  }
-
-  /* cuando crisis-card es standalone (sin wrapper .crisis) */
-  section.crisis-card {
-    background: var(--negro);
-    border-radius: 0;
-    max-width: 100%;
-    margin: 0;
-    padding: 70px 7%;
-  }
-  .crisis-card h2 { font-size: 64px; }
-  .crisis-card p { font-size: 24px; }
-  #lista-crisis { max-width: 780px; margin-top: 38px; gap: 18px; }
-  #lista-crisis .crisis-item { font-size: 1.1rem; padding: 20px 40px; }
-
-  /* Datos */
-  .datos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-    padding: 65px 5%;
-  }
-  .datos h2,
-  .datos > p { grid-column: 1 / -1; }
-
-  /* Vida en riesgo */
-  .riesgo { padding: 70px 6%; }
-  .riesgo h2 { font-size: 48px; margin-bottom: 8px; }
-  .riesgo > p { font-size: 18px; margin-bottom: 32px; }
-  .animales,
-  .animales-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-  }
-  .animales-grid .animal,
-  .riesgo .animal {
-    width: 100%;
-    height: 300px;
-    min-height: 300px;
-    border-radius: 34px;
-  }
-  .riesgo .animal img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.55);
-    transform: none;
-  }
-  .riesgo .animal .info {
-    position: absolute;
-    z-index: 3;
-    left: 38px;
-    top: 70px;
-    right: 36px;
-    color: white;
-  }
-  .riesgo .animal h3 {
-    position: static;
-    color: white;
-    font-size: 30px;
-    line-height: 1;
-    margin-bottom: 10px;
-  }
-  .riesgo .animal ul { list-style: disc; padding-left: 18px; }
-  .riesgo .animal li { color: white; font-size: 17px; line-height: 1.35; }
-  .riesgo .animal .nota {
-    display: block;
-    color: var(--naranja);
-    font-size: 13px;
-    line-height: 1.2;
-    margin-top: 85px;
-  }
-  .animal-texto { left: 38px; top: 70px; right: 36px; }
-  .animal h3 { font-size: 30px; margin-bottom: 10px; }
-  .animal li { font-size: 17px; line-height: 1.35; }
-  .nota-vaquita { font-size: 13px; margin-top: 85px; }
-
-  /* Form */
-  .form-section { padding: 80px 14%; }
-  .form-section h2 { font-size: 48px; }
-
-  /* Footer */
-  footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 90px;
-    padding: 80px 10% 32px;
-  }
-  footer h2,
-  footer h3 { font-size: 24px; }
-  footer p,
-  footer a,
-  footer li { font-size: 13px; }
-
-  /* Mamíferos secciones grid */
-  .info-cards { flex-direction: row; gap: 32px; }
-  .habitats-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
-  .amenazas-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
-
-  /* Especies destacadas desktop: 2 columnas, cards en fila imagen+texto */
-  .especies-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-    max-width: 1100px;
-  }
-
-  .especie-card {
-    flex-direction: row;
-    height: 210px;
-  }
-
-  .especie-card img {
-    width: 160px;
-    height: 100%;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-
-  .especie-info {
-    padding: 18px 20px;
-    gap: 5px;
-  }
-
-  .especie-info h3 {
-    font-size: 1.1rem;
-  }
-
-  .especie-info p {
-    font-size: 0.88rem;
-  }
-}
-
-/* ========================
-   BTN AMENAZAS — hover naranja con destellos
-======================== */
-.btn-amenazas {
-  position: relative;
-  overflow: hidden;
-  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-amenazas:hover {
-  background: var(--naranja);
-  border-color: var(--naranja);
-  color: var(--blanco);
-  box-shadow: 0 0 18px rgba(217, 110, 43, 0.7), 0 0 36px rgba(217, 110, 43, 0.35);
-  animation: pulse-naranja 1.2s ease infinite;
-}
-
-/* Destello que cruza el botón al hacer hover */
-.btn-amenazas::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
-  transform: skewX(-20deg);
-  transition: none;
-}
-
-.btn-amenazas:hover::before {
-  animation: destello 0.55s ease forwards;
-}
-
-@keyframes destello {
-  0%   { left: -75%; }
-  100% { left: 125%; }
-}
-
-@keyframes pulse-naranja {
-  0%   { box-shadow: 0 0 14px rgba(217,110,43,0.6), 0 0 28px rgba(217,110,43,0.3); }
-  50%  { box-shadow: 0 0 24px rgba(217,110,43,0.9), 0 0 48px rgba(217,110,43,0.5); }
-  100% { box-shadow: 0 0 14px rgba(217,110,43,0.6), 0 0 28px rgba(217,110,43,0.3); }
-}
-
-@media (min-width: 768px) {
-  .btn-amenazas {
-    font-size: 16px;
-    padding: 13px 32px;
-    border-radius: 34px;
-  }
-}
-/* ========================
-   ESPECIES DESTACADAS
-======================== */
-
-/* MÓVIL: imagen de fondo con nombre encima, 1 columna */
-.especies-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  max-width: 100%;
-  margin: 0 0 32px;
-  padding: 0;
-}
-
-.especie-card {
-  position: relative;
-  display: block;
-  height: 160px;
-  overflow: hidden;
-  border-radius: 0;
-  box-shadow: none;
-  background: var(--azul);
-}
-
-.especie-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.55);
-  display: block;
-}
-
-.especie-info {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-}
-
-.especie-info h3 {
-  color: white;
-  font-size: 1.4rem;
-  line-height: 1.1;
-  text-align: center;
-  margin: 0;
-  font-family: "Gloock", serif;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-}
-
-/* ocultar todo excepto el nombre en móvil */
-.especie-info .estado,
-.especie-info p,
-.especie-info .dato {
-  display: none;
-}
-
-/* colores de estado (globales) */
-.estado {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 20px;
-  align-self: flex-start;
-}
-.estado.peligro { background: #ffbaba; color: #a70000; }
-.estado.menor   { background: #c8f0d4; color: #155724; }
-
-/* ========================
-   DESKTOP — especies destacadas
-======================== */
-@media (min-width: 768px) {
-
-  .especies-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    max-width: 1100px;
-    margin: 0 auto 40px;
-    padding: 0 24px;
-  }
-
-  .especie-card {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 220px;
-    border-radius: 22px;
-    overflow: hidden;
-    background: #d6f1fb;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .especie-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.14);
-  }
-
-  .especie-card img {
-    width: 180px;
-    height: 100%;
-    flex-shrink: 0;
-    object-fit: cover;
-    filter: none;
-  }
-
-  .especie-info {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px 22px;
-    gap: 4px;
-  }
-
-  .especie-info h3 {
-    color: #0c2340;
-    font-size: 1.25rem;
-    line-height: 1.1;
-    text-align: left;
-    text-shadow: none;
-    margin: 0 0 4px;
-  }
-
-  .especie-info .estado,
-  .especie-info p,
-  .especie-info .dato {
-    display: inline-block;
-  }
-
-  .especie-info p {
-    color: #0c2340;
-    font-size: 0.85rem;
-    line-height: 1.4;
-    margin: 0;
-    display: block;
-  }
-
-  .especie-info p em {
-    font-size: 0.78rem;
-    font-style: italic;
-    display: block;
-    margin-bottom: 4px;
-    color: #4a6572;
-  }
-
-  .especie-info .dato {
-    font-size: 0.78rem;
-    padding: 3px 10px;
-    border-radius: 12px;
-    margin-top: 4px;
-    background: #b0b9bf;
-    color: #fff;
-    display: inline-block;
-  }
-}/* FIX FINAL ESPECIES DESTACADAS */
-
-@media (min-width: 768px) {
-  .mamiferos-hero ~ .especies-destacadas {
-    display: block !important;
-    width: 100% !important;
-    padding: 70px 6% !important;
-    background: var(--aqua-claro) !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especies-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 32px !important;
-    width: 100% !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especie-card {
-    display: flex !important;
-    width: 100% !important;
-    height: 260px !important;
-    min-height: 260px !important;
-    background: #bfe7f0 !important;
-    border-radius: 28px !important;
-    overflow: hidden !important;
-    position: relative !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especie-card img {
-    position: static !important;
-    width: 220px !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    filter: none !important;
-    transform: none !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especie-info {
-    flex: 1 !important;
-    padding: 36px !important;
-    position: relative !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especie-info h3 {
-    position: static !important;
-    transform: none !important;
-    color: var(--azul) !important;
-    font-size: 34px !important;
-    line-height: 1 !important;
-    margin-bottom: 8px !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especie-info p {
-    position: static !important;
-    color: var(--azul) !important;
-    font-size: 16px !important;
-    line-height: 1.35 !important;
-    margin-bottom: 8px !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .estado {
-    position: absolute !important;
-    top: 22px !important;
-    right: 22px !important;
-    padding: 6px 12px !important;
-    border-radius: 999px !important;
-    font-size: 11px !important;
-  }
-}
-/* =========================
-OCÉANOS EN CRISIS
-========================= */
-.crisis-card {
-  position: relative;
-  max-width: 1080px;
-  margin: 40px auto;
-  padding: 50px 30px;
-  border-radius: 30px;
-  background: url('imagenes/oceanosencrisis.png') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  overflow: hidden;
-}
-
-.crisis-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(8,38,61,.3), rgba(8,38,61,.7));
-  border-radius: 30px;
-  z-index: 1;
-}
-
-.crisis-card h2,
-.crisis-card p {
-  position: relative;
-  z-index: 2;
-  margin: 0 0 20px;
-}
-
-.crisis-card h2 {
-  font-family: "Gloock", serif;
-  font-size: 48px;
-}
-
-.crisis-card p {
-  font-size: 20px;
-}
-
-#boton-crisis {
-  position: relative;
-  z-index: 2;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 36px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-#boton-crisis.rotated {
-  transform: rotate(180deg);
-}
-
-#lista-crisis {
-  position: relative;
-  z-index: 2;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.6s ease;
-}
-#lista-crisis li.crisis-item {
-  background: rgba(255,255,255,0.15);
-  color: white;
-  padding: 15px 20px;
-  margin: 8px 0;
-  border-radius: 12px;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.5s ease;
-}
-
-#lista-crisis.active {
-  max-height: 1000px;
-}
-
-#lista-crisis.active li {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#lista-crisis.active li:nth-child(1) {
-  transition-delay: 0.1s;
-}
-#lista-crisis.active li:nth-child(2) {
-  transition-delay: 0.2s;
-}
-#lista-crisis.active li:nth-child(3) {
-  transition-delay: 0.3s;
-}
-#lista-crisis.active li:nth-child(4) {
-  transition-delay: 0.4s;
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-@media (max-width: 767px) {
-  .crisis-card {
-    padding: 30px 20px;
-    border-radius: 20px;
-  }
-
-  .crisis-card h2 {
-    font-size: 32px;
-  }
-
-  .crisis-card p {
-    font-size: 16px;
-  }
-
-  #boton-crisis {
-    font-size: 28px;
-  }
-
-#boton-crisis {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 32px;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-}
-#lista-crisis {
-  position: relative;
-  z-index: 2;
-}
-
-.crisis-card {
-  position: relative;
-  background-image: url('imagenes/oceanosencrisis.png');
-  background-size: cover;
-  background-position: center;
-  padding: 60px 40px 40px;
-  border-radius: 28px;
-  color: white;
-  text-align: center;
-}
-
-.crisis-card h2 {
-  font-size: 36px;
-  margin-bottom: 12px;
-}
-
-.crisis-card p {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.crisis-button {
-  display: inline-block;
-  font-size: 36px;
-  cursor: pointer;
-  transition: color 0.3s;
-  margin-bottom: 20px;
-}
-
-.crisis-button:hover {
-  color: #f05a5a; /* rojo al pasar el mouse */
-}
-
-.crisis-list {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
-  opacity: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.crisis-list li {
-  background: rgba(255,255,255,0.2);
-  border-radius: 18px;
-  padding: 16px 24px;
-  margin-bottom: 12px;
-  text-align: left;
-}
-
-#toggle-crisis:checked ~ .crisis-list {
-  max-height: 1000px; /* suficientemente grande para mostrar todo */
-  opacity: 1;
-}/* ==========================
-   CRISIS DESPLEGABLE - AJUSTES VISUALES
-========================== */
-
-.crisis-list {
-    list-style: none;
-    padding: 22px 0 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 28px; /* aumenta la separación entre tarjetas */
-}
-
-.crisis-list li {
-    background: #d8dbe0; /* gris clarito */
-    color: #000000; /* texto negro */
-    font-size: 1rem; /* texto centrado y legible */
-    text-align: center;
-    line-height: 1.4;
-
-    padding: 20px 28px; /* más espacio interno */
-    border-radius: 999px;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
-
-    list-style: none;
-    margin: 0;
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-
-    .crisis-list {
-        max-width: 900px;
-        margin: 0 auto;
-        gap: 32px; /* más separación en desktop */
-    }
-
-    .crisis-list li {
-        font-size: 1.2rem; /* un poco más grande */
-        padding: 24px 36px;
-    }
-}
-
-.dato-card {
-    font-size: 1.2rem; /* más grande */
-    text-align: center;
-    margin-bottom: 24px;
-    padding: 20px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    color: #ffffff;
-}
-/* ========================
-   HÁBITATS
-======================== */
-.habitats {
-  background-color: #d6f1fb;
-  padding: 32px 20px 40px;
-}
-
-.habitats-intro {
-  font-size: 13px;
-  color: #0c2340;
-  margin-bottom: 28px;
-  max-width: 800px;
-}
-
-.habitats-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-.habitat-card {
-  background: #fff;
-  padding: 24px 20px 20px;
-  border-radius: 24px;
-  text-align: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.habitat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-}
-
-.habitat-card img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-
-.habitat-card h3 {
-  font-size: 16px;
-  margin-bottom: 8px;
-  color: #0c2340;
-}
-
-.habitat-card p {
-  font-size: 13px;
-  line-height: 1.5;
-  color: #0c2340;
-}
-
-@media (min-width: 768px) {
-  .habitats {
-    padding: 55px 8%;
-  }
-
-  .habitats-intro {
-    font-size: 16px;
-    margin-bottom: 36px;
-  }
-
-  .habitats-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-  }
-
-  .habitat-card {
-    padding: 32px 24px 28px;
-  }
-
-  .habitat-card img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 16px;
-  }
-
-  .habitat-card h3 {
-    font-size: 18px;
-  }
-
-  .habitat-card p {
-    font-size: 14px;
-  }
-
-
-/* ========================
-   CRISIS CARD (details/summary)
+   CRISIS (details/summary — sin JS)
 ======================== */
 .crisis {
   background: var(--negro);
@@ -2020,18 +361,13 @@ RESPONSIVE
   cursor: pointer;
   list-style: none;
 }
-
-.crisis-header::-webkit-details-marker {
-  display: none;
-}
-
+.crisis-header::-webkit-details-marker { display: none; }
 .crisis-header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(8, 38, 61, 0.55);
+  background: rgba(8,38,61,0.55);
 }
-
 .crisis-header h2,
 .crisis-header p,
 .crisis-header .flecha {
@@ -2040,38 +376,22 @@ RESPONSIVE
   color: white;
   margin: 0;
 }
-
-.crisis-header h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.crisis-header p {
-  font-size: 1rem;
-  margin-bottom: 16px;
-}
-
-.crisis-header .flecha {
-  font-size: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.crisis-card[open] .flecha {
-  transform: rotate(180deg);
-}
+.crisis-header h2 { font-size: 2rem; margin-bottom: 10px; }
+.crisis-header p { font-size: 1rem; margin-bottom: 16px; }
+.crisis-header .flecha { font-size: 2rem; transition: transform 0.3s ease; }
+.crisis-card[open] .flecha { transform: rotate(180deg); }
 
 .crisis-list {
   list-style: none;
-  padding: 24px 0 8px;
+  padding: 24px 16px 16px;
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
   background: var(--negro);
 }
-
 .crisis-list li {
-  background: rgba(210, 215, 220, 0.88);
+  background: rgba(210,215,220,0.88);
   color: #111;
   text-align: center;
   border-radius: 999px;
@@ -2081,37 +401,446 @@ RESPONSIVE
   list-style: none;
 }
 
+/* ========================
+   DATOS
+======================== */
+.datos {
+  background: var(--negro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 40px 46px;
+}
+.datos h2 { color: #8fd3e2; font-size: 22px; }
+.datos > p { font-size: 11px; margin-bottom: 18px; }
+.dato-card {
+  background: var(--blanco);
+  color: #111;
+  border-radius: 12px;
+  padding: 20px 14px;
+  margin: 12px 0;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+  font-weight: 700;
+}
+
+/* ========================
+   VIDA EN RIESGO
+======================== */
+.riesgo { background: white; padding: 40px 39px; }
+.riesgo h2 { font-size: 34px; line-height: 1; }
+.riesgo > p { font-size: 12px; margin-bottom: 22px; }
+
+.animales,
+.animales-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+.animal {
+  position: relative;
+  min-height: 125px;
+  border-radius: 22px;
+  overflow: hidden;
+  color: white;
+  background: var(--azul);
+}
+.animal img { width: 100%; height: 100%; min-height: 125px; object-fit: cover; filter: brightness(0.55); }
+.animal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8,38,61,0.25);
+}
+.animal .info {
+  position: absolute;
+  z-index: 2;
+  left: 16px;
+  top: 26px;
+  right: 14px;
+}
+.animal h3 { font-size: 15px; line-height: 1; margin-bottom: 6px; color: white; }
+.animal ul { list-style: disc; padding-left: 14px; }
+.animal li { font-size: 9px; line-height: 1.25; color: white; }
+.animal .nota { color: var(--naranja); font-size: 8px; line-height: 1.1; margin-top: 26px; display: block; }
+
+/* ========================
+   FORM SECTION
+======================== */
+.form-section {
+  background: linear-gradient(var(--blanco), var(--azul));
+  text-align: center;
+  padding: 50px 38px;
+}
+.form-section h2 { font-size: 27px; }
+.form-section > p { color: var(--celeste); font-size: 13px; margin-bottom: 24px; }
+.form-section form { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.form-section input,
+.form-section textarea {
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 22px;
+  background: rgba(180,222,234,0.68);
+  padding: 9px 15px;
+  font-family: "Fustat", sans-serif;
+  font-size: 11px;
+}
+.form-section input:nth-child(1),
+.form-section input:nth-child(4),
+.form-section input:nth-child(5),
+.form-section textarea { grid-column: 1 / -1; }
+.form-section textarea { height: 98px; resize: none; }
+.form-section button {
+  grid-column: 2;
+  justify-self: end;
+  background: var(--celeste);
+  color: var(--blanco);
+  border: 0;
+  border-radius: 24px;
+  padding: 8px 24px;
+  font-size: 11px;
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+  background: var(--azul);
+  color: var(--blanco);
+  padding: 48px 38px 28px;
+}
+footer section, footer nav { margin-bottom: 26px; }
+footer h2, footer h3 { font-size: 17px; margin-bottom: 12px; }
+footer p, footer a, footer li { font-size: 10px; line-height: 1.55; color: rgba(255,255,255,0.72); }
+footer ul { columns: 2; }
+
+/* ========================
+   BUBBLES
+======================== */
+.bubbles { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
+.bubble { position: absolute; bottom: -50px; border-radius: 50%; animation: floatUp linear forwards; }
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 0.5; }
+  to   { transform: translateY(-120vh); opacity: 0; }
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(217,110,43,0.4); }
+  70%  { box-shadow: 0 0 0 12px rgba(217,110,43,0); }
+  100% { box-shadow: 0 0 0 0 rgba(217,110,43,0); }
+}
+
+/* ========================
+   SECTION TITLE (con ícono)
+======================== */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+.section-title img { width: 28px; height: 28px; object-fit: contain; }
+
+/* ========================
+   INFO CARDS
+======================== */
+.info-cards { display: flex; flex-direction: column; gap: 28px; max-width: 950px; margin: 0 auto 36px; }
+.info-cards .card { background: #0c2340; color: #fff; padding: 28px; border-radius: 18px; text-align: center; }
+
+/* ========================
+   ESPECIES DESTACADAS — MÓVIL
+   imagen fondo + solo nombre
+======================== */
+.especies-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 100%;
+  margin: 0 0 32px;
+  padding: 0;
+}
+.especie-card {
+  position: relative;
+  display: block;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--azul);
+}
+.especie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55);
+  display: block;
+}
+.especie-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.especie-info h3 {
+  color: white;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  text-align: center;
+  margin: 0;
+  font-family: "Gloock", serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.especie-info .estado,
+.especie-info p,
+.especie-info .dato { display: none; }
+
+.estado {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  align-self: flex-start;
+}
+.estado.peligro { background: #ffbaba; color: #a70000; }
+.estado.menor   { background: #c8f0d4; color: #155724; }
+
+.dato {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-top: 4px;
+  background: #b0b9bf;
+  color: #fff;
+}
+
+/* ========================
+   HÁBITATS — MÓVIL
+======================== */
+.habitats {
+  background-color: #d6f1fb;
+  padding: 32px 20px 40px;
+}
+.habitats-intro { font-size: 13px; color: #0c2340; margin-bottom: 28px; max-width: 800px; }
+.habitats-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.habitat-card {
+  background: #fff;
+  padding: 24px 20px 20px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.habitat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
+.habitat-card img { width: 32px; height: 32px; object-fit: contain; margin-bottom: 12px; }
+.habitat-card h3 { font-size: 16px; margin-bottom: 8px; color: #0c2340; }
+.habitat-card p { font-size: 13px; line-height: 1.5; color: #0c2340; }
+
+/* ========================
+   AMENAZAS GRID
+======================== */
+.amenazas-grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 950px; margin: 0 auto 36px; }
+.amenaza-card { background: #dcf5fb; padding: 20px; border-radius: 16px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+
+/* ========================
+   DESKTOP — min-width: 768px
+======================== */
 @media (min-width: 768px) {
-  .crisis {
-    padding: 60px 7%;
+
+  /* Header */
+  header { height: 56px; padding: 0 7%; }
+  header img { width: 110px; }
+  header p { font-size: 14px; }
+  header p::before { content: ""; font-size: 0; }
+  header nav { display: flex; gap: 34px; align-items: center; }
+  header nav a { color: rgba(255,255,255,0.85); font-size: 14px; }
+
+  /* Home hero */
+  .home-hero { height: 680px; padding: 80px 24px 120px; }
+  .home-hero h1 { font-size: 92px; margin-bottom: 24px; }
+  .home-hero p { max-width: 760px; font-size: 21px; margin-bottom: 28px; }
+  .home-hero form { max-width: 640px; }
+  .home-hero input { border-radius: 10px; padding: 15px 24px; font-size: 15px; }
+  .cta {
+    display: inline-block;
+    margin-top: 28px;
+    background: var(--celeste);
+    color: var(--blanco);
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-weight: 600;
   }
 
-  .crisis-card {
-    max-width: 1080px;
+  /* Stats */
+  .stats { grid-template-columns: repeat(3,1fr); gap: 45px; max-width: 1180px; margin: -58px auto 72px; padding: 0 60px; }
+  .stats article { padding: 25px 20px 28px; }
+  .stats img { width: 38px; }
+  .stats h2 { font-size: 31px; }
+  .stats h3 { font-size: 18px; }
+  .stats p { font-size: 12px; }
+
+  /* Categorías */
+  #categorias { display: grid; grid-template-columns: repeat(3,1fr); gap: 45px; padding: 70px 6% 90px; }
+  #categorias > h2, #categorias > p { grid-column: 1 / -1; }
+  #categorias > h2 { font-size: 58px; }
+  #categorias > p { max-width: 780px; font-size: 20px; }
+  #categorias article { height: 270px; margin-bottom: 0; border-radius: 26px; }
+  #categorias h3 { left: 34px; bottom: 66px; font-size: 30px; }
+  #categorias article p { left: 34px; bottom: 34px; font-size: 15px; }
+
+  /* Conservación */
+  #conservacion { padding: 115px 24px; }
+  #conservacion h2 { font-size: 56px; }
+  #conservacion p { max-width: 760px; font-size: 20px; }
+  .btn-amenazas { font-size: 16px; padding: 13px 32px; border-radius: 34px; }
+
+  /* Mamíferos hero */
+  .mamiferos-hero { height: 520px; }
+  .hero-texto { left: 9%; bottom: 72px; }
+  .hero-texto h1 { font-size: 62px; }
+  .hero-texto p { font-size: 22px; }
+
+  /* Mamíferos secciones generales */
+  .mamiferos-hero ~ section { padding: 55px 8%; }
+  .mamiferos-hero ~ section h2 { font-size: 48px; }
+  .mamiferos-hero ~ section p { font-size: 16px; }
+  .mamiferos-hero ~ section ul { grid-template-columns: repeat(2,1fr); gap: 24px; }
+  .mamiferos-hero ~ section:nth-of-type(4),
+  .mamiferos-hero ~ section:nth-of-type(5) {
+    display: inline-block;
+    width: calc(50% - 4px);
+    vertical-align: top;
+    padding: 30px 3%;
   }
 
-  .crisis-header {
-    min-height: 380px;
-    border-radius: 32px;
-  }
+  /* Amenazas hero */
+  .hero { padding: 80px 24px 55px; }
+  .alerta { width: 70px; }
+  .hero h1 { font-size: 46px; }
+  .hero p { font-size: 18px; max-width: 650px; }
 
-  .crisis-header h2 {
-    font-size: 3.5rem;
-  }
+  /* Wave */
+  .wave-section { padding: 90px 12% 120px; }
+  .wave-section::after { height: 90px; }
+  .wave-section h2 { font-size: 44px; }
+  .wave-section p { max-width: 660px; font-size: 17px; }
 
-  .crisis-header p {
-    font-size: 1.3rem;
-  }
+  /* Crisis */
+  .crisis { padding: 60px 7%; }
+  .crisis-card { max-width: 1080px; }
+  .crisis-header { min-height: 380px; border-radius: 32px; }
+  .crisis-header h2 { font-size: 3.5rem; }
+  .crisis-header p { font-size: 1.3rem; }
+  .crisis-list { gap: 18px; padding: 32px 0 12px; max-width: 820px; margin: 0 auto; }
+  .crisis-list li { font-size: 1.1rem; padding: 18px 36px; }
 
-  .crisis-list {
-    gap: 18px;
-    padding: 32px 0 12px;
-    max-width: 820px;
-    margin: 0 auto;
-  }
+  /* Datos */
+  .datos { display: grid; grid-template-columns: repeat(3,1fr); gap: 35px; padding: 65px 5%; }
+  .datos h2, .datos > p { grid-column: 1 / -1; }
 
-  .crisis-list li {
-    font-size: 1.1rem;
-    padding: 18px 36px;
+  /* Vida en riesgo */
+  .riesgo { padding: 70px 6%; }
+  .riesgo h2 { font-size: 48px; margin-bottom: 8px; }
+  .riesgo > p { font-size: 18px; margin-bottom: 32px; }
+  .animales, .animales-grid { grid-template-columns: repeat(2,1fr); gap: 28px; }
+  .animales-grid .animal, .riesgo .animal {
+    width: 100%; height: 300px; min-height: 300px; border-radius: 34px;
   }
+  .riesgo .animal img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; filter: brightness(0.55); transform: none;
+  }
+  .riesgo .animal .info { position: absolute; z-index: 3; left: 38px; top: 70px; right: 36px; }
+  .riesgo .animal h3 { font-size: 30px; line-height: 1; margin-bottom: 10px; }
+  .riesgo .animal ul { list-style: disc; padding-left: 18px; }
+  .riesgo .animal li { font-size: 17px; line-height: 1.35; }
+  .riesgo .animal .nota { font-size: 13px; margin-top: 85px; }
+
+  /* Form */
+  .form-section { padding: 80px 14%; }
+  .form-section h2 { font-size: 48px; }
+
+  /* Footer */
+  footer { display: grid; grid-template-columns: repeat(3,1fr); gap: 90px; padding: 80px 10% 32px; }
+  footer h2, footer h3 { font-size: 24px; }
+  footer p, footer a, footer li { font-size: 13px; }
+
+  /* Info cards */
+  .info-cards { flex-direction: row; gap: 32px; }
+
+  /* Hábitats */
+  .habitats { padding: 55px 8%; }
+  .habitats-intro { font-size: 16px; margin-bottom: 36px; }
+  .habitats-grid { grid-template-columns: repeat(3,1fr); gap: 28px; }
+  .habitat-card { padding: 32px 24px 28px; }
+  .habitat-card img { width: 40px; height: 40px; margin-bottom: 16px; }
+  .habitat-card h3 { font-size: 18px; }
+  .habitat-card p { font-size: 14px; }
+
+  /* Amenazas grid */
+  .amenazas-grid { grid-template-columns: repeat(3,1fr); gap: 32px; }
+
+  /* Especies destacadas desktop: cards horizontales */
+  .especies-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 24px;
+  }
+  .especie-card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 220px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #d6f1fb;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .especie-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0,0,0,0.14); }
+  .especie-card img { width: 160px; height: 100%; flex-shrink: 0; object-fit: cover; filter: none; }
+  .especie-info {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 18px;
+    gap: 3px;
+    overflow: hidden;
+  }
+  .especies-destacadas .especie-info h3 {
+    color: #0c2340;
+    font-size: 0.95rem;
+    line-height: 1.15;
+    text-align: left;
+    text-shadow: none;
+    margin: 0 0 3px;
+    font-family: "Gloock", serif;
+  }
+  .especies-destacadas .especie-info p {
+    color: #0c2340;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    margin: 0;
+    display: block;
+  }
+  .especies-destacadas .especie-info p em {
+    font-size: 0.72rem;
+    font-style: italic;
+    display: block;
+    margin-bottom: 3px;
+    color: #4a6572;
+  }
+  .especie-info .estado,
+  .especie-info p,
+  .especie-info .dato { display: inline-block; }
+  .especie-info .estado { font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; margin-bottom: 4px; align-self: flex-start; }
+  .especie-info .dato { font-size: 0.72rem; padding: 3px 10px; border-radius: 12px; margin-top: 3px; background: #b0b9bf; color: #fff; display: inline-block; }
 }
