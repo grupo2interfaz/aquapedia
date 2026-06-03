@@ -38,18 +38,6 @@
     });
 
 
-    // ── OCÉANOS EN CRISIS (desplegable) ──
-    var boton = doc.getElementById("boton-crisis");
-    var lista = doc.getElementById("lista-crisis");
-
-    if (boton && lista) {
-      boton.addEventListener("click", function() {
-        lista.classList.toggle("abierto");
-        boton.textContent = lista.classList.contains("abierto") ? "↑" : "↓";
-      });
-    }
-
-
     // ── BURBUJAS ──
     var container = doc.querySelector(".bubbles");
 
