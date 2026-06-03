@@ -1814,15 +1814,3 @@ especie-info h3 {
 .especie-card .estado {
     font-size: 0.8rem !important;
 }
-.btn-amenazas{
-    background: #4bb6d6;
-    color: white;
-    transition: background 0.4s ease,
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.btn-amenazas:hover{
-    background: linear-gradient(90deg,#ffb703,#fb8500,#e63946);
-    transform: scale(1.05);
-}
