@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.document.addEventListener("DOMContentLoaded", () => {
 
   // ── CONTADOR ANIMADO (stats) ──
-  const counters = document.querySelectorAll(".stats h2");
+  const counters = window.document.querySelectorAll(".stats h2");
 
   const animateCounter = (counter) => {
     const finalText = counter.textContent.trim();
@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // ── OCÉANOS EN CRISIS (desplegable) ──
-  const boton = document.getElementById("boton-crisis");
-  const lista = document.getElementById("lista-crisis");
+  const boton = window.document.getElementById("boton-crisis");
+  const lista = window.document.getElementById("lista-crisis");
 
   if (boton && lista) {
     boton.addEventListener("click", () => {
@@ -46,15 +46,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // ── BURBUJAS ──
-  const container = document.querySelector(".bubbles");
+  const container = window.document.querySelector(".bubbles");
 
   if (container) {
     function createBubble() {
-      const bubble = document.createElement("div");
+      const bubble = window.document.createElement("div");
       bubble.classList.add("bubble");
 
       const size = Math.random() * 80 + 20;
       bubble.style.width = `${size}px`;
       bubble.style.height = `${size}px`;
       bubble.style.left = `${Math.random() * 100}%`;
-      bubble.style.background = Mat
+      bubble.style.background = Math.random() > 0.5
+        ? "rgba(191,231,240,.35)"
+        : "rgba(46,150,173,.25)";
+
+      const duration = Math.random() * 8 + 8;
+      bubble.style.animationDuration = `${duration}s`;
+
+      container.appendChild(bubble);
+      setTimeout(() => bubble.remove(), duration * 1000);
+    }
+
+    setInterval(createBubble, 1200);
+  }
+
+});
