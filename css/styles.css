@@ -307,7 +307,9 @@ header nav {
   font-size: 13px;
 }
 
-#conservacion a {
+/* estilos base del botón conservacion → ver .btn-amenazas más abajo */
+#conservacion a,
+.btn-amenazas {
   display: inline-block;
   border: 1px solid rgba(255, 255, 255, 0.45);
   background: rgba(255, 255, 255, 0.1);
@@ -509,18 +511,38 @@ header nav {
    WAVE SECTIONS
 ======================== */
 .wave-section {
-  padding: 45px;
   position: relative;
+  padding: 40px 28px 80px;
+  margin-bottom: -2px;
+}
+
+.wave-section::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .wave-light {
   background: var(--aqua);
 }
 
+.wave-light::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 70' preserveAspectRatio='none'%3E%3Cpath d='M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z' fill='%232e96ad'/%3E%3C/svg%3E");
+}
+
 .wave-medium {
   background: var(--celeste);
   color: var(--blanco);
   text-align: center;
+}
+
+.wave-medium::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 70' preserveAspectRatio='none'%3E%3Cpath d='M0,20 C480,70 960,0 1440,45 L1440,70 L0,70 Z' fill='%2308263d'/%3E%3C/svg%3E");
 }
 
 .wave-dark {
@@ -599,27 +621,30 @@ header nav {
   list-style: none;
 }
 
-/* Lista crisis legacy (JS toggle con #lista-crisis) */
+/* Lista crisis (JS toggle con #lista-crisis) */
 #lista-crisis {
   display: none;
-  max-width: 520px;
+  list-style: none;
+  padding: 0;
   margin: 28px auto 0;
+  max-width: 520px;
+  flex-direction: column;
+  gap: 14px;
 }
 
 #lista-crisis.abierto {
-  display: block;
+  display: flex;
 }
 
 #lista-crisis .crisis-item {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.58);
-  color: white;
+  background: rgba(210, 215, 220, 0.82);
+  color: #1a1a1a;
   border-radius: 999px;
-  padding: 14px 28px;
-  margin-bottom: 10px;
-  font-size: 13px;
-  line-height: 1.15;
-  text-align: left;
+  padding: 16px 28px;
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: center;
+  list-style: none;
 }
 
 /* ========================
@@ -903,7 +928,7 @@ footer ul {
 
 .especie-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background: #d6f1fb;
   border-radius: 24px;
   overflow: hidden;
@@ -918,14 +943,14 @@ footer ul {
 }
 
 .especie-card img {
-  width: 180px;
-  height: 100%;
+  width: 100%;
+  height: 180px;
   object-fit: cover;
 }
 
 .especie-info {
   flex: 1;
-  padding: 15px 24px;
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -933,20 +958,20 @@ footer ul {
 
 .especie-info h3 {
   margin: 0 0 6px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.2;
   color: #0c2340;
 }
 
 .especie-info p {
   margin: 4px 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.88rem;
+  line-height: 1.45;
   color: #0c2340;
 }
 
 .especie-info p em {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   display: block;
   margin-bottom: 6px;
 }
@@ -1208,7 +1233,8 @@ footer ul {
   .hero p { font-size: 18px; max-width: 650px; }
 
   /* Wave */
-  .wave-section { padding: 90px 12%; }
+  .wave-section { padding: 90px 12% 120px; }
+  .wave-section::after { height: 90px; }
   .wave-section h2 { font-size: 44px; }
   .wave-section p { max-width: 660px; font-size: 17px; }
 
@@ -1222,8 +1248,8 @@ footer ul {
   }
   .crisis-card h2 { font-size: 64px; }
   .crisis-card p { font-size: 24px; }
-  .crisis-list { gap: 32px; margin-top: 38px; }
-  .crisis-list li { font-size: 1.25rem; padding: 24px 42px; }
+  #lista-crisis { max-width: 780px; margin-top: 38px; gap: 18px; }
+  #lista-crisis .crisis-item { font-size: 1.1rem; padding: 20px 40px; }
 
   /* Datos */
   .datos {
@@ -1308,7 +1334,90 @@ footer ul {
 
   /* Mamíferos secciones grid */
   .info-cards { flex-direction: row; gap: 32px; }
-  .especies-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .habitats-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
   .amenazas-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+
+  /* Especies destacadas desktop: 1 col, cards en fila imagen+texto */
+  .especies-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 860px;
+  }
+
+  .especie-card {
+    flex-direction: row;
+    height: 200px;
+  }
+
+  .especie-card img {
+    width: 200px;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  .especie-info {
+    padding: 24px 28px;
+  }
+
+  .especie-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .especie-info p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ========================
+   BTN AMENAZAS — hover naranja con destellos
+======================== */
+.btn-amenazas {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-amenazas:hover {
+  background: var(--naranja);
+  border-color: var(--naranja);
+  color: var(--blanco);
+  box-shadow: 0 0 18px rgba(217, 110, 43, 0.7), 0 0 36px rgba(217, 110, 43, 0.35);
+  animation: pulse-naranja 1.2s ease infinite;
+}
+
+/* Destello que cruza el botón al hacer hover */
+.btn-amenazas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+  transform: skewX(-20deg);
+  transition: none;
+}
+
+.btn-amenazas:hover::before {
+  animation: destello 0.55s ease forwards;
+}
+
+@keyframes destello {
+  0%   { left: -75%; }
+  100% { left: 125%; }
+}
+
+@keyframes pulse-naranja {
+  0%   { box-shadow: 0 0 14px rgba(217,110,43,0.6), 0 0 28px rgba(217,110,43,0.3); }
+  50%  { box-shadow: 0 0 24px rgba(217,110,43,0.9), 0 0 48px rgba(217,110,43,0.5); }
+  100% { box-shadow: 0 0 14px rgba(217,110,43,0.6), 0 0 28px rgba(217,110,43,0.3); }
+}
+
+@media (min-width: 768px) {
+  .btn-amenazas {
+    font-size: 16px;
+    padding: 13px 32px;
+    border-radius: 34px;
+  }
 }
