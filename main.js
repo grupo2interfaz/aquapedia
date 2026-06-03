@@ -105,3 +105,14 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(createBubble, 1200);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const boton = document.getElementById("boton-crisis");
+  const lista = document.getElementById("lista-crisis");
+
+  if (boton && lista) {
+    boton.addEventListener("click", () => {
+      lista.classList.toggle("abierto");
+      boton.textContent = lista.classList.contains("abierto") ? "↑" : "↓";
+    });
+  }
+});

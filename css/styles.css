@@ -1434,106 +1434,162 @@ footer ul {
     border-radius: 34px;
   }
 }
-/* =========================
-ESPECIES DESTACADAS
-========================= */
+/* ========================
+   ESPECIES DESTACADAS
+======================== */
 
-.especies-destacadas {
-  background: var(--aqua-claro);
-  padding: 40px 5%;
-}
-
-.especies-destacadas h2 {
-  font-size: 32px;
-  margin-bottom: 24px;
-  color: var(--azul);
-}
-
+/* MÓVIL: imagen de fondo con nombre encima, 1 columna */
 .especies-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 100%;
+  margin: 0 0 32px;
+  padding: 0;
 }
 
 .especie-card {
   position: relative;
-  border-radius: 20px;
+  display: block;
+  height: 160px;
   overflow: hidden;
-  background: #bfe7f0;
-  color: var(--azul);
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--azul);
 }
 
 .especie-card img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
+  filter: brightness(0.55);
   display: block;
 }
 
 .especie-info {
-  padding: 20px;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
 .especie-info h3 {
-  font-size: 22px;
-  margin-bottom: 6px;
+  color: white;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  text-align: center;
+  margin: 0;
+  font-family: "Gloock", serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
-.especie-info p {
-  font-size: 14px;
-  margin-bottom: 4px;
+/* ocultar todo excepto el nombre en móvil */
+.especie-info .estado,
+.especie-info p,
+.especie-info .dato {
+  display: none;
 }
 
+/* colores de estado (globales) */
 .estado {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  padding: 5px 12px;
-  border-radius: 999px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  align-self: flex-start;
 }
+.estado.peligro { background: #ffbaba; color: #a70000; }
+.estado.menor   { background: #c8f0d4; color: #155724; }
 
-.estado.peligro {
-  background: #f5b8c6;
-  color: #9b1b38;
-}
-
-.estado.menor {
-  background: #b7ead0;
-  color: #24724c;
-}
-
-/* =========================
-DESKTOP
-========================= */
+/* ========================
+   DESKTOP — especies destacadas
+======================== */
 @media (min-width: 768px) {
+
   .especies-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 24px;
   }
 
   .especie-card {
+    position: relative;
     display: flex;
-    min-height: 210px;
+    flex-direction: row;
+    height: 220px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #d6f1fb;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .especie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.14);
   }
 
   .especie-card img {
-    width: 170px;
-    height: auto;
+    width: 180px;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    filter: none;
   }
 
   .especie-info {
-    flex: 1;
-    padding: 34px 28px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 22px;
+    gap: 4px;
   }
 
   .especie-info h3 {
-    font-size: 28px;
+    color: #0c2340;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    text-align: left;
+    text-shadow: none;
+    margin: 0 0 4px;
+  }
+
+  .especie-info .estado,
+  .especie-info p,
+  .especie-info .dato {
+    display: inline-block;
   }
 
   .especie-info p {
-    font-size: 14px;
+    color: #0c2340;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+    display: block;
+  }
+
+  .especie-info p em {
+    font-size: 0.78rem;
+    font-style: italic;
+    display: block;
+    margin-bottom: 4px;
+    color: #4a6572;
+  }
+
+  .especie-info .dato {
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-top: 4px;
+    background: #b0b9bf;
+    color: #fff;
+    display: inline-block;
   }
 }
 /* =========================
