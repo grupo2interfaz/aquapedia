@@ -1998,130 +1998,34 @@ RESPONSIVE
   .habitat-card p {
     font-size: 14px;
   }
-}/* ==========================
-   OCÉANOS EN CRISIS
-========================== */
-
-.crisis {
-    margin: 80px auto;
-    width: 100%;
-}
-
-.crisis-card {
-    width: 100%;
-}
-
-.crisis-card summary {
-    list-style: none;
-    cursor: pointer;
-}
-
-.crisis-card summary::-webkit-details-marker {
-    display: none;
-}
-
-.crisis-header {
-    min-height: 320px;
-
-    border-radius: 40px;
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    position: relative;
-    overflow: hidden;
-}
-
-.crisis-header::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.35);
-}
-
-.crisis-header h2,
-.crisis-header p,
-.crisis-header .flecha {
-    position: relative;
-    z-index: 2;
-    color: white;
-}
-
-.crisis-header h2 {
-    margin: 0;
-    font-size: clamp(2.5rem, 6vw, 5rem);
-}
-
-.crisis-header p {
-    margin-top: 10px;
-    font-size: clamp(1rem, 2vw, 1.8rem);
-}
-
-.flecha {
-    margin-top: 20px;
-    font-size: 2rem;
-    transition: transform .3s ease;
-}
-
-.crisis-card[open] .flecha {
-    transform: rotate(180deg);
-}
-
-/* LISTA */
-
-.crisis-list {
-    list-style: none;
-    margin: 30px 0 0;
-    padding: 0;
-
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+.crisis-list-container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .crisis-list li {
-    background: #d9dde2;
-
-    color: #000;
-
-    text-align: center;
-
-    border-radius: 999px;
-
-    padding: 22px 30px;
-
-    font-size: 1.05rem;
-    line-height: 1.4;
-
-    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  background: #d9dde2;
+  color: #000;
+  text-align: center;
+  border-radius: 999px;
+  padding: 20px 28px;
+  font-size: 1rem;
+  line-height: 1.4;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
 }
 
-/* DESKTOP */
-
+/* Desktop */
 @media (min-width: 768px) {
+  .crisis-list-container {
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 32px;
+  }
 
-    .crisis-header {
-        min-height: 420px;
-    }
-
-    .crisis-list {
-        gap: 32px;
-        max-width: 1200px;
-        margin: 40px auto 0;
-    }
-
-    .crisis-list li {
-        font-size: 1.3rem;
-        padding: 28px 40px;
-    }
-
+  .crisis-list li {
+    font-size: 1.2rem;
+    padding: 28px 36px;
+  }
 }
