@@ -51,7 +51,9 @@ main {
   overflow: hidden;
 }
 
-/* HEADER */
+/* ========================
+   HEADER
+======================== */
 header {
   height: 42px;
   background: var(--azul);
@@ -82,7 +84,9 @@ header nav {
   display: none;
 }
 
-/* HOME HERO */
+/* ========================
+   HOME HERO
+======================== */
 .home-hero {
   position: relative;
   height: 365px;
@@ -156,7 +160,9 @@ header nav {
   display: none;
 }
 
-/* STATS */
+/* ========================
+   STATS
+======================== */
 .stats {
   display: grid;
   grid-template-columns: 1fr;
@@ -196,7 +202,9 @@ header nav {
   color: #8f8f8f;
 }
 
-/* HOME CATEGORIAS */
+/* ========================
+   HOME CATEGORIAS
+======================== */
 #categorias {
   background: var(--blanco);
   padding: 34px 46px 44px;
@@ -277,7 +285,9 @@ header nav {
   font-size: 28px;
 }
 
-/* HOME CONSERVACION */
+/* ========================
+   HOME CONSERVACION
+======================== */
 #conservacion {
   background: linear-gradient(var(--azul), var(--celeste));
   color: var(--blanco);
@@ -307,7 +317,9 @@ header nav {
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* MAMIFEROS */
+/* ========================
+   MAMIFEROS HERO
+======================== */
 .mamiferos-hero {
   position: relative;
   height: 160px;
@@ -382,7 +394,7 @@ header nav {
   font-size: 10px;
 }
 
-/* Habitos / comportamientos */
+/* Hábitos / comportamientos */
 .mamiferos-hero ~ section:nth-of-type(4),
 .mamiferos-hero ~ section:nth-of-type(5) {
   padding: 12px 36px;
@@ -406,7 +418,7 @@ header nav {
   text-align: center;
 }
 
-/* Especies destacadas */
+/* Especies destacadas — layout móvil */
 .mamiferos-hero ~ section:nth-of-type(6) {
   padding-left: 0;
   padding-right: 0;
@@ -438,7 +450,7 @@ header nav {
   font-size: 24px;
 }
 
-/* Habitat */
+/* Hábitat */
 .mamiferos-hero ~ section:nth-of-type(7) article {
   background: #eefbff;
   border-radius: 26px;
@@ -448,7 +460,7 @@ header nav {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
 }
 
-/* Amenazas mamiferos */
+/* Amenazas mamíferos */
 .mamiferos-hero ~ section:nth-of-type(8) article {
   background: var(--blanco);
   border: 1.5px solid var(--naranja);
@@ -466,7 +478,9 @@ header nav {
   font-size: 10px;
 }
 
-/* AMENAZAS */
+/* ========================
+   AMENAZAS — HERO
+======================== */
 .hero {
   background: var(--blanco);
   text-align: center;
@@ -491,6 +505,9 @@ header nav {
   font-size: 12px;
 }
 
+/* ========================
+   WAVE SECTIONS
+======================== */
 .wave-section {
   padding: 45px;
   position: relative;
@@ -520,6 +537,9 @@ header nav {
   font-size: 12px;
 }
 
+/* ========================
+   CRISIS
+======================== */
 .crisis {
   background: var(--negro);
   padding: 35px 38px;
@@ -538,31 +558,73 @@ header nav {
   overflow: hidden;
 }
 
-.crisis-list {
+.crisis-content {
   max-height: 0;
-  opacity: 0;
   overflow: hidden;
-  margin-top: 0;
-  transition: max-height 0.7s ease, opacity 0.4s ease, margin-top 0.4s ease;
+  transition: max-height 0.5s ease;
 }
 
-.crisis-list.active {
-  max-height: 600px;
-  opacity: 1;
-  margin-top: 28px;
+.crisis-content.active {
+  max-height: 1000px;
 }
 
-.crisis-item {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
+#boton-crisis {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
 }
 
-.crisis-list.active .crisis-item {
-  opacity: 1;
-  transform: translateY(0);
+/* Lista de crisis */
+.crisis-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
 }
 
+.crisis-list li {
+  background: #d8dbe0;
+  color: #000000;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.35;
+  padding: 20px 28px;
+  border-radius: 999px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.14);
+  list-style: none;
+}
+
+/* Lista crisis legacy (JS toggle con #lista-crisis) */
+#lista-crisis {
+  display: none;
+  max-width: 520px;
+  margin: 28px auto 0;
+}
+
+#lista-crisis.abierto {
+  display: block;
+}
+
+#lista-crisis .crisis-item {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.58);
+  color: white;
+  border-radius: 999px;
+  padding: 14px 28px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.15;
+  text-align: left;
+}
+
+/* ========================
+   DATOS
+======================== */
 .datos {
   background: var(--negro);
   color: var(--blanco);
@@ -590,6 +652,9 @@ header nav {
   font-weight: 700;
 }
 
+/* ========================
+   VIDA EN RIESGO
+======================== */
 .riesgo {
   background: white;
   padding: 40px 39px;
@@ -605,11 +670,12 @@ header nav {
   margin-bottom: 22px;
 }
 
-.animales {
+.animales,
+.animales-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-top: 18px;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 24px;
 }
 
 .animal {
@@ -668,58 +734,9 @@ header nav {
   margin-top: 26px;
 }
 
-/* DESKTOP */
-@media (min-width: 768px) {
-  .riesgo {
-    padding: 70px 6%;
-  }
-
-  .riesgo h2 {
-    font-size: 48px;
-  }
-
-  .riesgo > p {
-    font-size: 18px;
-    margin-bottom: 32px;
-  }
-
-  .animales {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-  }
-
-  .animal {
-    min-height: 300px;
-    border-radius: 34px;
-  }
-
-  .animal img {
-    height: 300px;
-    min-height: 300px;
-  }
-
-  .animal-texto {
-    left: 38px;
-    top: 70px;
-    right: 36px;
-  }
-
-  .animal h3 {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-
-  .animal li {
-    font-size: 17px;
-    line-height: 1.35;
-  }
-
-  .nota-vaquita {
-    font-size: 13px;
-    margin-top: 85px;
-  }
-}
-
+/* ========================
+   FORM SECTION
+======================== */
 .form-section {
   background: linear-gradient(var(--blanco), var(--azul));
   text-align: center;
@@ -775,7 +792,9 @@ header nav {
   font-size: 11px;
 }
 
-/* FOOTER */
+/* ========================
+   FOOTER
+======================== */
 footer {
   background: var(--azul);
   color: var(--blanco);
@@ -805,505 +824,9 @@ footer ul {
   columns: 2;
 }
 
-/* =========================
-   DESKTOP / WEB
-========================= */
-
-@media (min-width: 768px) {
-  header {
-    height: 56px;
-    padding: 0 7%;
-  }
-
-  header img {
-    width: 110px;
-  }
-
-  header p {
-    font-size: 14px;
-  }
-
-  header p::before {
-    content: "";
-    font-size: 0;
-  }
-
-  header nav {
-    display: flex;
-    gap: 34px;
-    align-items: center;
-  }
-
-  header nav a {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 14px;
-  }
-
-  .home-hero {
-    height: 680px;
-    padding: 80px 24px 120px;
-  }
-
-  .home-hero h1 {
-    font-size: 92px;
-    margin-bottom: 24px;
-  }
-
-  .home-hero p {
-    max-width: 760px;
-    font-size: 21px;
-    margin-bottom: 28px;
-  }
-
-  .home-hero form {
-    max-width: 640px;
-  }
-
-  .home-hero input {
-    border-radius: 10px;
-    padding: 15px 24px;
-    font-size: 15px;
-  }
-
-  .cta {
-    display: inline-block;
-    margin-top: 28px;
-    background: var(--celeste);
-    color: var(--blanco);
-    padding: 14px 30px;
-    border-radius: 10px;
-    font-weight: 600;
-  }
-
-  .stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
-    max-width: 1180px;
-    margin: -58px auto 72px;
-    padding: 0 60px;
-  }
-
-  .stats article {
-    padding: 25px 20px 28px;
-  }
-
-  .stats img {
-    width: 38px;
-  }
-
-  .stats h2 {
-    font-size: 31px;
-  }
-
-  .stats h3 {
-    font-size: 18px;
-  }
-
-  .stats p {
-    font-size: 12px;
-  }
-
-  #categorias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
-    padding: 70px 6% 90px;
-  }
-
-  #categorias > h2,
-  #categorias > p {
-    grid-column: 1 / -1;
-  }
-
-  #categorias > h2 {
-    font-size: 58px;
-  }
-
-  #categorias > p {
-    max-width: 780px;
-    font-size: 20px;
-  }
-
-  #categorias article {
-    height: 270px;
-    margin-bottom: 0;
-    border-radius: 26px;
-  }
-
-  #categorias h3 {
-    left: 34px;
-    bottom: 66px;
-    font-size: 30px;
-  }
-
-  #categorias article p {
-    left: 34px;
-    bottom: 34px;
-    font-size: 15px;
-  }
-
-  #conservacion {
-    padding: 115px 24px;
-  }
-
-  #conservacion h2 {
-    font-size: 56px;
-  }
-
-  #conservacion p {
-    max-width: 760px;
-    font-size: 20px;
-  }
-
-  .mamiferos-hero {
-    height: 520px;
-  }
-
-  .hero-texto {
-    left: 9%;
-    bottom: 72px;
-  }
-
-  .hero-texto h1 {
-    font-size: 62px;
-  }
-
-  .hero-texto p {
-    font-size: 22px;
-  }
-
-  .mamiferos-hero ~ section {
-    padding: 55px 8%;
-  }
-
-  .mamiferos-hero ~ section h2 {
-    font-size: 48px;
-  }
-
-  .mamiferos-hero ~ section p {
-    font-size: 16px;
-  }
-
-  .mamiferos-hero ~ section ul {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .mamiferos-hero ~ section:nth-of-type(4),
-  .mamiferos-hero ~ section:nth-of-type(5) {
-    display: inline-block;
-    width: calc(50% - 4px);
-    vertical-align: top;
-    padding: 30px 3%;
-  }
-
-  .mamiferos-hero ~ section:nth-of-type(6) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding-left: 8%;
-    padding-right: 8%;
-  }
-
-  .mamiferos-hero ~ section:nth-of-type(6) h2 {
-    grid-column: 1 / -1;
-    padding: 0;
-  }
-
-  .mamiferos-hero ~ section:nth-of-type(6) article {
-    height: 220px;
-    border-radius: 20px;
-  }
-
-  .mamiferos-hero ~ section:nth-of-type(6) h3 {
-    font-size: 30px;
-  }
-
-  .hero {
-    padding: 80px 24px 55px;
-  }
-
-  .alerta {
-    width: 70px;
-  }
-
-  .hero h1 {
-    font-size: 46px;
-  }
-
-  .hero p {
-    font-size: 18px;
-    max-width: 650px;
-  }
-
-  .wave-section {
-    padding: 90px 12%;
-  }
-
-  .wave-section h2 {
-    font-size: 44px;
-  }
-
-  .wave-section p {
-    max-width: 660px;
-    font-size: 17px;
-  }
-
-  .crisis {
-    padding: 80px 7% 55px;
-  }
-
-  .crisis-card {
-    max-width: 1080px;
-    margin: 0 auto 35px;
-    padding: 95px 30px;
-    border-radius: 30px;
-  }
-
-  .crisis-card h2 {
-    font-size: 64px;
-  }
-
-  .crisis-card p {
-    font-size: 24px;
-  }
-
-  .datos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-    padding: 65px 5%;
-  }
-
-  .datos h2,
-  .datos > p {
-    grid-column: 1 / -1;
-  }
-
-  .riesgo {
-    padding: 70px 6%;
-  }
-
-  .riesgo h2 {
-    font-size: 48px;
-  }
-
-  .animal img {
-    height: 260px;
-  }
-
-  .form-section {
-    padding: 80px 14%;
-  }
-
-  .form-section h2 {
-    font-size: 48px;
-  }
-
-  footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 90px;
-    padding: 80px 10% 32px;
-  }
-
-  footer h2,
-  footer h3 {
-    font-size: 24px;
-  }
-
-  footer p,
-  footer a,
-  footer li {
-    font-size: 13px;
-  }
-
-  /* FIX FINAL ESPECIES DESTACADAS */
-
-@media (min-width: 768px) {
-  .mamiferos-hero ~ .especies-destacadas {
-    display: block !important;
-    width: 100% !important;
-    padding: 70px 6% !important;
-    background: var(--aqua-claro) !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especies-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 32px !important;
-    width: 100% !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especie-card {
-    display: flex !important;
-    width: 100% !important;
-    height: 260px !important;
-    min-height: 260px !important;
-    background: #bfe7f0 !important;
-    border-radius: 28px !important;
-    overflow: hidden !important;
-    position: relative !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especie-card img {
-    position: static !important;
-    width: 220px !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    filter: none !important;
-    transform: none !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especie-info {
-    flex: 1 !important;
-    padding: 36px !important;
-    position: relative !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especie-info h3 {
-    position: static !important;
-    transform: none !important;
-    color: var(--azul) !important;
-    font-size: 34px !important;
-    line-height: 1 !important;
-    margin-bottom: 8px !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .especie-info p {
-    position: static !important;
-    color: var(--azul) !important;
-    font-size: 16px !important;
-    line-height: 1.35 !important;
-    margin-bottom: 8px !important;
-  }
-
-  .mamiferos-hero ~ .especies-destacadas .estado {
-    position: absolute !important;
-    top: 22px !important;
-    right: 22px !important;
-    padding: 6px 12px !important;
-    border-radius: 999px !important;
-    font-size: 11px !important;
-  }
-}
-/* FIX FINAL VIDA EN RIESGO DESKTOP */
-
-@media (min-width: 768px) {
-  .riesgo {
-    background: white !important;
-    padding: 70px 6% !important;
-  }
-
-  .riesgo h2 {
-    font-size: 48px !important;
-    margin-bottom: 8px !important;
-  }
-
-  .riesgo > p {
-    font-size: 18px !important;
-    margin-bottom: 32px !important;
-  }
-
-  .riesgo .animales {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 28px !important;
-  }
-
-  .riesgo .animal {
-    position: relative !important;
-    height: 300px !important;
-    min-height: 300px !important;
-    border-radius: 34px !important;
-    overflow: hidden !important;
-    background: var(--azul) !important;
-  }
-
-  .riesgo .animal img {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    filter: brightness(0.55) !important;
-    transform: none !important;
-  }
-
-  .riesgo .animal .info {
-    position: absolute !important;
-    z-index: 3 !important;
-    left: 38px !important;
-    top: 70px !important;
-    right: 36px !important;
-    color: white !important;
-  }
-
-  .riesgo .animal h3 {
-    position: static !important;
-    color: white !important;
-    font-size: 30px !important;
-    line-height: 1 !important;
-    margin-bottom: 10px !important;
-  }
-
-  .riesgo .animal ul {
-    list-style: disc !important;
-    padding-left: 18px !important;
-  }
-
-  .riesgo .animal li {
-    color: white !important;
-    font-size: 17px !important;
-    line-height: 1.35 !important;
-  }
-
-  .riesgo .animal .nota {
-    display: block !important;
-    color: var(--naranja) !important;
-    font-size: 13px !important;
-    line-height: 1.2 !important;
-    margin-top: 85px !important;
-  }
-}.crisis-list {
-  display: none;
-}
-
-.crisis-list.active {
-  display: block;
-}/* VIDA EN RIESGO — SOLO DESKTOP EN 2 COLUMNAS */
-
-@media (min-width: 768px) {
-  .riesgo .animales {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 28px !important;
-    width: 100% !important;
-  }
-
-  .riesgo .animal {
-    width: 100% !important;
-    height: 300px !important;
-    min-height: 300px !important;
-  }
-}
-#boton-crisis {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 32px;
-  cursor: pointer;
-}
-
-#lista-crisis {
-  display: none;
-  margin-top: 24px;
-}
-
-#lista-crisis.abierto {
-  display: block;
-}
-
+/* ========================
+   BUBBLES
+======================== */
 .bubbles {
   position: fixed;
   inset: 0;
@@ -1320,518 +843,472 @@ footer ul {
 }
 
 @keyframes floatUp {
-  from {
-    transform: translateY(0);
-    opacity: 0.5;
-  }
-  to {
-    transform: translateY(-120vh);
-    opacity: 0;
-  }
+  from { transform: translateY(0); opacity: 0.5; }
+  to   { transform: translateY(-120vh); opacity: 0; }
 }
 
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(217,110,43,.4);
-  }
-
-  70% {
-    box-shadow: 0 0 0 12px rgba(217,110,43,0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(217,110,43,0);
-  }
+  0%   { box-shadow: 0 0 0 0 rgba(217, 110, 43, 0.4); }
+  70%  { box-shadow: 0 0 0 12px rgba(217, 110, 43, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(217, 110, 43, 0); }
 }
 
-/* ==========================
-   OCÉANOS EN CRISIS
-   LISTA DESPLEGABLE
-========================== */
-
-.crisis-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-}
-
-.crisis-content.active {
-    max-height: 1000px;
-}
-
-.crisis-list {
-    list-style: none;
-    padding: 20px 0 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.crisis-list li {
-    background: rgba(220, 225, 230, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-
-    color: #ffffff;
-    font-size: 1rem;
-    line-height: 1.2;
-
-    padding: 18px 24px;
-    border-radius: 999px;
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-
-    list-style: none;
-    margin: 0;
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-
-    .crisis-list {
-        max-width: 900px;
-        margin: 0 auto;
-        gap: 20px;
-    }
-
-    .crisis-list li {
-        font-size: 1.1rem;
-        line-height: 1.3;
-        padding: 22px 36px;
-    }
-
-}
-
-/* ==========================
-   FIX FINAL - OCÉANOS EN CRISIS
-========================== */
-
-.crisis-list {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 32px auto 0 !important;
-
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 24px !important;
-
-  max-width: 900px !important;
-}
-
-.crisis-list li {
-  background: #d8dbe0 !important;
-  color: #000000 !important;
-
-  text-align: center !important;
-  font-size: 1rem !important;
-  line-height: 1.35 !important;
-
-  padding: 20px 28px !important;
-  border-radius: 999px !important;
-
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.14) !important;
-  list-style: none !important;
-}
-
-/* si tu JS usa active */
-.crisis-list.active {
-  display: flex !important;
-  opacity: 1 !important;
-  max-height: 900px !important;
-}
-
-
-/* ==========================
-   FIX FINAL - VIDA EN RIESGO GRID
-========================== */
-
-.animales-grid {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 24px !important;
-  margin-top: 24px !important;
-}
-
-@media (min-width: 768px) {
-
-  .crisis-list {
-    gap: 32px !important;
-    margin-top: 38px !important;
-  }
-
-  .crisis-list li {
-    font-size: 1.25rem !important;
-    padding: 24px 42px !important;
-  }
-
-  .animales-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 32px !important;
-  }
-
-  .animales-grid .animal {
-    width: 100% !important;
-    height: 300px !important;
-    min-height: 300px !important;
-  }
-
-}/* ==========================
-   MAMÍFEROS MARINOS - SECCIONES
-========================== */
-
-/* Títulos con icono */
+/* ========================
+   MAMÍFEROS — SECCIÓN TITLES
+======================== */
 .section-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 28px;
-    margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  margin-bottom: 24px;
 }
 
 .section-title img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
-/* Clasificación / tarjetas info */
-.crisis-list {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    max-width: 900px;
-    margin: 0 auto 36px auto;
-    padding: 0;
-}
-
-.crisis-list li {
-    background: #d8dbe0;
-    color: #000;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.4;
-    padding: 20px 28px;
-    border-radius: 999px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
-}
-
-/* Info cards hábitos y comportamientos */
+/* ========================
+   INFO CARDS (hábitos)
+======================== */
 .info-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    max-width: 950px;
-    margin: 0 auto 36px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 950px;
+  margin: 0 auto 36px;
 }
 
 .info-cards .card {
-    background: #0c2340;
-    color: #fff;
-    padding: 28px;
-    border-radius: 18px;
-    text-align: center;
+  background: #0c2340;
+  color: #fff;
+  padding: 28px;
+  border-radius: 18px;
+  text-align: center;
 }
 
-/* Especies destacadas grid */
-.especies-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 28px;
-    max-width: 950px;
-    margin: 0 auto 40px auto;
-}
-
-.especie-card {
-    border-radius: 18px;
-    overflow: hidden;
-    background: #dcf5fb;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.especie-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.especie-info {
-    padding: 20px;
-}
-
-.especie-info h3 {
-    margin: 12px 0 6px 0;
-    font-size: 20px;
-}
-
-.especie-info p {
-    margin: 4px 0;
-    font-size: 16px;
-    color: #000;
-}
-
-.estado {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 4px 8px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-}
-
-.estado.peligro { background: #ffbaba; color: #a70000; }
-.estado.menor { background: #d0f0c0; color: #155724; }
-
-/* Hábitats y distribución */
-.habitats-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 950px;
-    margin: 0 auto 36px auto;
-}
-
-.habitat-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* Conservación y amenazas */
-.amenazas-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 950px;
-    margin: 0 auto 36px auto;
-}
-
-.amenaza-card {
-    background: #dcf5fb;
-    padding: 20px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* MEDIA QUERIES DESKTOP */
-@media (min-width: 768px) {
-    .crisis-list { flex-direction: row; flex-wrap: wrap; gap: 32px; }
-    .info-cards { flex-direction: row; gap: 32px; }
-    .especies-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
-    .habitats-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    .amenazas-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
-}
-/* ==========================
+/* ========================
    ESPECIES DESTACADAS
-========================== */
-especie-info h3 {
-    font-size: 15px; /* antes 20px */
-    margin-bottom: 10px;
-    color: #0c2340;
-}
-
-.especie-info p em {
-    font-size: 12px; /* para el nombre científico */
-    display: block;
-    margin-bottom: 6px;
-}
+======================== */
 .especies-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto 40px auto;
-    padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 16px;
 }
 
 .especie-card {
-    display: flex;
-    flex-direction: row;
-    background: #d6f1fb;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  background: #d6f1fb;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .especie-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .especie-card img {
-    width: 180px;
-    height: 100%;
-    object-fit: cover;
+  width: 180px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .especie-info {
-    padding: 15px 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex: 1;
+  padding: 15px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .especie-info h3 {
-    margin: 0 0 6px 0;
-    font-size: 15px;
-    color: #0c2340;
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  color: #0c2340;
 }
 
 .especie-info p {
-    margin: 4px 0;
-    font-size: 14px;
-    color: #0c2340;
+  margin: 4px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #0c2340;
+}
+
+.especie-info p em {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 6px;
 }
 
 .estado {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    text-align: center;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .estado.peligro { background: #ffbaba; color: #a70000; }
-.estado.menor { background: #c8f0d4; color: #155724; }
+.estado.menor   { background: #c8f0d4; color: #155724; }
 
 .dato {
-    display: inline-block;
-    font-size: 12px;
-    padding: 4px 10px;
-    border-radius: 12px;
-    margin-top: 6px;
-    background: #b0b9bf;
-    color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-top: 6px;
+  background: #b0b9bf;
+  color: #fff;
 }
 
-/* MEDIA QUERIES DESKTOP */
-@media (min-width: 768px) {
-    .especies-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .especies-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}/* ==========================
-   HÁBITATS Y DISTRIBUCIÓN
-========================== */
+/* ========================
+   HÁBITATS
+======================== */
 .habitats {
-    background-color: #d6f1fb;
-    padding: 40px 16px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.habitats .section-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 28px;
-    margin-bottom: 16px;
-}
-
-.habitats .section-title img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
+  background-color: #d6f1fb;
+  padding: 40px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .habitats-intro {
-    font-size: 16px;
-    color: #0c2340;
-    margin-bottom: 32px;
-    max-width: 800px;
+  font-size: 16px;
+  color: #0c2340;
+  margin-bottom: 32px;
+  max-width: 800px;
 }
 
 .habitats-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 950px;
+  margin: 0 auto 36px;
 }
 
 .habitat-card {
-    background: #fff;
-    padding: 24px;
-    border-radius: 24px;
-    text-align: center;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  padding: 24px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .habitat-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .habitat-card h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-    color: #0c2340;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #0c2340;
 }
 
 .habitat-card p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #0c2340;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0c2340;
 }
 
-/* DESKTOP */
+/* ========================
+   AMENAZAS GRID
+======================== */
+.amenazas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 950px;
+  margin: 0 auto 36px;
+}
+
+.amenaza-card {
+  background: #dcf5fb;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================
+   DESKTOP — min-width: 768px
+======================== */
 @media (min-width: 768px) {
-    .habitats-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
-    }
-}
-/* FORZAR TAMAÑO CORRECTO EN ESPECIES */
 
-.especie-card h3 {
-    font-size: 1.1rem !important;
-    line-height: 1.2 !important;
-    margin: 0 0 5px 0 !important;
-}
+  /* Header */
+  header {
+    height: 56px;
+    padding: 0 7%;
+  }
+  header img { width: 110px; }
+  header p { font-size: 14px; }
+  header p::before { content: ""; font-size: 0; }
+  header nav { display: flex; gap: 34px; align-items: center; }
+  header nav a { color: rgba(255, 255, 255, 0.85); font-size: 14px; }
 
-.especie-card em {
-    font-size: 0.9rem !important;
-}
+  /* Home hero */
+  .home-hero { height: 680px; padding: 80px 24px 120px; }
+  .home-hero h1 { font-size: 92px; margin-bottom: 24px; }
+  .home-hero p { max-width: 760px; font-size: 21px; margin-bottom: 28px; }
+  .home-hero form { max-width: 640px; }
+  .home-hero input { border-radius: 10px; padding: 15px 24px; font-size: 15px; }
+  .cta {
+    display: inline-block;
+    margin-top: 28px;
+    background: var(--celeste);
+    color: var(--blanco);
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
 
-.especie-card p {
-    font-size: 0.95rem !important;
-    line-height: 1.5 !important;
-}
+  /* Stats */
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    max-width: 1180px;
+    margin: -58px auto 72px;
+    padding: 0 60px;
+  }
+  .stats article { padding: 25px 20px 28px; }
+  .stats img { width: 38px; }
+  .stats h2 { font-size: 31px; }
+  .stats h3 { font-size: 18px; }
+  .stats p { font-size: 12px; }
 
-.especie-card .estado {
-    font-size: 0.8rem !important;
-}
-#lista-crisis {
-  display: none;
-  max-width: 520px;
-  margin: 28px auto 0;
-}
+  /* Categorías */
+  #categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    padding: 70px 6% 90px;
+  }
+  #categorias > h2,
+  #categorias > p { grid-column: 1 / -1; }
+  #categorias > h2 { font-size: 58px; }
+  #categorias > p { max-width: 780px; font-size: 20px; }
+  #categorias article { height: 270px; margin-bottom: 0; border-radius: 26px; }
+  #categorias h3 { left: 34px; bottom: 66px; font-size: 30px; }
+  #categorias article p { left: 34px; bottom: 34px; font-size: 15px; }
 
-#lista-crisis.abierto {
-  display: block;
-}
+  /* Conservación */
+  #conservacion { padding: 115px 24px; }
+  #conservacion h2 { font-size: 56px; }
+  #conservacion p { max-width: 760px; font-size: 20px; }
 
-#lista-crisis .crisis-item {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.58);
-  color: white;
-  border-radius: 999px;
-  padding: 14px 28px;
-  margin-bottom: 10px;
-  font-size: 13px;
-  line-height: 1.15;
-  text-align: left;
+  /* Mamíferos hero */
+  .mamiferos-hero { height: 520px; }
+  .hero-texto { left: 9%; bottom: 72px; }
+  .hero-texto h1 { font-size: 62px; }
+  .hero-texto p { font-size: 22px; }
+
+  /* Mamíferos secciones */
+  .mamiferos-hero ~ section { padding: 55px 8%; }
+  .mamiferos-hero ~ section h2 { font-size: 48px; }
+  .mamiferos-hero ~ section p { font-size: 16px; }
+  .mamiferos-hero ~ section ul { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .mamiferos-hero ~ section:nth-of-type(4),
+  .mamiferos-hero ~ section:nth-of-type(5) {
+    display: inline-block;
+    width: calc(50% - 4px);
+    vertical-align: top;
+    padding: 30px 3%;
+  }
+
+  /* Especies destacadas (nth selector legacy) */
+  .mamiferos-hero ~ section:nth-of-type(6) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .mamiferos-hero ~ section:nth-of-type(6) h2 { grid-column: 1 / -1; padding: 0; }
+  .mamiferos-hero ~ section:nth-of-type(6) article { height: 220px; border-radius: 20px; }
+  .mamiferos-hero ~ section:nth-of-type(6) h3 { font-size: 30px; }
+
+  /* Especies destacadas (clase .especies-destacadas) */
+  .mamiferos-hero ~ .especies-destacadas {
+    display: block;
+    width: 100%;
+    padding: 70px 6%;
+    background: var(--aqua-claro);
+  }
+  .mamiferos-hero ~ .especies-destacadas .especies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    width: 100%;
+  }
+  .mamiferos-hero ~ .especies-destacadas .especie-card {
+    display: flex;
+    width: 100%;
+    height: 260px;
+    min-height: 260px;
+    background: #bfe7f0;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+  }
+  .mamiferos-hero ~ .especies-destacadas .especie-card img {
+    position: static;
+    width: 220px;
+    height: 100%;
+    object-fit: cover;
+    filter: none;
+    transform: none;
+  }
+  .mamiferos-hero ~ .especies-destacadas .especie-info {
+    flex: 1;
+    padding: 36px;
+    position: relative;
+  }
+  .mamiferos-hero ~ .especies-destacadas .especie-info h3 {
+    position: static;
+    transform: none;
+    color: var(--azul);
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .mamiferos-hero ~ .especies-destacadas .especie-info p {
+    position: static;
+    color: var(--azul);
+    font-size: 16px;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+  .mamiferos-hero ~ .especies-destacadas .estado {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+  }
+
+  /* Amenazas hero */
+  .hero { padding: 80px 24px 55px; }
+  .alerta { width: 70px; }
+  .hero h1 { font-size: 46px; }
+  .hero p { font-size: 18px; max-width: 650px; }
+
+  /* Wave */
+  .wave-section { padding: 90px 12%; }
+  .wave-section h2 { font-size: 44px; }
+  .wave-section p { max-width: 660px; font-size: 17px; }
+
+  /* Crisis */
+  .crisis { padding: 80px 7% 55px; }
+  .crisis-card {
+    max-width: 1080px;
+    margin: 0 auto 35px;
+    padding: 95px 30px;
+    border-radius: 30px;
+  }
+  .crisis-card h2 { font-size: 64px; }
+  .crisis-card p { font-size: 24px; }
+  .crisis-list { gap: 32px; margin-top: 38px; }
+  .crisis-list li { font-size: 1.25rem; padding: 24px 42px; }
+
+  /* Datos */
+  .datos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    padding: 65px 5%;
+  }
+  .datos h2,
+  .datos > p { grid-column: 1 / -1; }
+
+  /* Vida en riesgo */
+  .riesgo { padding: 70px 6%; }
+  .riesgo h2 { font-size: 48px; margin-bottom: 8px; }
+  .riesgo > p { font-size: 18px; margin-bottom: 32px; }
+  .animales,
+  .animales-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+  .animales-grid .animal,
+  .riesgo .animal {
+    width: 100%;
+    height: 300px;
+    min-height: 300px;
+    border-radius: 34px;
+  }
+  .riesgo .animal img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.55);
+    transform: none;
+  }
+  .riesgo .animal .info {
+    position: absolute;
+    z-index: 3;
+    left: 38px;
+    top: 70px;
+    right: 36px;
+    color: white;
+  }
+  .riesgo .animal h3 {
+    position: static;
+    color: white;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .riesgo .animal ul { list-style: disc; padding-left: 18px; }
+  .riesgo .animal li { color: white; font-size: 17px; line-height: 1.35; }
+  .riesgo .animal .nota {
+    display: block;
+    color: var(--naranja);
+    font-size: 13px;
+    line-height: 1.2;
+    margin-top: 85px;
+  }
+  .animal-texto { left: 38px; top: 70px; right: 36px; }
+  .animal h3 { font-size: 30px; margin-bottom: 10px; }
+  .animal li { font-size: 17px; line-height: 1.35; }
+  .nota-vaquita { font-size: 13px; margin-top: 85px; }
+
+  /* Form */
+  .form-section { padding: 80px 14%; }
+  .form-section h2 { font-size: 48px; }
+
+  /* Footer */
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px;
+    padding: 80px 10% 32px;
+  }
+  footer h2,
+  footer h3 { font-size: 24px; }
+  footer p,
+  footer a,
+  footer li { font-size: 13px; }
+
+  /* Mamíferos secciones grid */
+  .info-cards { flex-direction: row; gap: 32px; }
+  .especies-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .habitats-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .amenazas-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
 }
