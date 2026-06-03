@@ -1316,7 +1316,6 @@ footer ul {
   position: absolute;
   bottom: -50px;
   border-radius: 50%;
-  opacity: 0.15;
   animation: floatUp linear forwards;
 }
 
