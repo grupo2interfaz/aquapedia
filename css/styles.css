@@ -1434,65 +1434,109 @@ footer ul {
     border-radius: 34px;
   }
 }
+/* =========================
+ESPECIES DESTACADAS
+========================= */
+
+.especies-destacadas {
+  background: var(--aqua-claro);
+  padding: 40px 5%;
+}
+
+.especies-destacadas h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: var(--azul);
+}
+
+.especies-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.especie-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #bfe7f0;
+  color: var(--azul);
+}
+
+.especie-card img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.especie-info {
+  padding: 20px;
+}
+
+.especie-info h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.especie-info p {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.estado {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.estado.peligro {
+  background: #f5b8c6;
+  color: #9b1b38;
+}
+
+.estado.menor {
+  background: #b7ead0;
+  color: #24724c;
+}
+
+/* =========================
+DESKTOP
+========================= */
 @media (min-width: 768px) {
-  .especies-destacadas {
-    display: block;
-    width: 100%;
-    padding: 70px 6%;
-    background: var(--aqua-claro);
-  }
-
-  .especies-destacadas h2 {
-    font-size: 48px;
-    margin-bottom: 32px;
-  }
-
-  .especies-destacadas .especies-grid {
+  .especies-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(420px, 1fr));
-    gap: 32px;
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 
-  .especies-destacadas .especie-card {
+  .especie-card {
     display: flex;
-    width: 100%;
-    height: 260px;
-    min-height: 260px;
-    background: var(--aqua);
-    border-radius: 28px;
-    overflow: hidden;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.14);
+    min-height: 210px;
   }
 
-  .especies-destacadas .especie-card img {
-    width: 220px;
-    height: 100%;
-    object-fit: cover;
-    filter: none;
+  .especie-card img {
+    width: 170px;
+    height: auto;
   }
 
-  .especies-destacadas .especie-info {
-    display: block;
+  .especie-info {
     flex: 1;
-    padding: 36px;
-    position: relative;
+    padding: 34px 28px;
   }
 
-  .especies-destacadas .especie-info h3 {
-    position: static;
-    transform: none;
-    color: var(--azul);
-    font-size: 34px;
-    line-height: 1;
-    margin-bottom: 8px;
+  .especie-info h3 {
+    font-size: 28px;
   }
 
-  .especies-destacadas .especie-info p,
-  .especies-destacadas .especie-info .estado {
-    display: block;
+  .especie-info p {
+    font-size: 14px;
   }
-}/* =========================
+}
+/* =========================
 OCÉANOS EN CRISIS
 ========================= */
 .crisis-card {
