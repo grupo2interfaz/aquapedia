@@ -1789,3 +1789,16 @@ RESPONSIVE
 #lista-crisis.abierto {
   display: block;
 }
+#boton-crisis {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+#lista-crisis {
+  position: relative;
+  z-index: 2;
+}
