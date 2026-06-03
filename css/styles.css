@@ -1728,4 +1728,10 @@ RESPONSIVE
 
 #lista-crisis.abierto {
   display: block;
+}.habitat-card img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+  display: block;
 }
