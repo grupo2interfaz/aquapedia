@@ -3,42 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Amenazas | AquaPedia</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Fustat:wght@300;400;500;600;700&family=Gloock&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@300;400;500;600;700&family=Gloock&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <script src="main.js"></script>
 
 <body>
+
 <header>
   <a href="index.html">
     <img src="imagenes/logoblanco.png" alt="AquaPedia">
   </a>
-
   <nav>
     <a href="sobre-nosotros.html">Sobre nosotros</a>
     <a href="index.html#categorias">⌕ Explorar</a>
   </nav>
-
 </header>
+
 <main>
 
   <!-- HERO -->
   <section class="hero" id="inicio">
-
-  <img src="imagenes/alerta.png" alt="Alerta" class="alerta">
-
-  <h1>Nuestros océanos están en peligro</h1>
-
-  <p>
-    Los ecosistemas marinos enfrentan amenazas sin precedentes.
-    Conocé los riesgos y descubrí cómo podés hacer la diferencia.
-  </p>
-
-</section>
+    <img src="imagenes/alerta.png" alt="Alerta" class="alerta">
+    <h1>Nuestros océanos están en peligro</h1>
+    <p>
+      Los ecosistemas marinos enfrentan amenazas sin precedentes.
+      Conocé los riesgos y descubrí cómo podés hacer la diferencia.
+    </p>
+  </section>
 
   <!-- CONTAMINACIÓN -->
   <section class="wave-section wave-light">
@@ -69,112 +63,85 @@
     </p>
   </section>
 
-<section class="crisis-card" style="background-image: url('imagenes/oceanosencrisis.png');">
-
-  <section class="crisis-card">
-  <h2>Océanos en crisis</h2>
-  <p>¿Cómo podemos ayudar?</p>
-
-  <input type="checkbox" id="toggle-crisis" class="toggle-crisis">
-  <!-- label que actúa como flecha -->
-  <label for="toggle-crisis" class="crisis-button">↓</label>
-
-  <ul class="lista-crisis">
-    <li class="crisis-item">
-      Reducí el uso de plásticos de un solo uso y participá en limpiezas de playas.
-    </li>
-    <li class="crisis-item">
-      Elegí productos del mar certificados como sustentables y evitá especies sobreexplotadas.
-    </li>
-    <li class="crisis-item">
-      Apoyá organizaciones que protegen los ecosistemas marinos y promueven áreas protegidas.
-    </li>
-    <li class="crisis-item">
-      Difundí información sobre la importancia de los océanos y educá a tu comunidad.
-    </li>
-  </ul>
-</section>
-
-</section>
+  <!-- OCÉANOS EN CRISIS -->
+  <section class="crisis-card" style="background-image: url('imagenes/oceanosencrisis.png');">
+    <h2>Océanos en crisis</h2>
+    <p>¿Cómo podemos ayudar?</p>
+    <button id="boton-crisis" type="button">↓</button>
+    <ul id="lista-crisis">
+      <li class="crisis-item">Reducí el uso de plásticos de un solo uso y participá en limpiezas de playas.</li>
+      <li class="crisis-item">Elegí productos del mar certificados como sustentables y evitá especies sobreexplotadas.</li>
+      <li class="crisis-item">Apoyá organizaciones que protegen los ecosistemas marinos y promueven áreas protegidas.</li>
+      <li class="crisis-item">Difundí información sobre la importancia de los océanos y educá a tu comunidad.</li>
+    </ul>
+  </section>
 
   <!-- DATOS -->
   <section class="datos">
     <h2>Datos que no podemos ignorar</h2>
     <p>Cifras reales que reflejan el estado crítico de nuestros océanos</p>
-
-    <div class="dato-card">
-      +8 millones de toneladas de plástico terminan en los océanos cada año
-    </div>
-
-    <div class="dato-card">
-      El 90% de las especies marinas ya se ven afectadas por la contaminación
-    </div>
-
-    <div class="dato-card">
-      Más del 50% de los arrecifes de coral están desapareciendo
-    </div>
+    <div class="dato-card">+8 millones de toneladas de plástico terminan en los océanos cada año</div>
+    <div class="dato-card">El 90% de las especies marinas ya se ven afectadas por la contaminación</div>
+    <div class="dato-card">Más del 50% de los arrecifes de coral están desapareciendo</div>
   </section>
 
+  <!-- VIDA EN RIESGO -->
   <section class="riesgo">
-  <h2>La vida en riesgo</h2>
+    <h2>La vida en riesgo</h2>
+    <div class="animales-grid">
 
-  <div class="animales-grid">
-
-    <div class="animal">
-      <img src="imagenes/tortuga-carey.png" alt="Tortuga carey">
-      <div class="info">
-        <h3>Tortuga carey</h3>
-        <ul>
-          <li>En peligro crítico</li>
-          <li>Pesca ilegal + destrucción de arrecifes</li>
-        </ul>
+      <div class="animal">
+        <img src="imagenes/tortuga-carey.png" alt="Tortuga carey">
+        <div class="info">
+          <h3>Tortuga carey</h3>
+          <ul>
+            <li>En peligro crítico</li>
+            <li>Pesca ilegal + destrucción de arrecifes</li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div class="animal">
-      <img src="imagenes/tiburon-martillo.png" alt="Tiburón martillo">
-      <div class="info">
-        <h3>Tiburón martillo</h3>
-        <ul>
-          <li>En peligro crítico</li>
-          <li>Pesca intensiva (aletas)</li>
-        </ul>
+      <div class="animal">
+        <img src="imagenes/tiburon-martillo.png" alt="Tiburón martillo">
+        <div class="info">
+          <h3>Tiburón martillo</h3>
+          <ul>
+            <li>En peligro crítico</li>
+            <li>Pesca intensiva (aletas)</li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div class="animal">
-      <img src="imagenes/pinguino-galapagos.png" alt="Pingüino Galápagos">
-      <div class="info">
-        <h3>Pingüino Galápagos</h3>
-        <ul>
-          <li>En peligro</li>
-          <li>Calentamiento del océano</li>
-        </ul>
+      <div class="animal">
+        <img src="imagenes/pinguino-galapagos.png" alt="Pingüino Galápagos">
+        <div class="info">
+          <h3>Pingüino Galápagos</h3>
+          <ul>
+            <li>En peligro</li>
+            <li>Calentamiento del océano</li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div class="animal">
-      <img src="imagenes/vaquita-marina.png" alt="Vaquita marina">
-      <div class="info">
-        <h3>Vaquita marina</h3>
-        <ul>
-          <li>En peligro extremo</li>
-          <li>Redes de pesca ilegales</li>
-        </ul>
-        <span class="nota">
-          *quedan menos de 10 ejemplares en el mundo
-        </span>
+      <div class="animal">
+        <img src="imagenes/vaquita-marina.png" alt="Vaquita marina">
+        <div class="info">
+          <h3>Vaquita marina</h3>
+          <ul>
+            <li>En peligro extremo</li>
+            <li>Redes de pesca ilegales</li>
+          </ul>
+          <span class="nota">*quedan menos de 10 ejemplares en el mundo</span>
+        </div>
       </div>
-    </div>
 
-  </div>
-</section>
+    </div>
+  </section>
 
   <!-- FORMULARIO -->
   <section class="form-section">
     <h2>El océano no puede esperar</h2>
     <p>Tu acción hoy define su futuro</p>
-
     <form>
       <input type="text" placeholder="Nombre completo">
       <input type="text" placeholder="Fecha de nacimiento">
@@ -182,34 +149,19 @@
       <input type="email" placeholder="E-mail">
       <input type="text" placeholder="Dirección">
       <textarea placeholder="Comentarios"></textarea>
-
       <button type="submit">Enviar</button>
     </form>
   </section>
 
 </main>
 
-<!-- JS DESPLEGABLE -->
-<script>
-  const toggle = document.querySelector('.toggle');
-  const list = document.querySelector('.crisis-list');
-
-  toggle.addEventListener('click', () => {
-    list.classList.toggle('active');
-  });
-</script>
- <footer>
-
+<footer>
   <section>
     <h2>AquaPedia</h2>
-    <p>
-      Una enciclopedia digital dedicada a explorar y preservar la biodiversidad de nuestros océanos.
-    </p>
+    <p>Una enciclopedia digital dedicada a explorar y preservar la biodiversidad de nuestros océanos.</p>
   </section>
-
   <nav>
     <h3>Explorar</h3>
-
     <ul>
       <li><a href="mamiferos.html">Mamíferos marinos</a></li>
       <li><a href="peces.html">Peces</a></li>
@@ -218,18 +170,12 @@
       <li><a href="cnidarios.html">Cnidarios</a></li>
       <li><a href="equinodermos.html">Equinodermos</a></li>
     </ul>
-
   </nav>
-
   <section>
     <h3>Acerca de</h3>
-    <p>
-      AquaPedia es un proyecto educativo para generar conciencia sobre la vida acuática.
-    </p>
+    <p>AquaPedia es un proyecto educativo para generar conciencia sobre la vida acuática.</p>
   </section>
-
 </footer>
+
 </body>
-
 </html>
-
