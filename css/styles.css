@@ -1434,3 +1434,62 @@ footer ul {
     border-radius: 34px;
   }
 }
+@media (min-width: 768px) {
+  .especies-destacadas {
+    display: block;
+    width: 100%;
+    padding: 70px 6%;
+    background: var(--aqua-claro);
+  }
+
+  .especies-destacadas h2 {
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
+
+  .especies-destacadas .especies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(420px, 1fr));
+    gap: 32px;
+    width: 100%;
+  }
+
+  .especies-destacadas .especie-card {
+    display: flex;
+    width: 100%;
+    height: 260px;
+    min-height: 260px;
+    background: var(--aqua);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.14);
+  }
+
+  .especies-destacadas .especie-card img {
+    width: 220px;
+    height: 100%;
+    object-fit: cover;
+    filter: none;
+  }
+
+  .especies-destacadas .especie-info {
+    display: block;
+    flex: 1;
+    padding: 36px;
+    position: relative;
+  }
+
+  .especies-destacadas .especie-info h3 {
+    position: static;
+    transform: none;
+    color: var(--azul);
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .especies-destacadas .especie-info p,
+  .especies-destacadas .especie-info .estado {
+    display: block;
+  }
+}
