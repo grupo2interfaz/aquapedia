@@ -1600,27 +1600,23 @@ footer ul {
     color: #fff;
   }
 }
-/* =========================
-OCÉANOS EN CRISIS
-========================= */
 .crisis-card {
   position: relative;
-  max-width: 1080px;
-  margin: 40px auto;
-  padding: 50px 30px;
-  border-radius: 30px;
+  padding: 60px 30px 30px;
+  border-radius: 20px;
   background: url('imagenes/oceanosencrisis.png') center/cover no-repeat;
   color: white;
   text-align: center;
   overflow: hidden;
 }
 
+/* overlay para oscurecer */
 .crisis-card::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(8,38,61,.3), rgba(8,38,61,.7));
-  border-radius: 30px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 20px;
   z-index: 1;
 }
 
@@ -1628,110 +1624,48 @@ OCÉANOS EN CRISIS
 .crisis-card p {
   position: relative;
   z-index: 2;
-  margin: 0 0 20px;
 }
 
-.crisis-card h2 {
-  font-family: "Gloock", serif;
-  font-size: 48px;
-}
-
-.crisis-card p {
-  font-size: 20px;
-}
-
-#boton-crisis {
-  position: relative;
-  z-index: 2;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 36px;
+/* boton estilo flecha */
+.crisis-button {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 32px;
   cursor: pointer;
-  margin-bottom: 20px;
+  z-index: 2;
+  position: relative;
+  color: white;
   transition: transform 0.3s ease;
 }
 
-#boton-crisis.rotated {
+/* lista oculta por defecto */
+.lista-crisis {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* cuando el checkbox está checked, mostrar lista */
+.toggle-crisis:checked ~ .lista-crisis {
+  max-height: 500px; /* suficiente para mostrar los 4 items */
+  padding-top: 20px;
+}
+
+/* opcional: animar flecha al abrir */
+.toggle-crisis:checked + .crisis-button {
   transform: rotate(180deg);
 }
 
-#lista-crisis {
-  position: relative;
-  z-index: 2;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.6s ease;
-}
-
-#lista-crisis li.crisis-item {
-  background: rgba(255,255,255,0.15);
-  color: white;
-  padding: 15px 20px;
-  margin: 8px 0;
-  border-radius: 12px;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.5s ease;
-}
-
-/* Cuando la lista esté activa */
-#lista-crisis.active {
-  max-height: 1000px; /* suficiente para mostrar todos */
-}
-
-#lista-crisis.active li {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Animación con delay para cada item */
-#lista-crisis.active li:nth-child(1) {
-  transition-delay: 0.1s;
-}
-#lista-crisis.active li:nth-child(2) {
-  transition-delay: 0.2s;
-}
-#lista-crisis.active li:nth-child(3) {
-  transition-delay: 0.3s;
-}
-#lista-crisis.active li:nth-child(4) {
-  transition-delay: 0.4s;
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-@media (max-width: 767px) {
-  .crisis-card {
-    padding: 30px 20px;
-    border-radius: 20px;
-  }
-
-  .crisis-card h2 {
-    font-size: 32px;
-  }
-
-  .crisis-card p {
-    font-size: 16px;
-  }
-
-  #boton-crisis {
-    font-size: 28px;
-  }
-}#lista-crisis {
-  display: none;
-}
-
-#lista-crisis.abierto {
-  display: block;
-}.habitat-card img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  margin: 0 auto 10px;
-  display: block;
+/* items de la lista */
+.crisis-item {
+  background: rgba(255,255,255,0.2);
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-align: left;
 }
