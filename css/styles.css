@@ -1591,6 +1591,74 @@ footer ul {
     color: #fff;
     display: inline-block;
   }
+}/* FIX FINAL ESPECIES DESTACADAS */
+
+@media (min-width: 768px) {
+  .mamiferos-hero ~ .especies-destacadas {
+    display: block !important;
+    width: 100% !important;
+    padding: 70px 6% !important;
+    background: var(--aqua-claro) !important;
+  }
+
+  .mamiferos-hero ~ .especies-destacadas .especies-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px !important;
+    width: 100% !important;
+  }
+
+  .mamiferos-hero ~ .especies-destacadas .especie-card {
+    display: flex !important;
+    width: 100% !important;
+    height: 260px !important;
+    min-height: 260px !important;
+    background: #bfe7f0 !important;
+    border-radius: 28px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  .mamiferos-hero ~ .especies-destacadas .especie-card img {
+    position: static !important;
+    width: 220px !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  .mamiferos-hero ~ .especies-destacadas .especie-info {
+    flex: 1 !important;
+    padding: 36px !important;
+    position: relative !important;
+  }
+
+  .mamiferos-hero ~ .especies-destacadas .especie-info h3 {
+    position: static !important;
+    transform: none !important;
+    color: var(--azul) !important;
+    font-size: 34px !important;
+    line-height: 1 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .mamiferos-hero ~ .especies-destacadas .especie-info p {
+    position: static !important;
+    color: var(--azul) !important;
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .mamiferos-hero ~ .especies-destacadas .estado {
+    position: absolute !important;
+    top: 22px !important;
+    right: 22px !important;
+    padding: 6px 12px !important;
+    border-radius: 999px !important;
+    font-size: 11px !important;
+  }
 }
 /* =========================
 OCÉANOS EN CRISIS
