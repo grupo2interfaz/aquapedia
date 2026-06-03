@@ -1316,20 +1316,18 @@ footer ul {
   position: absolute;
   bottom: -50px;
   border-radius: 50%;
-  opacity: 0.15;
   animation: floatUp linear forwards;
 }
 
 @keyframes floatUp {
   from {
     transform: translateY(0);
+    opacity: 0.5;
   }
-
   to {
     transform: translateY(-120vh);
+    opacity: 0;
   }
-}.btn-outline {
-  animation: pulse 2.5s infinite;
 }
 
 @keyframes pulse {
@@ -1346,7 +1344,7 @@ footer ul {
   }
 }
 
-//* ==========================
+/* ==========================
    OCÉANOS EN CRISIS
    LISTA DESPLEGABLE
 ========================== */
