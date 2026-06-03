@@ -1726,7 +1726,6 @@ OCÉANOS EN CRISIS
   overflow: hidden;
   transition: max-height 0.6s ease;
 }
-
 #lista-crisis li.crisis-item {
   background: rgba(255,255,255,0.15);
   color: white;
@@ -1738,9 +1737,8 @@ OCÉANOS EN CRISIS
   transition: all 0.5s ease;
 }
 
-/* Cuando la lista esté activa */
 #lista-crisis.active {
-  max-height: 1000px; /* suficiente para mostrar todos */
+  max-height: 1000px;
 }
 
 #lista-crisis.active li {
@@ -1748,7 +1746,6 @@ OCÉANOS EN CRISIS
   transform: translateY(0);
 }
 
-/* Animación con delay para cada item */
 #lista-crisis.active li:nth-child(1) {
   transition-delay: 0.1s;
 }
@@ -1782,13 +1779,7 @@ RESPONSIVE
   #boton-crisis {
     font-size: 28px;
   }
-}#lista-crisis {
-  display: none;
-}
 
-#lista-crisis.abierto {
-  display: block;
-}
 #boton-crisis {
   background: none;
   border: none;
